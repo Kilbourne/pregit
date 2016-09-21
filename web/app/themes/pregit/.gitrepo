@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/roots/sage
+	branch = 8.5.0
+	commit = 223fc4811b960c1f49643a5ddb282a78fb5e5086
+	parent = 1221c896be9b9fd06082ed4a58921ede909c2f83
+	cmdver = 0.3.0
