@@ -39,7 +39,7 @@ var cssTasks = function(filename) {
     })
     .pipe($.concatUtil, filename)
     .pipe($.autoprefixer, { browsers: config.browsers })
-    .pipe($.minifyCss,config.minify)
+    .pipe($.cssNano,config.minify)
     .pipe(function() {
       return $.if(enabled.rev, $.rev());
     })
