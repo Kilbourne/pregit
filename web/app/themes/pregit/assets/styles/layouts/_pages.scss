@@ -1,0 +1,209 @@
+@media(max-width: 767px){
+	.et_divi_builder #et_builder_outer_content .et_pb_slider_show_image .et_pb_slide_image, .et_divi_builder #et_builder_outer_content .et_pb_slider_show_image .et_pb_slide_video {
+	  margin-top: 50px !important;
+	}
+}
+
+.et_divi_builder #et_builder_outer_content .et_pb_module .bordered-home-title{
+	text-align: left;	
+	margin: 1rem 0;
+	padding:.5rem .75rem;
+	font-size: 3rem;
+	font-weight: 300;	
+	padding-left: 1.25rem; 
+}
+#brand-form, .brand-form-text {
+    width: 50%;
+    float: left;
+    padding: 0 2% !important;
+}
+#brand-form input {
+    background: #fff !important;
+    width: 100%;
+    margin: .5rem 0 !important;
+    padding: .5rem 5%;
+}
+.brand-form-submit-container{
+	overflow: hidden;
+	text-align: center !important;
+	width: 100%;
+    margin-bottom: 1rem !important;
+}
+.et_divi_builder #et_builder_outer_content  input.brand-form-submit{
+	margin: 8% auto 0;
+	display: block;
+	background-color: #f2ab33;
+	padding: .5rem 1rem;
+	font-size: 1rem;
+}
+#et_builder_outer_content .home-bordered-text{
+	position: absolute;
+padding: 1rem 1.5rem !important;
+background-color:  rgba(29,29,27, 0.8);;
+color: #fff;
+}
+.et_divi_builder #et_builder_outer_content .et_pb_module h3{
+	font-size:1.5rem;
+	font-weight: 500;
+}
+.et_divi_builder #et_builder_outer_content .et_pb_module img{
+	width:100%;
+	height: auto;
+}
+
+@include media-query(palm)
+{
+	#newsletter-form{
+		input{
+			width:100% !important;
+		}
+	}
+}
+
+.azienda-layout{
+	overflow: hidden;
+	padding-bottom:1.5rem;
+	margin-bottom:1.5rem;
+	.azienda-box {
+    	overflow: hidden;    	
+    	padding:0 3%;
+    	.text-box,.img-box{
+    		height: 0;
+    		padding-bottom: 23%;
+    		float: left;
+		    margin: 0 1% 2rem;
+    	}
+    	.text-box,.img-box{
+			width: 23%;
+    	}
+    	.text-content{
+			width: 43%;
+			float: left;
+			margin: 0 1% 2rem;
+		}
+		.text-box {		    
+		    text-align: center;
+		    position: relative;
+		    border: 1px solid;
+		    color: #86754d;
+		    .text{
+			    position: absolute;
+			    top: 50%;
+			    transform: translate(-50%,-50%);
+			    left: 50%;
+			    text-transform: uppercase;
+			}
+		}
+		.img-box{
+		    >img{
+		    	width:100%;
+		    	height:auto;
+		    }
+		}
+		&.right{
+    		float: right;
+			.text-content{
+				width: 23%;
+			}
+			.empty-box{
+				width: 25%;
+				padding-bottom: 50%;
+				float: left;
+			}
+			.text-box,.text-content,.img-box{
+				margin: 0 1% 4px;
+			}
+    	}
+	}
+	@include media-query(palm)
+	{
+		.azienda-box {
+    		max-width: 400px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			.text-box,.text-content,.img-box{
+				height:auto;				
+			}
+			.text-box,.img-box{
+				width:48%;
+			}
+			.text-content {
+			    width: 98%;
+			    height: auto;
+			    padding: 0;
+			    float: right;
+			    order: 3;
+			}
+			&.right{
+    			float: none;
+    			.empty-box{ display:none;}
+    			 .text-content {
+				    width: auto;
+				    float: left;
+				    display: inline;
+				}
+				.img-box:last-of-type{
+					display:none;
+				}
+    		}
+    	}
+	}
+}
+
+.pregit-cats,.subcategory {
+    overflow: hidden;
+}
+.pregit-cats{
+	margin-bottom: 2.75rem;	
+	.shop-category {
+	    width: 50%;
+	    float: left;
+	    text-align: center;
+	    padding: 0 10%;
+	    &:first-child{
+	    	border-right: 1px solid #86754d;
+	    }
+	}
+	.category-title {
+	    font-size: 3rem;
+	    font-weight: 500;
+	    color: #86754d;
+	}
+	.subcategory {
+		display: flex;
+		margin-bottom: 1rem;
+		.img-container {
+		    width: 40%;		    
+		}
+		.text-container {
+		    position: relative;
+		    flex-grow: 1;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    padding: 0 12%;
+		}
+	}	
+	.subcategory-title {
+	    color: #86754d;
+	    font-weight: 500;
+	    margin: 0 0 .5rem;
+	    font-size: 1.5rem;
+	}
+	.subcategory-link {
+	    font-size: 0.75rem;
+	    text-decoration: none;
+	    color: #fff;
+	    background: #6f6f6e;
+	    padding: 4px 8px;
+	}	
+	@include media-query(palm)
+	{
+		.shop-category {
+			width:100%;
+			float:none;
+		}
+	}
+}
+
