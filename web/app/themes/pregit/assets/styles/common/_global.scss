@@ -3,3 +3,26 @@
 	max-width: 100%;
 	margin: 0 auto;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  	&:active,
+	&:focus {
+	position: static !important;
+	  clip: auto;
+	  overflow: visible;
+	  height: auto;
+	  width: auto;
+	}
+}
+html{ font-family:'open_sans';font-weight: 300;}
