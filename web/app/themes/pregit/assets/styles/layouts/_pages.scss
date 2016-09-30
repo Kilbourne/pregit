@@ -10,18 +10,44 @@
 	padding:.5rem .75rem;
 	font-size: 3rem;
 	font-weight: 300;	
-	padding-left: 1.25rem; 
+	padding-left: 1.25rem; 	
 }
+
 #brand-form, .brand-form-text {
     width: 50%;
     float: left;
     padding: 0 2% !important;
+    @media(max-width: 520px){
+    	width:100%;
+    }
+}
+#et_builder_outer_content .brand-form-text {
+  margin: .75rem 0;
 }
 #brand-form input {
     background: #fff !important;
     width: 100%;
     margin: .5rem 0 !important;
     padding: .5rem 5%;
+    color:#000;  
+}
+#brand-form input{
+	  &::-webkit-input-placeholder {
+	   color: #000;
+	   font-weight: 600;
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+	   color: #000;  font-weight: 600;
+	}
+
+	&::-moz-placeholder {  /* Firefox 19+ */
+	   color: #000;  font-weight: 600;
+	}
+
+	&:-ms-input-placeholder {   
+	   color: #000;  font-weight: 600;
+	}
 }
 .brand-form-submit-container{
 	overflow: hidden;
@@ -29,18 +55,57 @@
 	width: 100%;
     margin-bottom: 1rem !important;
 }
+.et_divi_builder #et_builder_outer_content .product-link-home{
+width: 64%;
+color: #fff;
+background-color: #86754d;
+padding: .25rem 1rem;
+display: inline-block;
+margin: 0 18%;
+}
+.et_divi_builder .fa-play{
+	width:80px;
+	height:80px;
+	background-color: transparent;
+	color:#fff;
+	border:1px solid;
+	border-radius: 50%;
+	&:before{
+		padding-left: 11px;
+		font-size: 3.6rem;
+	}
+}
+.et_divi_builder #et_builder_outer_content .home-news-container{
+	display: flex;
+height: 310.5px ;
+@media(max-width: 520px){
+	display:block;
+	height:auto;
+	overflow:hidden;
+	padding-bottom: 1rem;
+	>p{ display:none;}
+}
+}
 .et_divi_builder #et_builder_outer_content  input.brand-form-submit{
 	margin: 8% auto 0;
 	display: block;
 	background-color: #f2ab33;
 	padding: .5rem 1rem;
 	font-size: 1rem;
+	cursor:pointer;
 }
 #et_builder_outer_content .home-bordered-text{
 	position: absolute;
 padding: 1rem 1.5rem !important;
 background-color:  rgba(29,29,27, 0.8);;
 color: #fff;
+&.videotext{
+		top: 50%; width: 100%; transform: translateY(-50%);
+		@media(max-width:400px ){
+			transform:none;
+			position:static;
+		}
+	}
 }
 .et_divi_builder #et_builder_outer_content .et_pb_module h3{
 	font-size:1.5rem;
@@ -50,7 +115,9 @@ color: #fff;
 	width:100%;
 	height: auto;
 }
-
+#newsletter-form{
+		input[type="text"]{padding:0 2.5%;background-color: #fff;}
+}
 @include media-query(palm)
 {
 	#newsletter-form{
