@@ -33,11 +33,13 @@ function sk_wcmenucart() {
 <header class="banner">
     <div class="first-line"><span class="left"> IT | EN </span>
     <span class="right">
-         <?php        if (is_user_logged_in()) {
-      echo '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Profilo', 'sage' ).' </a> | <a href="'. esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) .'">'.__('Scollegati', 'sage' ).'</a></div></div>';
+    
+         <?php $UM_plinks=(new UM_Permalinks)->core; 
+      if (is_user_logged_in()) {
+      echo '<div class="account-link"><div><a href="'.get_permalink($UM_plinks['account']). '">'.__('Profilo', 'sage' ).' </a> | <a href="'. esc_url( get_permalink($UM_plinks['logout'])) .'">'.__('Scollegati', 'sage' ).'</a></div></div>';
     }
     elseif (!is_user_logged_in() ) {
-      echo '<div class="account-link"><div><a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink(woocommerce_get_page_id('myaccount')). '?action=register">'.__('Registrati', 'sage' ).' </a></div></div>';
+      echo '<div class="account-link"><div><a href="'.get_permalink($UM_plinks['login']). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink($UM_plinks['register']). '?action=register">'.__('Registrati', 'sage' ).' </a></div></div>';
     } ?>
     <div class="cart-icon-container"> <?php echo sk_wcmenucart(); ?></div> 
     <form action="<?php echo get_home_url(); ?>" id="responsive_menu_pro_search" method="get" role="search">
@@ -46,7 +48,7 @@ function sk_wcmenucart() {
         </form>
     </span>
     <div class="container">
-      <div class="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/pregit_logo.svg" alt="" class="logo-img"></div>
+      <div class="logo"><a href="<?php echo get_home_url(); ?> "><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/pregit_logo.svg" alt="" class="logo-img"></a></div>
       <div class="nav-container">
       <h2 class="claim">  Selected Quality of Italian Wine & Food</h2>  
       <nav class="nav-primary">
@@ -59,4 +61,5 @@ function sk_wcmenucart() {
     </div> 
     </div>
      </div>
+     <?php  do_shortcode(' [responsive_menu_pro ]' ); ?>
 </header>
