@@ -3,14 +3,17 @@
 	  margin-top: 50px !important;
 	}
 }
-
+.home.et_divi_builder{
+   #et_builder_outer_content .et_pb_text{ min-height: 300px;}
+  #et_builder_outer_content .et_pb_module p{ display:inline-block;}
+}
 .et_divi_builder #et_builder_outer_content .et_pb_module .bordered-home-title{
-	text-align: left;	
+	text-align: left;
 	margin: 1rem 0;
 	padding:.5rem .75rem;
 	font-size: 3rem;
-	font-weight: 300;	
-	padding-left: 1.25rem; 	
+	font-weight: 300;
+	padding-left: 1.25rem;
 }
 
 #brand-form, .brand-form-text {
@@ -29,7 +32,7 @@
     width: 100%;
     margin: .5rem 0 !important;
     padding: .5rem 5%;
-    color:#000;  
+    color:#000;
 }
 #brand-form input{
 	  &::-webkit-input-placeholder {
@@ -45,7 +48,7 @@
 	   color: #000;  font-weight: 600;
 	}
 
-	&:-ms-input-placeholder {   
+	&:-ms-input-placeholder {
 	   color: #000;  font-weight: 600;
 	}
 }
@@ -132,7 +135,7 @@ color: #fff;
 	padding-bottom:1.5rem;
 	margin-bottom:1.5rem;
 	.azienda-box {
-    	overflow: hidden;    	
+    	overflow: hidden;
     	padding:0 3%;
     	.text-box,.img-box{
     		height: 0;
@@ -148,7 +151,7 @@ color: #fff;
 			float: left;
 			margin: 0 1% 2rem;
 		}
-		.text-box {		    
+		.text-box {
 		    text-align: center;
 		    position: relative;
 		    border: 1px solid;
@@ -190,7 +193,7 @@ color: #fff;
 			display: flex;
 			flex-wrap: wrap;
 			.text-box,.text-content,.img-box{
-				height:auto;				
+				height:auto;
 			}
 			.text-box,.img-box{
 				width:48%;
@@ -222,7 +225,7 @@ color: #fff;
     overflow: hidden;
 }
 .pregit-cats{
-	margin-bottom: 2.75rem;	
+	margin-bottom: 2.75rem;
 	.shop-category {
 	    width: 50%;
 	    float: left;
@@ -241,7 +244,7 @@ color: #fff;
 		display: flex;
 		margin-bottom: 1rem;
 		.img-container {
-		    width: 40%;		    
+		    width: 40%;
 		}
 		.text-container {
 		    position: relative;
@@ -251,7 +254,7 @@ color: #fff;
 		    justify-content: center;
 		    padding: 0 12%;
 		}
-	}	
+	}
 	.subcategory-title {
 	    color: #86754d;
 	    font-weight: 500;
@@ -264,7 +267,7 @@ color: #fff;
 	    color: #fff;
 	    background: #6f6f6e;
 	    padding: 4px 8px;
-	}	
+	}
 	@include media-query(palm)
 	{
 		.shop-category {
