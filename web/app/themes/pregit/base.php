@@ -19,13 +19,13 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    
+
       <div class="content row">
-        <main class="main">
-        <div class="et_builder_outer_content" id="et_builder_outer_content">
+              <div class="et_builder_outer_content" id="et_builder_outer_content">
         <div class="et_builder_inner_content et_pb_gutters3">
         <?php echo do_shortcode(get_page_by_title('Header Slider')->post_content); ?>
         </div></div>
+        <main class="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (false) : ?>
@@ -34,7 +34,7 @@ use Roots\Sage\Wrapper;
           </aside><!-- /.sidebar -->
         <?php endif; ?>
       </div><!-- /.content -->
-    
+
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
