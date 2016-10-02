@@ -47,3 +47,6 @@ function set_column2( $input_info, $field, $column, $value, $form_id ) {
 
 // Disabilità opzione se già usate
 // se max row
+// WPMEMBERS
+// PRODUCT THUMB + GRAVITY
+// TAXONOMY + ACF
