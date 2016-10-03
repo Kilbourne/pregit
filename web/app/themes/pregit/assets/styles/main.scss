@@ -23,10 +23,12 @@
 @import "components/fonts";
 @import "components/grid";
 @import "components/wp-classes";
+
 @import "layouts/header";
 //@import "components/menu";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
+@import "layouts/woocommerce";
 @import "layouts/posts";
 @import "layouts/tinymce";
