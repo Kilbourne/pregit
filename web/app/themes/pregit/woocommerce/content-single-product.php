@@ -36,11 +36,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 	 global $post;
 	 $post_id=$post->ID;
-	 //var_dump(echo get_field( $post_id ));
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+<?php wc_get_template( 'single-product/title.php' ); ?>
 <div class="first-col">
 	<?php
 		/**
@@ -62,13 +61,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 </div>
  <div class="second-col">
- 	<div class="tabella-attributi">
+   <div class="first-row-container">
+    <div class="tabella-attributi">
  		<p class="riga-attributo"><span class="titolo"><?php _e('Denominazione','sage') ?>  </span><span class="attributo"><?php echo get_field( 'denominazione', $post_id  ); ?></span></p>
- 		 <p class="riga-attributo"><span class="titolo"><?php _e('classificazione','sage') ?>  </span><span class="attributo"><?php echo get_field( 'Classificazione', $post_id  ); ?></span></p>
+ 		 <p class="riga-attributo"><span class="titolo"><?php _e('Classificazione','sage') ?>  </span><span class="attributo"><?php echo get_field( 'classificazione', $post_id  ); ?></span></p>
  		 <p class="riga-attributo"><span class="titolo"><?php _e('Alcol Vol. %','sage') ?>  </span><span class="attributo"><?php echo get_field( 'alcol', $post_id  ); ?></span></p>
  		 <p class="riga-attributo"><span class="titolo"><?php _e('Annata','sage') ?>  </span><span class="attributo"><?php echo get_field( 'annata', $post_id  ); ?></span></p>
  		 <p class="riga-attributo"><span class="titolo"><?php _e('Produttore','sage') ?>  </span><span class="attributo"><?php echo get_field( 'produttore2', $post_id  ); ?></span></p> 
  	</div>
+ 	<div class="buy-container">
+ 	<?php  woocommerce_template_single_price(); woocommerce_template_single_add_to_cart() ?>	
+ 	</div>
+ 	
+   </div>
  	<div class="attributi-espansi">
  	 	<div class="prima-riga">
  	 		<div class="colonna-left">
@@ -96,14 +101,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-
 	<!--<div class="summary entry-summary">
 
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
 			 *
-			! * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_title - 5
 			 * @hooked woocommerce_template_single_rating - 10
 			! * @hooked woocommerce_template_single_price - 10
 			 * @hooked woocommerce_template_single_excerpt - 20
@@ -111,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
-			//do_action( 'woocommerce_single_product_summary' );
+			
 		?>
 
 	</div>--><!-- .summary -->
