@@ -191,8 +191,9 @@
             @include clearfix();
 
             div.quantity {
-                float: left;
+                //float: left;
                 margin: 0 4px 0 0;
+                margin-bottom: .5rem;
             }
 
             table {
@@ -258,7 +259,7 @@
 
             .button {
                 vertical-align: middle;
-                float: left;
+                //float: left;
             }
 
             .group_table {
