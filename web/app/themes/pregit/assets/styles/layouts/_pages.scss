@@ -1,6 +1,6 @@
 .home.et_divi_builder main #et_builder_outer_content{
     .et_pb_text{ min-height: 300px;}
-    .et_pb_module p{ display:inline-block;}
+    //.et_pb_module p{ display:inline-block;}
 }
 .home.et_divi_builder #et_builder_outer_content{
   @media(max-width: 767px){
@@ -276,4 +276,94 @@
 			float:none;
 		}
 	}
+}
+
+
+body.tax-product_cat,body.tax-producer{
+  .category-products-container{
+    margin: 0 5rem 3rem;
+    overflow: hidden;
+    position:relative;
+  }
+ .main-title{
+  display:none;
+ }
+ .page-title.inverted{
+  color:#bfbfbf;
+  font-size: 6rem;
+  text-align: center;
+  display: inline-block;
+  line-height: 174px;
+  margin: 0;
+  transform: rotate(-180deg);  
+  writing-mode: vertical-lr;
+  vertical-align: top;
+    
+ }
+ 
+ ul.products{  
+  width: calc(100% - 179px );
+  display: inline-block;
+  vertical-align: top;
+  li.product{
+    width: 30.8%;
+    border: 1px solid;
+    margin-bottom: 1.5rem;
+    @include media-query(palm){
+      width: 48%;
+      margin: 0 0 1.5rem; 
+      float: left;
+      clear: both;
+    }
+    @media(max-width:450px){
+      width: 100%;
+    }
+    >img{
+      margin: 0 auto;
+    }
+    >h3{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        background: #1d1d1b;
+        color: #fff;        
+    }
+    .cat_item_mask{
+      position:absolute;
+      display:none;   
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background: rgba(0, 0, 0, 0.25);
+    }
+    .woocommerce-LoopProduct-link {
+      position:absolute;
+      
+      top: 50%;
+      left: 50%;
+      background: #86754d;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border: 1px solid;
+      transform: translate(-50%,-50%);  
+    }
+    &:hover{
+      .cat_item_mask {
+        display:block;
+      }
+      >h3{
+        background:transparent;        
+      }
+    }
+  }
+ }
+.woocommerce-pagination{ text-align: right; a{ color:#575756;}}
+@include media-query(palm){
+  .main-title{ display:block;}
+  .page-title.inverted{ display:none}
+    ul.products{ width:100%}
+ }
 }
