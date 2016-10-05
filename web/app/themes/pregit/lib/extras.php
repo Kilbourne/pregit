@@ -129,3 +129,27 @@ function set_column2( $input_info, $field, $column, $value, $form_id ) {
       )
     ),'value'=>'ID',"text"=>'post_title' );
 }
+
+
+
+
+
+
+add_filter('loop_shop_columns', __NAMESPACE__ . '\\wc_product_columns_frontend');
+            function wc_product_columns_frontend() {
+                global $woocommerce;
+
+                // Default Value also used for categories and sub_categories
+                $columns = 4;
+
+                // Product List
+                if ( is_tax(['product_cat','producer']) ) :
+                    $columns = 3;
+                endif;
+
+ 
+
+    return $columns;
+
+
+}
