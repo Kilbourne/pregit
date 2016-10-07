@@ -25,13 +25,44 @@
       font-weight: 300;
       padding-left: 1.25rem;
     }
-
+    &:last-child{
+      min-height: auto;
+    }
+    .et_pb_slides{ padding-top:5%; }
+    .et_pb_slide>.et_pb_container{
+      width:auto; 
+      .et_pb_slide_image{
+        width:auto;
+      }
+      .et_pb_slide_description{
+        display: inline-block;
+        width: auto;  
+        text-align:center;
+        .et_pb_slide_content{ text-align:left;}
+      }
+      @media(max-width: 767px){
+        min-height: auto !important;
+        .et_pb_slide_image{
+          margin-top: 5rem !important;
+        }
+        .et_pb_slide_description{
+          padding: 1.5rem 0;
+        }
+        .et_pb_slide_image,.et_pb_slide_description{
+          position:static;
+        }
+      } 
+    }
   }
   .home-bordered-text{
     position: absolute;
-    padding: 1rem 1.5rem !important;
+    padding: 2.5rem 1.5rem !important;
     background-color:  rgba(29,29,27, 0.8);;
     color: #fff;
+    >h3{
+      font-size: 2.2rem;
+font-weight: 300;
+    }
     &.videotext{
         top: 50%; width: 100%; transform: translateY(-50%);
         @media(max-width:400px ){
@@ -40,23 +71,26 @@
         }
     }
   }
-  #brand-form, .brand-form-text {
+  #gform_wrapper_3, .brand-form-text {
     width: 50%;
     float: left;
     padding: 0 2% !important;
+    display:inline-block;
+    vertical-align: top;
     @media(max-width: 520px){
       width:100%;
     }
   }
-  .brand-form-text {
-    margin: .75rem 0;
-  }
-  #brand-form input {
-    background: #fff !important;
-    width: 100%;
-    margin: .5rem 0 !important;
-    padding: .5rem 5%;
-    color:#000;
+  #gform_wrapper_3{
+    padding: .5rem 2% !important;
+    .gform_body{ max-width: 100%;}
+    .gfield_label{ display:none;}
+    .ginput_container {
+        background-color: #fff;
+        margin-bottom: 1rem;
+        padding: .5rem 3%;
+        font-weight: 600;
+        >input{ height: 36px; 
     &::-webkit-input-placeholder {
        color: #000;
        font-weight: 600;
@@ -73,7 +107,16 @@
     &:-ms-input-placeholder {
        color: #000;  font-weight: 600;
     }
+        }
+    }
+    .gform_footer{display:none}
   }
+  .brand-form-text {
+    margin: .75rem 0;
+  }
+ 
+
+  
   .brand-form-submit-container{
     overflow: hidden;
     text-align: center !important;
@@ -120,17 +163,41 @@
     }
   }
 }
-
-#newsletter-form{
-		input[type="text"]{padding:0 2.5%;background-color: #fff;}
+.et_pb_module #gform_wrapper_4{
+  margin: 1.25rem 0;
+  padding: 0 5%;
+  overflow:hidden;
+  .gform_body{
+    max-width: 100%;
+    width: 70%;
+    background-color: #fff;
+    margin-right: 1.5%;
+    padding: 0;
+    display: inline-block;
+    float: left;
+  }
+  .gform_footer{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 28.5%;
+    background-color: #86754d;
+    color: #fff;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    float: left;
+    clear: none;
+  }
+  @include media-query(palm){
+    .gform_body,.gform_footer{ width:100%; }
+  }
 }
-@include media-query(palm)
-{
-	#newsletter-form{
-		input{
-			width:100% !important;
-		}
-	}
+.gform_wrapper form .gform_body  #gform_fields_4{ padding:0;
+  .gfield_label{ display:none; }
+  input{ width:100%;padding: 0 2.5%;}
+ }
+#gform_submit_button_4{
+  text-transform: uppercase;
 }
 
 .azienda-layout{
