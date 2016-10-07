@@ -32,6 +32,20 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
+add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
+function conditional_mobile_menu($items, $args){
+$items.=account_link_menu_item()  ;
+ return $items;
+}
+function account_link_menu_item(){
+  $UM_plinks=(new \UM_Permalinks)->core; 
+      if (is_user_logged_in()) {
+      return '<li class="menu-item menu-account" ><a href="'.get_permalink($UM_plinks['account']). '">'.__('Profilo', 'sage' ).' </a></li><li class="menu-item menu-logout" > <a href="'. esc_url( get_permalink($UM_plinks['logout'])) .'">'.__('Scollegati', 'sage' ).'</a></li>';
+    }
+    elseif (!is_user_logged_in() ) {
+      return '<li class="menu-item menu-login" ><a href="'.get_permalink($UM_plinks['login']). '">'.__('Accedi', 'sage' ).' </a></li><li class="menu-item menu-register" ><a href="'.get_permalink($UM_plinks['register']). '?action=register">'.__('Registrati', 'sage' ).' </a></li>';
+    }
+}
 add_filter('single_product_large_thumbnail_size', __NAMESPACE__ . '\\pregit_single_product_thumb_size' );
 function pregit_single_product_thumb_size(){
   return 'full';
