@@ -27,7 +27,10 @@
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
+        $('.brand-form-submit').click(function(event) {
+          $('#gform_submit_button_3').click();
+        });
+      
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
