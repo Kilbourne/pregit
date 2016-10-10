@@ -126,11 +126,11 @@ function remove_edit_producer_ui(){
 }
 add_action( 'admin_print_scripts',  __NAMESPACE__ . '\\remove_edit_producer_ui',50 );
 
-add_filter( 'gform_column_input_1_5_3', __NAMESPACE__ . '\\set_column', 10, 5 );
+add_filter( 'gform_column_input_6_5_3', __NAMESPACE__ . '\\set_column', 10, 5 );
 function set_column( $input_info, $field, $column, $value, $form_id ) {
     return array( 'type' => 'date');
 }
-add_filter( 'gform_column_input_1_5_1',__NAMESPACE__ . '\\set_column2', 10, 5 );
+add_filter( 'gform_column_input_6_5_1',__NAMESPACE__ . '\\set_column2', 10, 5 );
 function set_column2( $input_info, $field, $column, $value, $form_id ) {
     return array( 'type' => 'post-select','args'=>array(
       'post_type' => 'product',
