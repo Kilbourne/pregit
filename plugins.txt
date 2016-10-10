@@ -4,7 +4,31 @@ server info
 security
 medialibrary    
 
+smtp
 
 multilanguage
 seo
 cache
+
+FRONT ASSETT
+divi
+gf
+resp-menu
+um
+wc
+wccatalog
+
+Option
+admincolumns
+acf
+error_log
+favicon
+gf
+feed
+um
+wc
+wp-admin-ui
+wp-hammer
+updraft
+wp-retina
+wc-catalog
