@@ -36,6 +36,67 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
+    'prova_produttore':{
+      init:function(){
+        
+        $('.gfield.hidden').hide();
+
+        var max_rows=$('.gfield_list_group').first().find('option').length;
+
+        gform.addFilter( 'gform_list_item_pre_add', function ( clone ) {
+          
+            clone.find('.datepicker').removeClass('hasDatepicker').removeAttr('id');
+            set_max_rows(clone.find('.gfield_list_icons img'));
+            return clone;
+        });
+                          
+        function set_max_rows(buttons){
+
+          if(buttons){
+            buttons.first().attr('onclick',"gformAddListItem(this, "+max_rows+")");
+            buttons.first().attr('onkeypress',"gformAddListItem(this, "+max_rows+")");
+            buttons.last().attr('onclick',"gformDeleteListItem(this, "+max_rows+")");
+            buttons.last().attr('onkeypress',"gformDeleteListItem(this, "+max_rows+")");      
+          }
+        }
+        
+        $('.gfield_list_icons').each(function(index, el) {
+
+              var buttons = $(el).children('img');
+              set_max_rows(buttons);
+        });
+
+        function disable_option(){
+          var rows=$('.gfield_list_group');
+          var options=rows.find('option');
+          var selected=[];
+          var disabled=[];
+
+          rows.each(function(index, el) {
+            var val =$(this).find('select').val();              
+            if(val)selected.push(val);
+          });
+          
+          options.each(function(index) {            
+            if($(this).attr('disabled')==='disabled') disabled.push($(this).val());
+          });
+
+          options.each(function(index, el) {
+            if(selected.indexOf($(el).val())!==-1 && $(el).parent().val() !== $(el).val()){
+              $(el).attr('disabled','disabled');
+            }else if( disabled.indexOf($(el).val())!==-1 ){
+              $(el).attr('disabled',null);
+            }
+          });
+        }
+
+        disable_option();
+
+        $('.ginput_list').on('click','.gfield_list_icons img',function(event) { disable_option(); });
+        $('.ginput_list').on('focus','.datepicker',function(e){ gformInitDatepicker(); })
+        $('.ginput_list').on('change focus mousedown keydown touchstart','.gfield_list_group select',function(event) { disable_option(); });    
+      }
+    },
     // About us page, note the change from about-us to about_us.
     'about_us': {
       init: function() {
