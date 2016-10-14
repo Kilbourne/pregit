@@ -18,7 +18,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
+$cat_id=$wp_query->get_queried_object_id();
+if(!get_term( $cat_id, 'product_cat')->parent ) wp_redirect( get_permalink( get_post( wc_get_page_id( 'shop' ) ) ) );
 
 //get_header( 'shop' ); ?>
 
