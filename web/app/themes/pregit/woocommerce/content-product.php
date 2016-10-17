@@ -59,7 +59,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	echo'<div class="cat_item_mask">';
 	do_action( 'woocommerce_before_shop_loop_item' );
 	_e('Scopri');
-	do_action( 'woocommerce_after_shop_loop_item_title' );
+	//do_action( 'woocommerce_after_shop_loop_item_title' );
 	echo'</div>';
 	/**
 	 * woocommerce_after_shop_loop_item hook.

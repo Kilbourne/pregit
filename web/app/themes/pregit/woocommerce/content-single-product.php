@@ -50,15 +50,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>	
+	<?php
+		$producer_terms=wp_get_post_terms(get_the_id(), 'producer', array("fields" => "ids"));
+		
+	 if($producer_terms) { 
+	 	$term_id = $producer_terms[0];
+	 	?>
 	<div class="produttore-link">
-		<a href="">
+		<a href="<?php echo esc_url( get_term_link( $term_id ) ); ?>">
 			<p><?php _e('Guarda tutti i prodotti','sage') ?></p>
-			<img src="" alt="">
+			<?php echo wp_get_attachment_image(get_field('logo', 'producer_'.$term_id))?wp_get_attachment_image(get_field('logo', 'producer_'.$term_id)):''; ?>
 		</a>
 	</div>
+	<?php } 
+		if(get_field('scheda_prodotto',get_the_id())){
+			
+
+	 ?>
 	<div class="product-scheda">
-		<a href="" "<?php _e('Scarica la scheda','sage') ?> "><?php _e('Scarica la scheda','sage') ?> </a>
+		<a href="<?php echo wp_get_attachment_url(get_field('scheda_prodotto',get_the_id()));  ?>" ><?php _e('Scarica la scheda','sage') ?> </a>
 	</div>
+	<?php } ?>
 </div>
  <div class="second-col">
    <div class="first-row-container">
@@ -68,9 +80,38 @@ if ( ! defined( 'ABSPATH' ) ) {
  		 <p class="riga-attributo"><span class="titolo"><?php _e('Alcol Vol. %','sage') ?>  </span><span class="attributo"><?php echo get_field( 'alcol', $post_id  ); ?></span></p>
  		 <p class="riga-attributo"><span class="titolo"><?php _e('Annata','sage') ?>  </span><span class="attributo"><?php echo get_field( 'annata', $post_id  ); ?></span></p>
  		 <p class="riga-attributo"><span class="titolo"><?php _e('Produttore','sage') ?>  </span><span class="attributo"><?php echo get_field( 'produttore2', $post_id  ); ?></span></p> 
+<?php 
+global $product;
+if($product->is_type( 'variable' )){
+$get_variations = sizeof( $product->get_children() ) <= apply_filters( 'woocommerce_ajax_variation_threshold', 30, $product );
+
+			$available_variations = $get_variations ? $product->get_available_variations() : false;
+			$attributes           = $product->get_variation_attributes();
+			$selected_attributes  = $product->get_variation_default_attributes();
+			$attribute_keys = array_keys( $attributes );
+		 ?>
+ 		 	<?php  if ( !empty( $available_variations )) {  ?>
+<table class="variations" cellspacing="0">
+			<tbody>
+				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
+					<tr class="riga-attributo">
+						<td class="label titolo"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></td>
+						<td class="value">
+							<?php
+								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( urldecode( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ) : $product->get_variation_default_attribute( $attribute_name );
+								wc_dropdown_variation_attribute_options( array( 'options' => $options, 'attribute' => $attribute_name, 'product' => $product, 'selected' => $selected ) );
+								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'woocommerce' ) . '</a>' ) : '';
+							?>
+						</td>
+					</tr>
+				<?php endforeach;?>
+			</tbody>
+		</table>
+		<?php }} ?>
  	</div>
  	<div class="buy-container">
- 	<?php  woocommerce_template_single_price(); woocommerce_template_single_add_to_cart() ?>	
+ 	<?php do_action( 'woocommerce_single_product_summary' );
+?>	
  	</div>
  	
    </div>
@@ -128,7 +169,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		//do_action( 'woocommerce_after_single_product_summary' );
+		do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
