@@ -10,16 +10,16 @@ function sk_wcmenucart() {
     $viewing_cart = __('Carrello', 'sage');
     $cart_url = $woocommerce->cart->get_cart_url();
     $cart_contents_count = $woocommerce->cart->cart_contents_count;
-    $cart_contents = sprintf(_n('%d item', '%d items', $cart_contents_count, 'sage'), $cart_contents_count);    
+    $cart_contents = sprintf(_n('%d  item', '%d items', $cart_contents_count, 'sage'), $cart_contents_count);    
     // Uncomment the line below to hide nav menu cart item when there are no items in the cart
      if ( $cart_contents_count > 0 ) {
 
-        $menu_item = '<a class="wcmenucart-contents" href="'. $cart_url .'" title="'. $viewing_cart .'">';
+        $menu_item = '<a class="cart-contents" href="'. $cart_url .'" title="'. $viewing_cart .'">';
       
 
       $menu_item .= '<i class="fa fa-shopping-cart"></i> ';
 
-      $menu_item .= '<span class="wcmenucart-text">(' . $cart_contents_count . ') '.$viewing_cart;
+      $menu_item .= '<span class="wcmenucart-text">(<span class="cart-length">' . $cart_contents_count . '</span>) '.$viewing_cart;
       $menu_item .= '</span></a>';
     // Uncomment the line below to hide nav menu cart item when there are no items in the cart
       echo $menu_item;
@@ -46,7 +46,7 @@ function sk_wcmenucart() {
      <i class="fa fa-search"></i>
             <input type="search" name="s" value="" placeholder="<?php _e( 'Cerca', 'responsive-menu-pro' ); ?>" id="responsive_menu_pro_search_input">            
         </form>
-    </span>
+    </span></div>
     <div class="container">
       <div class="logo"><a href="<?php echo get_home_url(); ?> "><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/pregit_logo.svg" alt="" class="logo-img"></a></div>
       <div class="nav-container">
@@ -58,8 +58,7 @@ function sk_wcmenucart() {
       endif;
       ?>
     </nav>
-    </div> 
     </div>
-     </div>
-     <?php  do_shortcode(' [responsive_menu_pro ]' ); ?>
+    <?php  do_shortcode(' [responsive_menu_pro ]' ); ?> 
+    </div>        
 </header>

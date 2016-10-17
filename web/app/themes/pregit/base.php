@@ -21,10 +21,11 @@ use Roots\Sage\Wrapper;
     ?>
 
       <div class="content row">
+      <div class="divi-slider header-slide">
               <div class="et_builder_outer_content" id="et_builder_outer_content">
         <div class="et_builder_inner_content et_pb_gutters3">
         <?php if( is_front_page() || is_page('i-pregi-ditalia' ) || is_shop()) echo do_shortcode(get_page_by_title('Header Slider')->post_content);?>
-        </div></div>
+        </div></div></div>  
         <main class="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
