@@ -1,14 +1,6 @@
-logging
-spam
-server info
-security
-medialibrary    
-
-smtp
-
-multilanguage
+!security
+!multilanguage
 seo
-cache
 
 FRONT ASSETT
 divi
@@ -25,6 +17,7 @@ error_log
 favicon
 gf
 feed
+spam
 um
 wc
 wp-admin-ui
@@ -32,3 +25,13 @@ wp-hammer
 updraft
 wp-retina
 wc-catalog
+wp-rocket
+smtp
+
+Woocommerce
+Shipping
+Taxes
+inventory
+coupon
+pagamenti
+email
