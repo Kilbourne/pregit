@@ -7,10 +7,11 @@
     table.cart {
         .product-thumbnail {
             min-width: 32px;
+            max-width: 60px;
         }
 
         img {
-            width: 32px;
+            //width: 32px;
             box-shadow: none;
         }
 
@@ -18,7 +19,6 @@
         td {
             vertical-align: middle;
         }
-
         td.actions {
             .coupon {
                 .input-text {

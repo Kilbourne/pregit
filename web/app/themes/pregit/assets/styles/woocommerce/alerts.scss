@@ -1,8 +1,9 @@
 .woocommerce-message,
 .woocommerce-error,
 .woocommerce-info {
-    padding: 1em 2em 1em 3.5em;
-    margin: 0 0 2em;
+    line-height: 2.25em;
+    padding: 1em 2em 1em 18.5em;
+    margin: 0 0 .5em;
     position: relative;
     background-color: lighten($secondary, 5%);
     color: $secondarytext;
@@ -16,9 +17,11 @@
         font-family: 'WooCommerce';
         content: '\e028';
         display: inline-block;
-        position: absolute;
+        //position: absolute;
         top: 1em;
-        left: 1.5em;
+        left: 16.5em;
+        vertical-align: middle;
+        margin-right: 4px;
     }
 
     .button {
@@ -33,27 +36,27 @@
 }
 
 .woocommerce-message {
-    border-top-color: #8fae1b;
+    border-top-color: $primary;
 
     &::before {
         content: '\e015';
-        color: #8fae1b;
+        color: $primary;
     }
 }
 
 .woocommerce-info {
-    border-top-color: #1e85be;
+    border-top-color: $primary;
 
     &::before {
-        color: #1e85be;
+        color: $primary;
     }
 }
 
 .woocommerce-error {
-    border-top-color: #b81c23;
+    border-top-color: $primary;
 
     &::before {
         content: '\e016';
-        color: #b81c23;
+        color: $primary;
     }
 }

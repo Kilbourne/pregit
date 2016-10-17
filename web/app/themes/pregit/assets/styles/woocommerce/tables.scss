@@ -122,6 +122,11 @@ table.shop_attributes {
     }
 
     td.product-name {
+        >a{
+            font-weight: 700;
+            text-decoration: none;
+            color: #86754D;
+        }
         dl.variation {
             margin: 0.25em 0;
             @include clearfix();
@@ -131,10 +136,11 @@ table.shop_attributes {
                 display: inline-block;
                 float: left;
                 margin-bottom: 1em;
+                font-weight: 500;
             }
 
             dt {
-                font-weight: 700;
+                
                 padding: 0 0 0.25em;
                 margin: 0 4px 0 0;
                 clear: left;
@@ -142,7 +148,9 @@ table.shop_attributes {
 
             dd {
                 padding: 0 0 0.25em;
-
+                float:none;
+                margin-left: 0;
+                p{margin-top:0;}
                 p:last-child {
                     margin-bottom: 0;
                 }
