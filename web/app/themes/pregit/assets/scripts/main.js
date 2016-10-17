@@ -36,15 +36,40 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
-    'prova_produttore':{
+    'single_product':{
       init:function(){
-        
+        $('.tabella-attributi .reset_variations').click(function(event) {
+  event.preventDefault();
+  $('.tabella-attributi select').val('').change();
+  $('.variations_form.cart').trigger('reset_data');
+});
+        $('.tabella-attributi select').change(function(e){
+          var val = $(this).val();
+          var id = e.target.id;
+          $('.buy-container #'+id).val(val).change();
+        });
+        $("form.cart").on("change", "input.qty", function() {
+    if (this.value === "0")
+        this.value = "1";
+ 
+    $(this.form).find(".single_add_to_cart_button[data-quantity]").data("quantity", this.value);
+});
+        $(document.body).on("added_to_cart", function() {
+          var val=Number($('.wcmenucart-text>.cart-length').text());
+          
+    $("a.added_to_cart").remove();
+});
+      }
+    },
+    'um_page_account':{
+      init:function(){
+        if($('.gform_wrapper').length){
         $('.gfield.hidden').hide();
 
         var max_rows=$('.gfield_list_group').first().find('option').length;
 
         gform.addFilter( 'gform_list_item_pre_add', function ( clone ) {
-          
+
             clone.find('.datepicker').removeClass('hasDatepicker').removeAttr('id');
             set_max_rows(clone.find('.gfield_list_icons img'));
             return clone;
@@ -95,6 +120,7 @@
         $('.ginput_list').on('click','.gfield_list_icons img',function(event) { disable_option(); });
         $('.ginput_list').on('focus','.datepicker',function(e){ gformInitDatepicker(); })
         $('.ginput_list').on('change focus mousedown keydown touchstart','.gfield_list_group select',function(event) { disable_option(); });    
+      }
       }
     },
     // About us page, note the change from about-us to about_us.
