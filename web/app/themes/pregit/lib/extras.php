@@ -145,7 +145,20 @@ function set_column2( $input_info, $field, $column, $value, $form_id ) {
 }
 
 
-
+/**
+ *  This will hide the Divi "Project" post type.
+ *  Thanks to georgiee (https://gist.github.com/EngageWP/062edef103469b1177bc#gistcomment-1801080) for his improved solution.
+ */
+add_filter( 'et_project_posttype_args', __NAMESPACE__ . '\\mytheme_et_project_posttype_args', 10, 1 );
+function mytheme_et_project_posttype_args( $args ) {
+  return array_merge( $args, array(
+    'public'              => false,
+    'exclude_from_search' => false,
+    'publicly_queryable'  => false,
+    'show_in_nav_menus'   => false,
+    'show_ui'             => false
+  ));
+}
 
 
 
@@ -166,4 +179,106 @@ add_filter('loop_shop_columns', __NAMESPACE__ . '\\wc_product_columns_frontend')
     return $columns;
 
 
+}
+
+
+/**
+ * Restrict specific user roles from accessing profile page
+ */
+add_action("template_redirect", __NAMESPACE__ . '\\um_custom_page_restriction');
+function um_custom_page_restriction(){
+   
+
+    if( !is_user_logged_in()  ) return;
+    if ( um_is_core_page('login')  ) {
+    {
+             exit( wp_redirect(       um_get_core_page('account') ) ); // redirect 
+             // You can also return a template file to display message
+    }
+  }
+}
+
+add_filter('um_account_page_default_tabs_hook', __NAMESPACE__ . '\\form_tab', 100  );
+function form_tab( $tabs ) {
+  
+global $ultimatemember;
+  if (  $ultimatemember->user->get_role() === 'produttore'  ) $tabs[235]['order_form'] = [
+    'icon' => 'um-faicon-pencil',
+  'title'  => 'Order Form',
+'custom' => true
+  ];
+    return $tabs;  
+    
+}
+  
+
+/* Finally we add some content in the tab */
+
+add_filter('um_account_content_hook_orders', __NAMESPACE__ . '\\um_account_content_hook_orders_tab');
+function um_account_content_hook_orders_tab( $output ){
+  global $ultimatemember;
+ if($ultimatemember->user->get_role() === 'produttore'){
+  return $output;
+ }
+$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
+  
+  'meta_key'    => '_customer_user',
+  'meta_value'  => get_current_user_id(),
+  'post_type'   => wc_get_order_types( 'view-orders' ),
+  'post_status' => array_keys( wc_get_order_statuses() )
+) ) );
+if ( !$customer_orders ){
+  ob_start();
+ 
+   
+echo '<div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
+    <a class="woocommerce-Button button" href="'.esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ).'">'.
+       __( 'Go Shop', 'woocommerce' ).'
+    </a>'.
+     __( 'No order has been made yet.', 'woocommerce' ).'
+  </div>';
+  $output .= ob_get_contents();
+  ob_end_clean();
+return $output;
+}
+  
+  return $output;
+}
+add_action('um_account_tab__order_form', __NAMESPACE__ . '\\um_account_tab__mytab');
+function um_account_tab__mytab( $info ) {
+  global $ultimatemember;
+  extract( $info );
+
+  echo  do_shortcode('[gravityform id="6" ajax="true"]' );
+
+}
+add_action( 'wp_loaded', __NAMESPACE__ . '\\remove_account_photo' );
+function remove_account_photo(){
+remove_action('um_account_user_photo_hook__mobile', 'um_account_user_photo_hook__mobile');
+remove_action('um_account_user_photo_hook', 'um_account_user_photo_hook');
+}
+
+remove_all_actions( 'woocommerce_after_single_product_summary');
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
+add_action( 'woocommerce_before_main_content', 'wc_print_notices', 15 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+
+add_filter( 'woocommerce_add_to_cart_fragments', __NAMESPACE__ . '\\woocommerce_header_add_to_cart_fragment' );
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+  ob_start();
+  ?>
+  <a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php __('Carrello', 'sage'); ?>"><i class="fa fa-shopping-cart"></i><span class="wcmenucart-text">(<span class="cart-length">
+  <?php echo WC()->cart->get_cart_contents_count(); ?> </span>) <?php _e('Carrello', 'sage')?></span></a>
+   
+  <?php
+  
+  $fragments['a.cart-contents'] = ob_get_clean();
+  
+  return $fragments;
 }
