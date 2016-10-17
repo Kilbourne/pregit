@@ -22,3 +22,8 @@ function title() {
     return get_the_title();
   }
 }
+
+function hidden(){
+  if (is_search()) return '';
+  return ' visually-hidden ';
+}
