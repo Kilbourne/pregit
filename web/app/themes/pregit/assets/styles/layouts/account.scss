@@ -95,3 +95,34 @@
 	text-transform: uppercase;
 	font-weight: 600;
 }
+.um-page-account #gform_6{
+	display:none;
+
+}
+.um-page-account .gform_confirmation_message{
+	margin-top:1rem;
+}
+/*
+.um-page-account .um-form{
+	>form,.gform_wrapper{
+		display:inline-block;
+		vertical-align: top;		
+	}
+	.um-account-side{
+		min-width: 31.85vw;
+	}
+	.um-account-main{
+		max-width: 45.5vw;
+	}
+
+	.um-account-main, .um-account-side {
+	    float: none;
+	    padding: 0 30px;
+	    box-sizing: border-box;
+	    display: inline-block;
+	}
+}
+*/
+.um-form .um-account-main {
+    width: 63%;
+}
