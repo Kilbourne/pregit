@@ -3,7 +3,7 @@
 namespace Roots\Sage\Extras;
 
 use Roots\Sage\Setup;
-
+use GFAPI;
 /**
  * Add <body> classes
  */
@@ -281,4 +281,86 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
   $fragments['a.cart-contents'] = ob_get_clean();
   
   return $fragments;
+}
+
+add_filter( 'searchwp_tax_term_or_logic', '__return_true' );
+
+add_action( 'um_after_account_page_load', __NAMESPACE__ . '\\insert_producer_gf' );
+function insert_producer_gf(){
+  echo  do_shortcode('[gravityform id="6" ajax="true"]' );
+}
+
+
+
+// Register Custom Post Type
+function init_producer_orders_ct() {
+
+  $labels = array(
+    'name'                  => _x( 'Producer Orders', 'Post Type General Name', 'sage' ),
+    'singular_name'         => _x( 'Producer Order', 'Post Type Singular Name', 'sage' ),
+    'menu_name'             => __( 'Producer Orders', 'sage' ),
+    'name_admin_bar'        => __( 'Producer Order', 'sage' ),
+    'archives'              => __( 'Item Archives', 'sage' ),
+    'parent_item_colon'     => __( 'Parent Item:', 'sage' ),
+    'all_items'             => __( 'All Items', 'sage' ),
+    'add_new_item'          => __( 'Add New Item', 'sage' ),
+    'add_new'               => __( 'Add New', 'sage' ),
+    'new_item'              => __( 'New Item', 'sage' ),
+    'edit_item'             => __( 'Edit Item', 'sage' ),
+    'update_item'           => __( 'Update Item', 'sage' ),
+    'view_item'             => __( 'View Item', 'sage' ),
+    'search_items'          => __( 'Search Item', 'sage' ),
+    'not_found'             => __( 'Not found', 'sage' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'sage' ),
+    'featured_image'        => __( 'Featured Image', 'sage' ),
+    'set_featured_image'    => __( 'Set featured image', 'sage' ),
+    'remove_featured_image' => __( 'Remove featured image', 'sage' ),
+    'use_featured_image'    => __( 'Use as featured image', 'sage' ),
+    'insert_into_item'      => __( 'Insert into item', 'sage' ),
+    'uploaded_to_this_item' => __( 'Uploaded to this item', 'sage' ),
+    'items_list'            => __( 'Items list', 'sage' ),
+    'items_list_navigation' => __( 'Items list navigation', 'sage' ),
+    'filter_items_list'     => __( 'Filter items list', 'sage' ),
+  );
+  $args = array(
+    'label'                 => __( 'Producer Order', 'sage' ),
+    'description'           => __( 'Producer Order', 'sage' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title', 'author', 'revisions', 'custom-fields', ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'show_in_admin_bar'     => false,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => false,   
+    'exclude_from_search'   => true,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'post',
+  );
+  register_post_type( 'producer_orders', $args );
+
+}
+//add_action( 'init', __NAMESPACE__ . '\\init_producer_orders_ct', 0 );
+
+/** Step 2 (from text above). */
+add_action( 'admin_menu', __NAMESPACE__ . '\\my_plugin_menu' );
+
+/** Step 1. */
+function my_plugin_menu() {
+  add_menu_page( 'Ordini Produttori', 'Ordini Produttori', 'manage_options', 'producer_orders', __NAMESPACE__ . '\\producer_orders_screen_callback' );
+}
+
+/** Step 3. */
+function producer_orders_screen_callback() {
+  if ( !current_user_can( 'manage_options' ) )  {
+    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+  }
+$entries = GFAPI::get_entries( 6 );
+var_dump($entries[0]);
+  echo '<div class="wrap">';
+  echo '<p>Here is where the form would go if I actually had options.</p>';
+  echo '</div>';
 }
