@@ -63,6 +63,17 @@
     },
     'um_page_account':{
       init:function(){
+        
+        $('.um-account-main #gform_submit_button_6').on('click', function (event) {
+          event.preventDefault();
+          $('#gform_6 .gform_fields').replaceWith($('.um-account-main .gform_fields').clone())
+          $('#gform_6').submit();
+        });
+        $('#gform_6').on('submit', function (event) {
+            $('.gforms_confirmation_message').remove();
+        })
+
+
         if($('.gform_wrapper').length){
         $('.gfield.hidden').hide();
 
@@ -92,7 +103,7 @@
         });
 
         function disable_option(){
-          var rows=$('.gfield_list_group');
+          var rows=$('.um-account-tab .gfield_list_group');
           var options=rows.find('option');
           var selected=[];
           var disabled=[];
