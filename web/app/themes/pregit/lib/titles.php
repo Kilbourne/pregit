@@ -25,5 +25,7 @@ function title() {
 
 function hidden(){
   if (is_search()) return '';
+  
+  if(get_field('show_title',get_the_id())) return '';
   return ' visually-hidden ';
 }
