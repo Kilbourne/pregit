@@ -40,12 +40,16 @@ function sk_wcmenucart() {
     }
     elseif (!is_user_logged_in() ) {
       echo '<div class="account-link"><div><a href="'.get_permalink($UM_plinks['login']). '">'.__('Accedi', 'sage' ).' </a> | <a href="'.get_permalink($UM_plinks['register']). '?action=register">'.__('Registrati', 'sage' ).' </a></div></div>';
-    } ?>
+    } 
+    $query = isset( $_GET['searchwpquery'] ) ? sanitize_text_field( $_GET['searchwpquery'] ) : '';
+?>
     <div class="cart-icon-container"> <?php echo sk_wcmenucart(); ?></div> 
-    <form action="<?php echo get_home_url(); ?>" id="responsive_menu_pro_search" method="get" role="search">
+    <form action="<?php echo get_permalink( 922 ); ?>" id="responsive_menu_pro_search" method="get" role="search">
      <i class="fa fa-search"></i>
-            <input type="search" name="s" value="" placeholder="<?php _e( 'Cerca', 'responsive-menu-pro' ); ?>" id="responsive_menu_pro_search_input">            
+            <input type="search" name="searchwpquery" value="<?php echo esc_attr( $query ); ?>" placeholder="<?php _e( 'Cerca', 'responsive-menu-pro' ); ?>" id="responsive_menu_pro_search_input">            
         </form>
+        
+
     </span></div>
     <div class="container">
       <div class="logo"><a href="<?php echo get_home_url(); ?> "><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/pregit_logo.svg" alt="" class="logo-img"></a></div>

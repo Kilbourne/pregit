@@ -12,3 +12,9 @@
 <?php endwhile; ?>
 
 <?php the_posts_navigation(); ?>
+
+
+
+     
+
+    

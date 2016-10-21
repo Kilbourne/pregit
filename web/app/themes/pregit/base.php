@@ -7,8 +7,10 @@ use Roots\Sage\Wrapper;
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
-  <?php get_template_part('templates/head'); ?>
-  <body <?php body_class(); ?>>
+  <?php get_template_part('templates/head'); 
+$title=get_field('show_title',get_the_id())?'page_title':'';
+  ?>
+  <body <?php body_class($title); ?>>
     <!--[if IE]>
       <div class="alert alert-warning">
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
