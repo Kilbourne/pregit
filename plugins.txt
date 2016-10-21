@@ -1,32 +1,34 @@
-!security
-!multilanguage
-seo
+security
 
 FRONT ASSETT
 divi
 gf
 resp-menu
 um
+wpml
 wc
 wccatalog
 
 Option
-admincolumns
-acf
-error_log
-favicon
-gf
-feed
-spam
-um
-wc
-wp-admin-ui
-wp-hammer
-updraft
-wp-retina
-wc-catalog
+autodescription
+backupbuddy
+broken-link-checker
+error-log-monitor
+favicon-by-realfavicongenerator
+global-meta-box-order
+gravityforms
+postman-smtp
+sitecondor-seo
+sitepress-multilingual-cms
+ultimate-member
+wp-admin-ui-customize
+wp-retina-2x
 wp-rocket
-smtp
+wp-serverinfo
+wp-spamshield
+wp-sweep
+xml-sitemap-feed
+xslt
 
 Woocommerce
 Shipping
