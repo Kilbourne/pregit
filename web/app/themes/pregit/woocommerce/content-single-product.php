@@ -36,6 +36,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 	 global $post;
 	 $post_id=$post->ID;
+	 $p_cat = array_filter(get_the_terms( $post_id, 'product_cat' ),function($el){
+	 		return $el->parent === 0;
+	 })[0]->slug;
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -75,12 +78,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  <div class="second-col">
    <div class="first-row-container">
     <div class="tabella-attributi">
- 		<p class="riga-attributo"><span class="titolo"><?php _e('Denominazione','sage') ?>  </span><span class="attributo"><?php echo get_field( 'denominazione', $post_id  ); ?></span></p>
- 		 <p class="riga-attributo"><span class="titolo"><?php _e('Classificazione','sage') ?>  </span><span class="attributo"><?php echo get_field( 'classificazione', $post_id  ); ?></span></p>
- 		 <p class="riga-attributo"><span class="titolo"><?php _e('Alcol Vol. %','sage') ?>  </span><span class="attributo"><?php echo get_field( 'alcol', $post_id  ); ?></span></p>
- 		 <p class="riga-attributo"><span class="titolo"><?php _e('Annata','sage') ?>  </span><span class="attributo"><?php echo get_field( 'annata', $post_id  ); ?></span></p>
- 		 <p class="riga-attributo"><span class="titolo"><?php _e('Produttore','sage') ?>  </span><span class="attributo"><?php echo get_field( 'produttore2', $post_id  ); ?></span></p> 
+    	<?php 
+    		$b_att = ['denominazione','classificazione','alcol','annata'];
+    		$c_att = ['provenienza'];
+    		$arr_att = $p_cat === 'bevande' ? $b_att : $c_att ;
+    		foreach ($arr_att as $key => $value) {
+    			$field = get_field_object($value);
+    			echo '<p class="riga-attributo"><span class="titolo">'. __($field['label'],'sage') . '</span><span class="attributo">'. $field['value'].'</span></p>';
+    		}
+    		if($producer_terms) { 
+    	 ?> 		
+ 		 <p class="riga-attributo"><span class="titolo"><?php _e('Produttore','sage') ?>  </span><span class="attributo"><?php echo get_term( $term_id, 'producer' )->name  ?></span></p> 
 <?php 
+}
 global $product;
 if($product->is_type( 'variable' )){
 $get_variations = sizeof( $product->get_children() ) <= apply_filters( 'woocommerce_ajax_variation_threshold', 30, $product );
@@ -113,24 +123,35 @@ $get_variations = sizeof( $product->get_children() ) <= apply_filters( 'woocomme
  	<?php do_action( 'woocommerce_single_product_summary' );
 ?>	
  	</div>
- 	
+ 	<?php  		if( $p_cat !== 'bevande'){
+ 			echo '<div class="product-notes attributo-espanso-content">'.get_field( 'note', $post_id  ).'</div>';
+ 		} ?>
    </div>
  	<div class="attributi-espansi">
+ 	<?php 
+ 		$b_att = ['caratteristiche_organolettiche','abbinamenti','temperatura_di_servizio','vinificazione',];
+    		$c_att = ['descrizione_prodotto','allergeni','utilizzo_e_abbinamento','processo_produttivo',];
+    		$arr_att = $p_cat === 'bevande' ? $b_att : $c_att ;
+    		$obj_arr = array_map(function($el){
+    			$field = get_field_object($el);
+    			return [ "label"=>$field['label'], "value" => $field['value'] ];
+    		},$arr_att);    		
+ 	 ?>
  	 	<div class="prima-riga">
  	 		<div class="colonna-left">
- 	 			<div class="organolettiche"><h4 class="attributo-espanso-title"><?php _e('CARATTERISTICHE ORGANOLETTICHE','sage'); ?> </h4>
- 	 			<div class="attributo-espanso-content"><?php echo get_field( 'caratteristiche_organolettiche', $post_id  );?></div> </div>
+ 	 			<div class="organolettiche"><h4 class="attributo-espanso-title"><?php _e($obj_arr[0]['label'],'sage'); ?> </h4>
+ 	 			<div class="attributo-espanso-content"><?php echo $obj_arr[0]['value'];?></div> </div>
  	 		</div>
  	 		<div class="colonna-right">
- 	 			<div class="abbinamenti"><h4 class="attributo-espanso-title"><?php _e('ABBINAMENTI','sage'); ?> </h4>
- 	 			<div class="attributo-espanso-content"><?php echo get_field( 'abbinamenti', $post_id  );?></div> </div>
- 	 			<div class="temperatura"><h4 class="attributo-espanso-title"><?php _e('TEMPERATURA DI SERVIZIO °C','sage'); ?> </h4>
- 	 			<div class="attributo-espanso-content"><?php echo get_field('temperatura_di_servizio',  $post_id  );?></div> </div>
+ 	 			<div class="abbinamenti"><h4 class="attributo-espanso-title"><?php _e($obj_arr[1]['label'],'sage'); ?> </h4>
+ 	 			<div class="attributo-espanso-content"><?php echo $obj_arr[1]['value'];?></div> </div>
+ 	 			<div class="temperatura"><h4 class="attributo-espanso-title"><?php _e($obj_arr[2]['label'],'sage'); ?> </h4>
+ 	 			<div class="attributo-espanso-content"><?php echo $obj_arr[2]['value'];?></div> </div>
  	 		</div>
  	 	</div>
  	 	<div class="secondariga">
- 	 		<div class="vinificazione"><h4 class="attributo-espanso-title"><?php _e('VINIFICAZIONE','sage'); ?> </h4>
- 	 		<div class="attributo-espanso-content"><?php echo get_field('vinificazione',  $post_id  );?></div> </div>
+ 	 		<div class="vinificazione"><h4 class="attributo-espanso-title"><?php _e($obj_arr[3]['label'],'sage'); ?> </h4>
+ 	 		<div class="attributo-espanso-content"><?php echo $obj_arr[3]['value'];?></div> </div>
  	 	</div>
  	 </div> 
  </div> 
