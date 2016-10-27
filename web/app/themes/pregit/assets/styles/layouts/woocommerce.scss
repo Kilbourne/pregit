@@ -13,7 +13,7 @@
 		float:left;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-between;		
 		text-align: center;
 		padding: 0 10%;
 		margin-bottom: 4rem;
@@ -40,14 +40,15 @@
 		}
 	}
 	.first-row-container{
-		display: flex;		
+		display: flex;	
+		flex-wrap: wrap;
 		margin-bottom: 2rem;
 		@include media-query(palm){
 			flex-wrap:wrap;
 			margin-bottom:0;
 		}
 	}
-	.images{ margin:0 auto; }
+	.images{ margin:0 auto 1rem; }
 	.produttore-link{
 	    background: #efefef;
 	    padding: .5rem 1.5rem;
@@ -188,11 +189,15 @@
 	}
 	.attributo-espanso-content{
 		background:transparentize(#86754d, 0.9);
-		padding: 0 3%;
+		padding: 0 1rem;
 		p{ 
 			margin:0;
-			padding: 0.5rem 0 7.5%;;
+			padding: 0.5rem 0 1.5rem;
 			line-height: 1.6;
+		}
+		&.product-notes{
+			background: #fff;
+			p:last-of-type{ padding-bottom: 0;}
 		}
 	}
 	.organolettiche strong{ font-weight: 500; }
