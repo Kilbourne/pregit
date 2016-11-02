@@ -36,9 +36,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 	 global $post;
 	 $post_id=$post->ID;
-	 $p_cat = array_filter(get_the_terms( $post_id, 'product_cat' ),function($el){
+	 
+	 $p_cat = array_values(array_map (function($v){ return $v->slug; },array_filter(get_the_terms( $post_id, 'product_cat' ),function($el){
 	 		return $el->parent === 0;
-	 })[0]->slug;
+	 })))[0];	 
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -138,21 +139,35 @@ $get_variations = sizeof( $product->get_children() ) <= apply_filters( 'woocomme
     		},$arr_att);    		
  	 ?>
  	 	<div class="prima-riga">
+ 	 		<?php if($obj_arr[0]['value'] && $obj_arr[0]['value'] !== ''){ ?>
  	 		<div class="colonna-left">
+ 	 		
  	 			<div class="organolettiche"><h4 class="attributo-espanso-title"><?php _e($obj_arr[0]['label'],'sage'); ?> </h4>
  	 			<div class="attributo-espanso-content"><?php echo $obj_arr[0]['value'];?></div> </div>
+ 	 			
  	 		</div>
+ 	 		<?php } ?>
+ 	 		<?php if(($obj_arr[1]['value'] && $obj_arr[1]['value'] !== '' ) || ($obj_arr[2]['value'] && $obj_arr[2]['value'] !== '') ) { ?>
  	 		<div class="colonna-right">
+				<?php if($obj_arr[1]['value'] && $obj_arr[1]['value'] !== ''){ ?>
  	 			<div class="abbinamenti"><h4 class="attributo-espanso-title"><?php _e($obj_arr[1]['label'],'sage'); ?> </h4>
  	 			<div class="attributo-espanso-content"><?php echo $obj_arr[1]['value'];?></div> </div>
+<?php } ?>
+<?php if($obj_arr[2]['value'] && $obj_arr[2]['value'] !== ''){ ?>
  	 			<div class="temperatura"><h4 class="attributo-espanso-title"><?php _e($obj_arr[2]['label'],'sage'); ?> </h4>
  	 			<div class="attributo-espanso-content"><?php echo $obj_arr[2]['value'];?></div> </div>
+<?php } ?>
  	 		</div>
+ 	 		<?php } ?>
  	 	</div>
+ 	 	<?php if($obj_arr[3]['value'] && $obj_arr[3]['value'] !== ''){ ?>
  	 	<div class="secondariga">
+
  	 		<div class="vinificazione"><h4 class="attributo-espanso-title"><?php _e($obj_arr[3]['label'],'sage'); ?> </h4>
  	 		<div class="attributo-espanso-content"><?php echo $obj_arr[3]['value'];?></div> </div>
+
  	 	</div>
+ 	 	<?php } ?>
  	 </div> 
  </div> 
  <section class="product-form">

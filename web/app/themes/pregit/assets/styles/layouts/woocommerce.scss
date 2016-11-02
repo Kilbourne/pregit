@@ -163,11 +163,12 @@
 	    justify-content: space-between;	    
 	}
 	.colonna-left{
-		margin-right: 1rem;
+		
 		@media(max-width:650px){			
 			margin-right: 0rem;
 		}
 	}
+	.colonna-left+.colonna-right{margin-left: 1rem;}
 	.colonna-right{
 		display:flex;
 		flex-direction:column;
@@ -200,7 +201,13 @@
 			p:last-of-type{ padding-bottom: 0;}
 		}
 	}
-	.organolettiche strong{ font-weight: 500; }
+	.organolettiche {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		.attributo-espanso-content{ flex-grow:2;}
+		strong{ font-weight: 500; }
+	}
 	.product-form{
 		
 		clear:both;
