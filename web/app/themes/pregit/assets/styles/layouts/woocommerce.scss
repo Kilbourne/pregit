@@ -172,7 +172,8 @@
 	.colonna-right{
 		display:flex;
 		flex-direction:column;
-		justify-content:space-between;		
+		justify-content:space-between;	
+		flex-grow: 1;	
 	}
 	@media(max-width:650px){
 		.colonna-left,.colonna-right{
