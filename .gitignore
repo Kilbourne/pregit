@@ -30,3 +30,4 @@ node_modules
 bin
 .vagrant
 .htaccess
+web/app/themes/pregit/assets/styles/components/_fonts.scss
