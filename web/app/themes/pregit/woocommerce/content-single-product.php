@@ -34,15 +34,10 @@ if (post_password_required()) {
     echo get_the_password_form();
     return;
 }
-global $post;
-$post_id = $post->ID;
-
-$p_cat = array_values(array_map(function ($v) {return $v->slug;}, array_filter(get_the_terms($post_id, 'product_cat'), function ($el) {
-    return $el->parent === 0;
-})))[0];
+$p_cat = get_field('tipo');
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID();?>" <?php post_class();?>>
+<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID();?>" <?php post_class($p_cat);?>>
 <?php wc_get_template('single-product/title.php');?>
 <div class="first-col">
   <?php
@@ -76,12 +71,12 @@ if (get_field('scheda_prodotto', get_the_id())) {
   <?php }?>
 </div>
  <div class="second-col">
-   <div class="first-row-container">
+   <div class="first-row-container" style="<?php if ($p_cat !== 'bevanda' && get_field('note')) {?> flex-wrap: wrap; <?php }?>">
     <div class="tabella-attributi">
       <?php
 $b_att   = ['denominazione', 'classificazione', 'alcol', 'annata'];
 $c_att   = ['provenienza'];
-$arr_att = $p_cat === 'bevande' ? $b_att : $c_att;
+$arr_att = $p_cat === 'bevanda' ? $b_att : $c_att;
 foreach ($arr_att as $key => $value) {
     $field = get_field_object($value);
     echo '<p class="riga-attributo"><span class="titolo">' . __($field['label'], 'sage') . '</span><span class="attributo">' . $field['value'] . '</span></p>';
@@ -124,15 +119,15 @@ $selected = isset($_REQUEST['attribute_' . sanitize_title($attribute_name)]) ? w
   <?php do_action('woocommerce_single_product_summary');
 ?>
   </div>
-  <?php if ($p_cat !== 'bevande') {
-    echo '<div class="product-notes attributo-espanso-content">' . get_field('note', $post_id) . '</div>';
+  <?php if ($p_cat !== 'bevanda') {
+    echo '<div class="product-notes attributo-espanso-content">' . get_field('note') . '</div>';
 }?>
    </div>
   <div class="attributi-espansi">
   <?php
 $b_att   = ['caratteristiche_organolettiche', 'abbinamenti', 'temperatura_di_servizio', 'vinificazione'];
 $c_att   = ['descrizione_prodotto', 'allergeni', 'utilizzo_e_abbinamento', 'processo_produttivo'];
-$arr_att = $p_cat === 'bevande' ? $b_att : $c_att;
+$arr_att = $p_cat === 'bevanda' ? $b_att : $c_att;
 $obj_arr = array_map(function ($el) {
     $field = get_field_object($el);
     return ["label" => $field['label'], "value" => $field['value']];

@@ -1,3 +1,12 @@
+.woocommerce div.product.cibo {
+    .temperatura {
+        height: 100%;
+        .attributo-espanso-content {
+            height: 100%;
+        }
+    }
+}
+
 .woocommerce div.product {
     overflow: hidden;
     .product_title {
@@ -30,7 +39,7 @@
         @include media-query(palm) {
             width: 100%;
             max-width: 500px;
-            margin: 0 auto 4rem;
+            margin: 0 auto 1rem;
             float: none;
             .images {
                 max-width: 100px;
@@ -50,11 +59,11 @@
         margin-bottom: 4rem;
         @include media-query(palm) {
             width: 100%;
+            margin-bottom: 1.5rem;
         }
     }
     .first-row-container {
         display: flex;
-        flex-wrap: wrap;
         margin-bottom: 2rem;
         @include media-query(palm) {
             flex-wrap: wrap;
@@ -114,7 +123,7 @@
         text-align: right;
         @include media-query(palm) {
             text-align: center;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1rem;
             .cart {
                 display: inline-block;
                 vertical-align: middle;
@@ -175,8 +184,10 @@
     }
     .prima-riga {
         display: flex;
-        margin-bottom: 1.5rem;
-        @media(max-width: 650px) {
+        @include media-query(lap-and-up) {
+            margin-bottom: 1.5rem;
+        }
+        @include media-query(palm) {
             flex-wrap: wrap;
         }
     }
@@ -186,12 +197,15 @@
         justify-content: space-between;
     }
     .colonna-left {
-        @media(max-width: 650px) {
+        display: flex;
+        @include media-query(palm) {
             margin-right: 0rem;
         }
     }
-    .colonna-left+.colonna-right {
-        margin-left: 1rem;
+    @include media-query(lap-and-up) {
+        .colonna-left+.colonna-right {
+            margin-left: 1rem;
+        }
     }
     .colonna-right {
         display: flex;
@@ -199,9 +213,9 @@
         justify-content: space-between;
         flex-grow: 1;
     }
-    @media(max-width:650px) {
-        .colonna-left,
-        .colonna-right {
+    .colonna-left,
+    .colonna-right {
+        @include media-query(palm) {
             width: 100%;
             >div {
                 margin-bottom: 1.5rem;
@@ -226,15 +240,21 @@
         }
         &.product-notes {
             background: #fff;
+            p:first-of-type {
+                padding-top: 0;
+            }
             p:last-of-type {
                 padding-bottom: 0;
+            }
+            @include media-query(palm) {
+                margin-bottom: 1rem;
             }
         }
     }
     .organolettiche {
-        height: 100%;
         display: flex;
         flex-direction: column;
+        width: 100%;
         .attributo-espanso-content {
             flex-grow: 2;
         }
@@ -297,7 +317,7 @@
         float: left;
         padding: 0;
         clear: none;
-        @media(max-width: 650px) {
+        @include media-query(palm) {
             width: 100%;
             float: none;
         }
@@ -305,7 +325,7 @@
     .gform_wrapper .top_label div.ginput_container {
         float: left;
         width: 90%;
-        @media(max-width: 650px) {
+        @include media-query(palm) {
             width: 100%;
             float: none;
             padding: 0 2%;

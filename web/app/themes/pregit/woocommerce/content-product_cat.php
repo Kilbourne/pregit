@@ -16,42 +16,47 @@
  * @version 2.6.1
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (!defined('ABSPATH')) {
+    exit;
 }
 ?>
-<li <?php wc_product_cat_class( '', $category ); ?>>
-	<?php
-	/**
-	 * woocommerce_before_subcategory hook.
-	 *
-	 * @hooked woocommerce_template_loop_category_link_open - 10
-	 */
-	do_action( 'woocommerce_before_subcategory', $category );
+<li <?php wc_product_cat_class('', $category);?>>
+  <?php
+/**
+ * woocommerce_before_subcategory hook.
+ *
+ * @hooked woocommerce_template_yloop_category_link_open - 10
+ */
+//do_action('woocommerce_before_subcategory', $category);
 
-	/**
-	 * woocommerce_before_subcategory_title hook.
-	 *
-	 * @hooked woocommerce_subcategory_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_subcategory_title', $category );
+/**
+ * woocommerce_before_subcategory_title hook.
+ *
+ * @hooked woocommerce_subcategory_thumbnail - 10
+ */
+do_action('woocommerce_before_subcategory_title', $category);
 
-	/**
-	 * woocommerce_shop_loop_subcategory_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_category_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
+/**
+ * woocommerce_shop_loop_subcategory_title hook.
+ *
+ * @hooked woocommerce_template_loop_category_title - 10
+ */
+do_action('woocommerce_shop_loop_subcategory_title', $category);
 
-	/**
-	 * woocommerce_after_subcategory_title hook.
-	 */
-	do_action( 'woocommerce_after_subcategory_title', $category );
-
-	/**
-	 * woocommerce_after_subcategory hook.
-	 *
-	 * @hooked woocommerce_template_loop_category_link_close - 10
-	 */
-	do_action( 'woocommerce_after_subcategory', $category ); ?>
+/**
+ * woocommerce_after_subcategory_title hook.
+ */
+do_action('woocommerce_after_subcategory_title', $category);
+echo '<div class="cat_item_mask">';
+echo '<a class="woocommerce-LoopCat-link" href="' . get_term_link($category, 'product_cat') . '">';
+_e('Scopri');
+//do_action( 'woocommerce_after_shop_loop_item_title' );
+do_action('woocommerce_after_subcategory', $category);
+echo '</div>';
+/**
+ * woocommerce_after_subcategory hook.
+ *
+ * @hooked woocommerce_template_loop_category_link_close - 10
+ */
+//do_action('woocommerce_after_subcategory', $category);?>
 </li>

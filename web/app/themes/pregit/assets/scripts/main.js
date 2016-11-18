@@ -38,6 +38,25 @@
         },
         'single_product': {
             init: function() {
+                if ($('.cibo .temperatura').length) {
+                    var adjustTemperaturaHeight = function() {
+                        var adjusted = false;
+                        if ($(window).width() >= 800) {
+                            $('.temperatura .attributo-espanso-content').height(function() {
+                                $(this).height(0);
+                                return $(this).parent().height() - $('.temperatura .attributo-espanso-title').height();
+                            });
+                            adjusted = false;
+                        } else {
+                            if (!adjusted) $('.temperatura .attributo-espanso-content').height('auto');
+                            adjusted = true;
+                        }
+
+                    };
+                    adjustTemperaturaHeight();
+                    $(window).resize(adjustTemperaturaHeight);
+                }
+
                 $('.tabella-attributi .reset_variations').click(function(event) {
                     event.preventDefault();
                     $('.tabella-attributi select').val('').change();
