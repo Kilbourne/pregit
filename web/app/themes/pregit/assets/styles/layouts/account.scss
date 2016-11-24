@@ -1,8 +1,29 @@
 .main>.um {
     &.um-login,
-    &.um-register,
     &.um-password {
         max-width: 560px;
+    }
+    &.um-register {
+        max-width: none;
+        .um-field {
+            width: 100%;
+            @include media-query(lap-and-up) {
+                width: 48%;
+            }
+            display: inline-block;
+            margin: 0 1%;
+            &:not(.um-field-divider):nth-last-of-type(-n+2) {
+                width: 100%;
+            }
+        }
+        .um-field-divider,
+        .um-row>* {
+            width: 100%;
+        }
+        .um-field-divider {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
     }
 }
 

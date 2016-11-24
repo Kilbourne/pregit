@@ -6,6 +6,7 @@
     }
     border-bottom: 8px solid #86754d;
     position:relative;
+    margin-bottom: 3.25rem;
     .first-line {
         font-size: .8rem;
         margin: 0 1rem 0;
@@ -26,6 +27,8 @@
     }
     #responsive_menu_pro_button {
         right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
         &.responsive_menu_pro_admin_bar_showing {
             margin-top: 0;
         }
@@ -39,7 +42,7 @@
         clear: both;
         font-size: 1rem;
         position: relative;
-        margin: -10px 4rem .75rem;
+        margin: -10px auto .75rem;
         .claim {
             color: #86754d;
             font-weight: 300;
@@ -49,26 +52,21 @@
             font-size: 1.67rem;
             word-spacing: -1px;
         }
-        .logo {
-            float: left;
-            position: absolute;
+        .nav .logo {
+            position: relative;
             z-index: 10;
-            max-width: 33%;
-            top: -14px;
-            >a>img {
-                width: 100%;
-            }
+            list-style: none;
+            margin-top: -111px;
+            top: 80px;
         }
     }
 }
 
 .nav-container {
-    margin-left: 200px;
     margin-top: 10px;
 }
 
 .nav-primary {
-    max-width: 800px;
     .nav {
         margin: 0;
         margin-left: 1rem;
@@ -76,6 +74,8 @@
         padding: 0;
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
+        padding: 0 5%;
     }
     .menu-item {
         display: inline-block;
@@ -126,10 +126,6 @@
     }
 }
 
-#responsive_menu_pro_button {
-    z-index: 9998;
-}
-
 @media(max-width: 26.875em) {
     //.claim{ margin-top :0;}
 }
@@ -138,12 +134,6 @@
     //.banner .container .claim{ display:none; margin:0;}
     //.banner .container .logo{ position:static; margin: 0 auto; float:none;}
     //.banner .container{ min-height: 100px;}
-    .banner .container .logo {
-        float: none;
-        position: static;
-        width: 100px;
-        display: inline-block;
-    }
     .banner .nav-container {
         margin-left: 2%;
         width: calc( 98% - 153px);
@@ -153,9 +143,6 @@
 }
 
 @media(max-width: 520px) {
-    .banner .container .logo {
-        width: 60px;
-    }
     .banner .nav-container {
         margin-right: 2%;
         text-align: center;
@@ -163,13 +150,18 @@
     }
 }
 
-#responsive_menu_pro.responsive_menu_pro_admin_bar_showing {
-    padding-top: 0;
-    margin-top: 32px;
-}
-
-@media(max-width: 782px) {
-    #responsive_menu_pro.responsive_menu_pro_admin_bar_showing {
-        margin-top: 46px;
+.container >.logo {
+    float: none;
+    position: static;
+    display: inline-block;
+    z-index: 10;
+    max-width: 33%;
+    width: 60px;
+    top: -14px;
+    >a>img {
+        width: 100%;
+    }
+    @include media-query(lap-and-up) {
+        display: none !important;
     }
 }
