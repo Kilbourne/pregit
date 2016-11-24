@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7bb86c8cef7add50067c0ca58cfad35c",
+    "hash": "f0eb0b6f91d3a52288b3a2cc243bee2b",
+    "content-hash": "c7916eab3b6028cf5851bc234fffad52",
     "packages": [
         {
             "name": "composer/installers",
@@ -105,6 +106,50 @@
                 "zikula"
             ],
             "time": "2016-04-13 19:46:30"
+        },
+        {
+            "name": "composerpress/gravity-forms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-gravityforms.git",
+                "reference": "master"
+            },
+            "type": "wordpress-plugin",
+            "time": "2016-11-21 16:57:13"
+        },
+        {
+            "name": "composerpress/gravityform-entries-for-ultimate-member",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-um-gf-entries.git",
+                "reference": "master"
+            },
+            "type": "wordpress-plugin",
+            "time": "2016-11-21 16:55:55"
+        },
+        {
+            "name": "composerpress/producer-orders-admin-table",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-producers-orders-admin-table.git",
+                "reference": "master"
+            },
+            "type": "wordpress-plugin",
+            "time": "2016-11-21 16:55:17"
+        },
+        {
+            "name": "composerpress/ultimate-member-mailchimp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-um-mailchimp.git",
+                "reference": "master"
+            },
+            "type": "wordpress-plugin",
+            "time": "2016-11-21 16:56:47"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -234,6 +279,75 @@
             "time": "2016-05-08 17:14:32"
         },
         {
+            "name": "pressjitsu/wp-transients-cleaner",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pressjitsu/wp-transients-cleaner.git",
+                "reference": "35ee63a729068dcc1a8a6942288e49cadb0ecfc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pressjitsu/wp-transients-cleaner/zipball/35ee63a729068dcc1a8a6942288e49cadb0ecfc2",
+                "reference": "35ee63a729068dcc1a8a6942288e49cadb0ecfc2",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-muplugin",
+            "support": {
+                "source": "https://github.com/pressjitsu/wp-transients-cleaner/tree/master",
+                "issues": "https://github.com/pressjitsu/wp-transients-cleaner/issues"
+            },
+            "time": "2016-09-10 12:46:03"
+        },
+        {
+            "name": "roots/soil",
+            "version": "3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/soil.git",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/soil/zipball/5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
+            "homepage": "https://roots.io/plugins/soil/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2016-08-30 18:15:45"
+        },
+        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -291,6 +405,686 @@
             "time": "2016-03-01 16:27:06"
         },
         {
+            "name": "satispress/admin-columns-pro",
+            "version": "3.8.8",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/admin-columns-pro/3.8.8",
+                "reference": null,
+                "shasum": "cc135379942d3fda3819d8f77e58caad0c755986"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "AdminColumns.com",
+                    "homepage": "https://www.admincolumns.com"
+                }
+            ],
+            "description": "Customize columns on the administration screens for post(types), users and other content. Filter and sort content, and edit posts directly from the posts overview. All via an intuitive, easy-to-use drag-and-drop interface.",
+            "homepage": "https://www.admincolumns.com"
+        },
+        {
+            "name": "satispress/admin-menu-editor-pro",
+            "version": "2.4.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/admin-menu-editor-pro/2.4.2",
+                "reference": null,
+                "shasum": "16aa765201da6997519d9e1c129b0dd53f46b593"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Janis Elsts",
+                    "homepage": "http://w-shadow.com/"
+                }
+            ],
+            "description": "Lets you directly edit the WordPress admin menu. You can re-order, hide or rename existing menus, add custom menus and more.",
+            "homepage": "http://adminmenueditor.com/"
+        },
+        {
+            "name": "satispress/advanced-custom-fields-pro",
+            "version": "5.4.8",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/advanced-custom-fields-pro/5.4.8",
+                "reference": null,
+                "shasum": "556ebc84d82de78c1d36a94d563ee25c770fd8c6"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Elliot Condon",
+                    "homepage": "http://www.elliotcondon.com/"
+                }
+            ],
+            "description": "Customise WordPress with powerful, professional and intuitive fields",
+            "homepage": "https://www.advancedcustomfields.com/"
+        },
+        {
+            "name": "satispress/cac-addon-acf",
+            "version": "1.3.5.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/cac-addon-acf/1.3.5.2",
+                "reference": null,
+                "shasum": "d3c41ab60227798a5df3ae3574c2c01d66187c80"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Codepress",
+                    "homepage": "https://admincolumns.com"
+                }
+            ],
+            "description": "Show Advanced Custom Fields fields in your admin post overviews and edit them inline! ACF integration Add-on for Admin Columns."
+        },
+        {
+            "name": "satispress/cac-addon-woocommerce",
+            "version": "1.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/cac-addon-woocommerce/1.4",
+                "reference": null,
+                "shasum": "77607f89bec8ae6ba00a69800b07c2a0cc302db1"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Codepress",
+                    "homepage": "https://admincolumns.com"
+                }
+            ],
+            "description": "Enhance your product and order overviews with new columns, and edit products directly from the overview page. WooCommerce integration Add-on for Admin Columns Pro."
+        },
+        {
+            "name": "satispress/divi-builder",
+            "version": "1.3.10",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/divi-builder/1.3.10",
+                "reference": null,
+                "shasum": "5904d7f6e2f53b2f1ddcf999c54fc4144a46e893"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Elegant Themes",
+                    "homepage": "http://elegantthemes.com"
+                }
+            ],
+            "description": "A drag and drop page builder for any WordPress theme.",
+            "homepage": "http://elegantthemes.com"
+        },
+        {
+            "name": "satispress/enhanced-media-library-pro",
+            "version": "2.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/enhanced-media-library-pro/2.3",
+                "reference": null,
+                "shasum": "369a777d334ff67b1bfc4b8d26fe6a3bdfffae34"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "wpUXsolutions",
+                    "homepage": "http://wpUXsolutions.com"
+                }
+            ],
+            "description": "This plugin will be handy for those who need to manage a lot of media files.",
+            "homepage": "http://wpUXsolutions.com"
+        },
+        {
+            "name": "satispress/gravityforms-multilingual",
+            "version": "1.3.12",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/gravityforms-multilingual/1.3.12",
+                "reference": null,
+                "shasum": "d4c431739584d8a1e9479712010691acffeb026a"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Add multilingual support for Gravity Forms | Documentation | WPML 3.5.2 release notes",
+            "homepage": "http://wpml.org/documentation/related-projects/gravity-forms-multilingual/"
+        },
+        {
+            "name": "satispress/gravityformsmailchimp",
+            "version": "3.7.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/gravityformsmailchimp/3.7.3",
+                "reference": null,
+                "shasum": "22eddd9093bf0611239bd688e97dbee98ced14b4"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "rocketgenius",
+                    "homepage": "http://www.rocketgenius.com"
+                }
+            ],
+            "description": "Integrates Gravity Forms with MailChimp allowing form submissions to be automatically sent to your MailChimp account",
+            "homepage": "http://www.gravityforms.com"
+        },
+        {
+            "name": "satispress/responsive-menu-pro",
+            "version": "1.0.9",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/responsive-menu-pro/1.0.9",
+                "reference": null,
+                "shasum": "ba2ac87cb3e4caaacc7d8fa6e6b2eea69e16ea7e"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Responsive Menu",
+                    "homepage": "http://responsive.menu"
+                }
+            ],
+            "description": "Responsive Menu Pro",
+            "homepage": "http://responsive.menu"
+        },
+        {
+            "name": "satispress/searchwp",
+            "version": "2.8.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/searchwp/2.8.4",
+                "reference": null,
+                "shasum": "25cbe238d99b31c798fbba33da0b5e374450290d"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "SearchWP, LLC",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "The best WordPress search you can find",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-exclude-ui-master",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/searchwp-exclude-ui-master/1.0.1",
+                "reference": null,
+                "shasum": "cf454c529ccd2aa837f1964d96e8980b497e546f"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Add a checkbox to edit screens to add an \"Exclude from search\" checkbox",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-live-ajax-search",
+            "version": "1.1.8",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/searchwp-live-ajax-search/1.1.8",
+                "reference": null,
+                "shasum": "1d3690fb1b6d4c336bf9344184c0711cebffab2f"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Enhance your search forms with live search, powered by SearchWP (if installed)",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-term-priority-master",
+            "version": "1.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/searchwp-term-priority-master/1.1.2",
+                "reference": null,
+                "shasum": "2880396f251d9ef9f923c65e8f9d4c827ad7de99"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Bubbles term archive pages to the top of search results for supplemental search engines",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-woocommerce-master",
+            "version": "1.1.10",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/searchwp-woocommerce-master/1.1.10",
+                "reference": null,
+                "shasum": "5779d357f41bd0b65b1e83ba412ad2a834748721"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "SearchWP, LLC",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Integrate SearchWP with WooCommerce searches and Layered Navigation",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/searchwp-wpml-master",
+            "version": "1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/searchwp-wpml-master/1.2.1",
+                "reference": null,
+                "shasum": "ff707fded544d862833b8599763ac0c2aa8a7379"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Jonathan Christopher",
+                    "homepage": "https://searchwp.com/"
+                }
+            ],
+            "description": "Integrate SearchWP with WPML",
+            "homepage": "https://searchwp.com/"
+        },
+        {
+            "name": "satispress/sitepress-multilingual-cms",
+            "version": "3.5.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/sitepress-multilingual-cms/3.5.3.1",
+                "reference": null,
+                "shasum": "b62424a8944f0b636e8eb3ec781d8b7416c814df"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "WPML Multilingual CMS | Documentation | WPML 3.5.3.1 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/um-woocommerce",
+            "version": "1.0.9",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/um-woocommerce/1.0.9",
+                "reference": null,
+                "shasum": "9d35fa514d88ccd722df7ec08c978d7bf6e61d1a"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Ultimate Member",
+                    "homepage": "http://ultimatemember.com/"
+                }
+            ],
+            "description": "Integrates your WooCommerce store with Ultimate Member.",
+            "homepage": "http://ultimatemember.com/"
+        },
+        {
+            "name": "satispress/updraftplus",
+            "version": "2.12.6.22",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/updraftplus/2.12.6.22",
+                "reference": null,
+                "shasum": "f9edf20e2208d21fbe39ed256a200e11abc9528d"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "UpdraftPlus.Com, DavidAnderson",
+                    "homepage": "https://updraftplus.com"
+                }
+            ],
+            "description": "Backup and restore: take backups locally, or backup to Amazon S3, Dropbox, Google Drive, Rackspace, (S)FTP, WebDAV & email, on automatic schedules.",
+            "homepage": "https://updraftplus.com"
+        },
+        {
+            "name": "satispress/woocommerce-google-analytics-pro",
+            "version": "1.1.5",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/woocommerce-google-analytics-pro/1.1.5",
+                "reference": null,
+                "shasum": "c2397bade84fd87ca8523b8062034c0d62846075"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "WooThemes / SkyVerge",
+                    "homepage": "http://www.skyverge.com"
+                }
+            ],
+            "description": "Supercharge your Google Analytics tracking with enhanced eCommerce tracking and custom event tracking",
+            "homepage": "http://www.woothemes.com/products/woocommerce-google-analytics-pro/"
+        },
+        {
+            "name": "satispress/woocommerce-multilingual",
+            "version": "3.8",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/woocommerce-multilingual/3.8",
+                "reference": null,
+                "shasum": "200634a215bb73b38196b3c76f872c04de67987a"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Allows running fully multilingual e-Commerce sites with WooCommerce and WPML. Documentation.",
+            "homepage": "http://wpml.org/documentation/related-projects/woocommerce-multilingual/"
+        },
+        {
+            "name": "satispress/woocommerce-product-csv-import-suite",
+            "version": "1.10.12",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/woocommerce-product-csv-import-suite/1.10.12",
+                "reference": null,
+                "shasum": "a169648638d731ebc0cf0cb4c0d933c17e9d181b"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Automattic",
+                    "homepage": "https://woocommerce.com"
+                }
+            ],
+            "description": "Import and export products and variations straight from WordPress admin. Go to WooCommerce > CSV Import Suite to get started. Supports post fields, product data, custom post types, taxonomies, and images.",
+            "homepage": "https://woocommerce.com/products/product-csv-import-suite/"
+        },
+        {
+            "name": "satispress/wordpress-seo-premium",
+            "version": "3.7.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wordpress-seo-premium/3.7.1",
+                "reference": null,
+                "shasum": "235b3d197128505d4e9889299273b677209138c4"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "homepage": "https://yoast.com/"
+                }
+            ],
+            "description": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.",
+            "homepage": "https://yoast.com/wordpress/plugins/seo/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wpseoplugin"
+        },
+        {
+            "name": "satispress/wp-migrate-db-pro",
+            "version": "1.7",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wp-migrate-db-pro/1.7",
+                "reference": null,
+                "shasum": "7459b472ca6deb68bcd6f5d7f50333d68d2b53ad"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Delicious Brains",
+                    "homepage": "http://deliciousbrains.com"
+                }
+            ],
+            "description": "Export, push, and pull to migrate your WordPress databases.",
+            "homepage": "http://deliciousbrains.com/wp-migrate-db-pro/"
+        },
+        {
+            "name": "satispress/wp-migrate-db-pro-media-files",
+            "version": "1.4.6",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wp-migrate-db-pro-media-files/1.4.6",
+                "reference": null,
+                "shasum": "437bd5049abf6955fc43fe111cb95fe79219c06a"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Delicious Brains",
+                    "homepage": "http://deliciousbrains.com"
+                }
+            ],
+            "description": "An extension to WP Migrate DB Pro, allows the migration of media files.",
+            "homepage": "http://deliciousbrains.com/wp-migrate-db-pro/"
+        },
+        {
+            "name": "satispress/wp-toolbar-editor",
+            "version": "1.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wp-toolbar-editor/1.2",
+                "reference": null,
+                "shasum": "0930ced065e2da8584b316d5ee03c38a6a641fe1"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Janis Elsts",
+                    "homepage": "http://w-shadow.com/"
+                }
+            ],
+            "description": "Lets you edit the WordPress Toolbar (a.k.a. Admin Bar) - the horizontal menu at the top of your page that shows up when you're logged in. You can hide, move, rename and edit existing items, as well as create new menu items. Requires Admin Menu Editor Pro.",
+            "homepage": "http://adminmenueditor.com/"
+        },
+        {
+            "name": "satispress/wpml-media",
+            "version": "2.1.23",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpml-media/2.1.23",
+                "reference": null,
+                "shasum": "3c29b9422265a84ce8a1e8ce15a30f8735e9ba66"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Add multilingual support for Media files | Documentation | WPML 3.5.2 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/wpml-string-translation",
+            "version": "2.4.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpml-string-translation/2.4.2",
+                "reference": null,
+                "shasum": "be8c07e0f1dbb1bbc5ff53efceab91d45259586b"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Adds theme and plugins localization capabilities to WPML | Documentation | WPML 3.5.2 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/wpml-translation-management",
+            "version": "2.2.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpml-translation-management/2.2.4",
+                "reference": null,
+                "shasum": "e66f4898ff4ea88109033e2ce1e0919b36bef761"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "OnTheGoSystems",
+                    "homepage": "http://www.onthegosystems.com/"
+                }
+            ],
+            "description": "Add a complete translation process for WPML | Documentation | WPML 3.5.2 release notes",
+            "homepage": "https://wpml.org/"
+        },
+        {
+            "name": "satispress/wpseo-woocommerce",
+            "version": "3.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpseo-woocommerce/3.7.0",
+                "reference": null,
+                "shasum": "cff4399706cfacc39a5a95872c8825b6eb2cd66a"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "homepage": "https://yoast.com"
+                }
+            ],
+            "description": "This extension to WooCommerce and WordPress SEO by Yoast makes sure there's perfect communication between the two plugins.",
+            "homepage": "https://yoast.com/wordpress/plugins/yoast-woocommerce-seo/"
+        },
+        {
+            "name": "satispress/yith-woocommerce-catalog-mode-premium",
+            "version": "1.4.6",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/yith-woocommerce-catalog-mode-premium/1.4.6",
+                "reference": null,
+                "shasum": "f49101afe0f22dc5454a6e4befe932a589209fa9"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "YITHEMES",
+                    "homepage": "http://yithemes.com/"
+                }
+            ],
+            "description": "YITH WooCommerce Catalog Mode allows you to disable shop functions.",
+            "homepage": "http://yithemes.com/themes/plugins/yith-woocommerce-catalog-mode/"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -339,9 +1133,1569 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "wpackagist-plugin/above-the-fold-optimization",
+            "version": "2.6.15",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/above-the-fold-optimization/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/above-the-fold-optimization.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/above-the-fold-optimization/"
+        },
+        {
+            "name": "wpackagist-plugin/admin-color-schemer",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/admin-color-schemer/",
+                "reference": "tags/1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/admin-color-schemer.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/admin-color-schemer/"
+        },
+        {
+            "name": "wpackagist-plugin/admin-post-navigation",
+            "version": "2.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/admin-post-navigation/",
+                "reference": "tags/2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/admin-post-navigation.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/admin-post-navigation/"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-excerpt",
+            "version": "4.2.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-excerpt/",
+                "reference": "tags/4.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-excerpt.4.2.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-excerpt/"
+        },
+        {
+            "name": "wpackagist-plugin/amp",
+            "version": "0.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amp/",
+                "reference": "tags/0.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amp.0.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amp/"
+        },
+        {
+            "name": "wpackagist-plugin/autodescription",
+            "version": "2.7.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autodescription/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autodescription/"
+        },
+        {
+            "name": "wpackagist-plugin/category-posts-in-custom-menu",
+            "version": "1.2.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/category-posts-in-custom-menu/",
+                "reference": "tags/1.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/category-posts-in-custom-menu.1.2.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/category-posts-in-custom-menu/"
+        },
+        {
+            "name": "wpackagist-plugin/disable-comments",
+            "version": "1.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-comments/",
+                "reference": "tags/1.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.1.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-comments/"
+        },
+        {
+            "name": "wpackagist-plugin/dom-seo-image",
+            "version": "1.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/dom-seo-image/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/dom-seo-image.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/dom-seo-image/"
+        },
+        {
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "3.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/3.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
+        },
+        {
+            "name": "wpackagist-plugin/error-log-monitor",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/error-log-monitor/",
+                "reference": "tags/1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/error-log-monitor.1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/error-log-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/facebook-open-graph-update",
+            "version": "1.6.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/facebook-open-graph-update/",
+                "reference": "tags/1.6.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/facebook-open-graph-update.1.6.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/facebook-open-graph-update/"
+        },
+        {
+            "name": "wpackagist-plugin/favicon-by-realfavicongenerator",
+            "version": "1.3.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/favicon-by-realfavicongenerator/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/favicon-by-realfavicongenerator.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/favicon-by-realfavicongenerator/"
+        },
+        {
+            "name": "wpackagist-plugin/fb-instant-articles",
+            "version": "3.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/fb-instant-articles/",
+                "reference": "tags/3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/fb-instant-articles.3.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/fb-instant-articles/"
+        },
+        {
+            "name": "wpackagist-plugin/global-meta-box-order",
+            "version": "1.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/global-meta-box-order/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/global-meta-box-order.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/global-meta-box-order/"
+        },
+        {
+            "name": "wpackagist-plugin/google-sitemap-generator",
+            "version": "4.0.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-sitemap-generator/",
+                "reference": "tags/4.0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-sitemap-generator.4.0.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/imsanity",
+            "version": "2.3.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/imsanity/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/imsanity.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/imsanity/"
+        },
+        {
+            "name": "wpackagist-plugin/menu-social-icons",
+            "version": "1.3.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/menu-social-icons/",
+                "reference": "tags/1.3.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/menu-social-icons.1.3.10.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/menu-social-icons/"
+        },
+        {
+            "name": "wpackagist-plugin/pc-robotstxt",
+            "version": "1.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/pc-robotstxt/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/pc-robotstxt.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/pc-robotstxt/"
+        },
+        {
+            "name": "wpackagist-plugin/post-types-order",
+            "version": "1.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/post-types-order/",
+                "reference": "tags/1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/post-types-order.1.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/post-types-order/"
+        },
+        {
+            "name": "wpackagist-plugin/remove-orphan-shortcodes",
+            "version": "1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/remove-orphan-shortcodes/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/remove-orphan-shortcodes.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/remove-orphan-shortcodes/"
+        },
+        {
+            "name": "wpackagist-plugin/safe-redirect-manager",
+            "version": "1.7.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-redirect-manager/",
+                "reference": "tags/1.7.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-redirect-manager.1.7.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-redirect-manager/"
+        },
+        {
+            "name": "wpackagist-plugin/safe-svg",
+            "version": "1.3.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-svg/",
+                "reference": "tags/1.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.1.3.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-svg/"
+        },
+        {
+            "name": "wpackagist-plugin/shortcode-ui",
+            "version": "0.7.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/shortcode-ui/",
+                "reference": "tags/0.7.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/shortcode-ui.0.7.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/shortcode-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/stops-core-theme-and-plugin-updates",
+            "version": "6.2.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/stops-core-theme-and-plugin-updates/",
+                "reference": "tags/6.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/stops-core-theme-and-plugin-updates.6.2.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/stops-core-theme-and-plugin-updates/"
+        },
+        {
+            "name": "wpackagist-plugin/term-management-tools",
+            "version": "1.1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/term-management-tools/",
+                "reference": "tags/1.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/term-management-tools.1.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/term-management-tools/"
+        },
+        {
+            "name": "wpackagist-plugin/transients-manager",
+            "version": "1.7.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/transients-manager/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/transients-manager.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/transients-manager/"
+        },
+        {
+            "name": "wpackagist-plugin/ultimate-member",
+            "version": "1.3.73",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ultimate-member/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ultimate-member.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ultimate-member/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "2.6.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/2.6.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.2.6.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-ajax-add-to-cart-for-variable-products",
+            "version": "1.2.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce-ajax-add-to-cart-for-variable-products/",
+                "reference": "tags/1.2.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-ajax-add-to-cart-for-variable-products.1.2.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-ajax-add-to-cart-for-variable-products/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-edit",
+            "version": "4.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-edit/",
+                "reference": "tags/4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-edit.4.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-edit/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-email-template",
+            "version": "2.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-email-template/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-email-template.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-email-template/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-performance-pack",
+            "version": "1.10.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-performance-pack/",
+                "reference": "tags/1.10.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-performance-pack.1.10.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-performance-pack/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-retina-2x",
+            "version": "4.6.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-retina-2x/",
+                "reference": "tags/4.6.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-retina-2x.4.6.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-retina-2x/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-spamshield",
+            "version": "1.9.9.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-spamshield/",
+                "reference": "tags/1.9.9.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-spamshield.1.9.9.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-spamshield/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-sweep",
+            "version": "1.0.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-sweep/",
+                "reference": "tags/1.0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-sweep.1.0.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-sweep/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-widget-disable",
+            "version": "1.6.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-widget-disable/",
+                "reference": "tags/1.6.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-widget-disable.1.6.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-widget-disable/"
+        },
+        {
+            "name": "wpackagist-plugin/xslt",
+            "version": "1.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/xslt/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/xslt.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/xslt/"
         }
     ],
     "packages-dev": [
+        {
+            "name": "bueltge/wordPress-admin-style",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bueltge/WordPress-Admin-Style.git",
+                "reference": "f1c6eb4c250d2a6262cc8fffbd4fedccb1f98e1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bueltge/WordPress-Admin-Style/zipball/f1c6eb4c250d2a6262cc8fffbd4fedccb1f98e1a",
+                "reference": "f1c6eb4c250d2a6262cc8fffbd4fedccb1f98e1a",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">5.2.4"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "GPL 3+"
+            ],
+            "authors": [
+                {
+                    "name": "Inpsyde GmbH",
+                    "homepage": "http://inpsyde.com",
+                    "email": "info@inpsyde.com",
+                    "role": "Company"
+                },
+                {
+                    "name": "Frank Bültge",
+                    "homepage": "http://bueltge.de",
+                    "email": "frank@bueltge.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Shows the WordPress admin styles on one page to help you to develop WordPress compliant",
+            "homepage": "https://github.com/bueltge/WordPress-Admin-Style",
+            "support": {
+                "source": "https://github.com/bueltge/WordPress-Admin-Style/tree/1.4.1",
+                "issues": "https://github.com/bueltge/WordPress-Admin-Style/issues"
+            },
+            "time": "2016-07-06 12:56:11"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "a795611394b3c05164fd0eb291b492b39339cba4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/a795611394b3c05164fd0eb291b492b39339cba4",
+                "reference": "a795611394b3c05164fd0eb291b492b39339cba4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "psr/log": "^1.0",
+                "symfony/process": "^2.5 || ^3.0"
+            },
+            "suggest": {
+                "symfony/process": "This is necessary to reliably check whether openssl_x509_parse is vulnerable on older php versions, but can be ignored on PHP 5.5.6+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "time": "2016-11-02 18:11:27"
+        },
+        {
+            "name": "composer/composer",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/composer.git",
+                "reference": "5465af955800fa884a36f66ff65280584988efd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/composer/zipball/5465af955800fa884a36f66ff65280584988efd0",
+                "reference": "5465af955800fa884a36f66ff65280584988efd0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "composer/semver": "^1.0",
+                "composer/spdx-licenses": "^1.0",
+                "justinrainbow/json-schema": "^1.6 || ^2.0",
+                "php": "^5.3.2 || ^7.0",
+                "psr/log": "^1.0",
+                "seld/cli-prompt": "^1.0",
+                "seld/jsonlint": "^1.4",
+                "seld/phar-utils": "^1.0",
+                "symfony/console": "^2.5 || ^3.0",
+                "symfony/filesystem": "^2.5 || ^3.0",
+                "symfony/finder": "^2.2 || ^3.0",
+                "symfony/process": "^2.1 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit-mock-objects": "^2.3 || ^3.0"
+            },
+            "suggest": {
+                "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages",
+                "ext-zip": "Enabling the zip extension allows you to unzip archives",
+                "ext-zlib": "Allow gzip compression of HTTP requests"
+            },
+            "bin": [
+                "bin/composer"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\": "src/Composer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Composer helps you declare, manage and install dependencies of PHP projects, ensuring you have the right stack everywhere.",
+            "homepage": "https://getcomposer.org/",
+            "keywords": [
+                "autoload",
+                "dependency",
+                "package"
+            ],
+            "time": "2016-11-03 16:43:15"
+        },
+        {
+            "name": "composer/semver",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/semver/zipball/c7cb9a2095a074d131b65a8a0cd294479d785573",
+                "reference": "c7cb9a2095a074d131b65a8a0cd294479d785573",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Semver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "keywords": [
+                "semantic",
+                "semver",
+                "validation",
+                "versioning"
+            ],
+            "time": "2016-08-30 16:08:34"
+        },
+        {
+            "name": "composer/spdx-licenses",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/spdx-licenses.git",
+                "reference": "96c6a07b05b716e89a44529d060bc7f5c263cb13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/96c6a07b05b716e89a44529d060bc7f5c263cb13",
+                "reference": "96c6a07b05b716e89a44529d060bc7f5c263cb13",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5 || ^5.0.5",
+                "phpunit/phpunit-mock-objects": "2.3.0 || ^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Spdx\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "SPDX licenses list and validation library.",
+            "keywords": [
+                "license",
+                "spdx",
+                "validator"
+            ],
+            "time": "2016-09-28 07:17:45"
+        },
+        {
+            "name": "gitonomy/gitlib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gitonomy/gitlib.git",
+                "reference": "9ff6537dac74b2198fa5b0c85aec026bc037cce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gitonomy/gitlib/zipball/9ff6537dac74b2198fa5b0c85aec026bc037cce5",
+                "reference": "9ff6537dac74b2198fa5b0c85aec026bc037cce5",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/process": "^2.3|^3.0"
+            },
+            "require-dev": {
+                "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Add some log"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gitonomy\\Git\\": "src/Gitonomy/Git/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Salomé",
+                    "email": "alexandre.salome@gmail.com",
+                    "homepage": "http://alexandre-salome.fr"
+                },
+                {
+                    "name": "Julien DIDIER",
+                    "email": "genzo.wm@gmail.com",
+                    "homepage": "http://www.jdidier.net"
+                }
+            ],
+            "description": "Library for accessing git",
+            "homepage": "http://gitonomy.com",
+            "time": "2016-07-30 16:15:30"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "6b2a33e6a768f96bdc2ead5600af0822eed17d67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/6b2a33e6a768f96bdc2ead5600af0822eed17d67",
+                "reference": "6b2a33e6a768f96bdc2ead5600af0822eed17d67",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpdocumentor/phpdocumentor": "~2",
+                "phpunit/phpunit": "^4.8.22"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2016-06-02 10:59:52"
+        },
+        {
+            "name": "khromov/wp-performance-profiler",
+            "version": "0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/khromov/wp-performance-profiler.git",
+                "reference": "dev-master"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/khromov/wp-performance-profiler/archive/0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0.12"
+            },
+            "type": "wordpress-muplugin"
+        },
+        {
+            "name": "manovotny/wptest",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/poststatus/wptest.git",
+                "reference": "841f3fea2991c2e5104de847da2182996962a24f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/poststatus/wptest/zipball/841f3fea2991c2e5104de847da2182996962a24f",
+                "reference": "841f3fea2991c2e5104de847da2182996962a24f",
+                "shasum": ""
+            },
+            "type": "library",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Novotny",
+                    "email": "manovotny@gmail.com",
+                    "homepage": "http://manovotny.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WP Test - The Best Tests For WordPress.",
+            "homepage": "http://wptest.io",
+            "keywords": [
+                "data",
+                "export",
+                "import",
+                "tests",
+                "unit tests",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/poststatus/wptest/tree/1.5.0",
+                "issues": "https://github.com/poststatus/wptest/issues"
+            },
+            "time": "2014-09-10 03:08:59"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "satispress/wp-all-export-pro",
+            "version": "1.4.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wp-all-export-pro/1.4.1",
+                "reference": null,
+                "shasum": "2a2c56eed1a33c5cee09d65eb6abff49075bda6d"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Soflyy",
+                    "homepage": ""
+                }
+            ],
+            "description": "Export any post type to a CSV or XML file. Edit the exported data, and then re-import it later using WP All Import.",
+            "homepage": "http://www.wpallimport.com/export/"
+        },
+        {
+            "name": "satispress/wp-all-import-pro",
+            "version": "4.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wp-all-import-pro/4.3.1",
+                "reference": null,
+                "shasum": "191f0d69d3e30e38846e5e84fd68eb1271ab3241"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Soflyy",
+                    "homepage": ""
+                }
+            ],
+            "description": "The most powerful solution for importing XML and CSV files to WordPress. Import to Posts, Pages, and Custom Post Types. Support for imports that run on a schedule, ability to update existing imports, and much more.",
+            "homepage": "http://www.wpallimport.com/"
+        },
+        {
+            "name": "satispress/wp-migrate-db-pro-cli",
+            "version": "1.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wp-migrate-db-pro-cli/1.3",
+                "reference": null,
+                "shasum": "ce4d96d9efa8eb742d9fdbfdda0ae2b650d3c87d"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Delicious Brains",
+                    "homepage": "http://deliciousbrains.com"
+                }
+            ],
+            "description": "An extension to WP Migrate DB Pro, allows you to execute migrations using a function call or via WP-CLI",
+            "homepage": "http://deliciousbrains.com/wp-migrate-db-pro/"
+        },
+        {
+            "name": "satispress/wpai-acf-add-on",
+            "version": "3.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpai-acf-add-on/3.1.0",
+                "reference": null,
+                "shasum": "7b0feea003c154f7226e129195f9a62a46426fd6"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Soflyy",
+                    "homepage": ""
+                }
+            ],
+            "description": "Import to Advanced Custom Fields. Requires WP All Import & Advanced Custom Fields.",
+            "homepage": "http://www.wpallimport.com/"
+        },
+        {
+            "name": "satispress/wpai-user-add-on",
+            "version": "1.0.7",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpai-user-add-on/1.0.7",
+                "reference": null,
+                "shasum": "845649ce37343ee9cdda52fff287762ffc8e1cd8"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Soflyy",
+                    "homepage": ""
+                }
+            ],
+            "description": "Import Users & User's metadata to WordPress. Requires WP All Import.",
+            "homepage": "http://www.wpallimport.com/"
+        },
+        {
+            "name": "satispress/wpai-woocommerce-add-on",
+            "version": "2.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://192.168.1.18/wordtest/satispress/wpai-woocommerce-add-on/2.3.0",
+                "reference": null,
+                "shasum": "2a596eabc5915b26520c4780c38232a010cb30f1"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Soflyy",
+                    "homepage": ""
+                }
+            ],
+            "description": "Import to WooCommerce. Adds a section to WP All Import that looks just like WooCommerce. Requires WP All Import.",
+            "homepage": "http://www.wpallimport.com/"
+        },
+        {
+            "name": "seld/cli-prompt",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/cli-prompt.git",
+                "reference": "8cbe10923cae5bcd7c5a713f6703fc4727c8c1b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/cli-prompt/zipball/8cbe10923cae5bcd7c5a713f6703fc4727c8c1b4",
+                "reference": "8cbe10923cae5bcd7c5a713f6703fc4727c8c1b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Seld\\CliPrompt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "Allows you to prompt for user input on the command line, and optionally hide the characters they type",
+            "keywords": [
+                "cli",
+                "console",
+                "hidden",
+                "input",
+                "prompt"
+            ],
+            "time": "2016-04-18 09:31:41"
+        },
+        {
+            "name": "seld/jsonlint",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/jsonlint.git",
+                "reference": "19495c181d6d53a0a13414154e52817e3b504189"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/19495c181d6d53a0a13414154e52817e3b504189",
+                "reference": "19495c181d6d53a0a13414154e52817e3b504189",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 || ^7.0"
+            },
+            "bin": [
+                "bin/jsonlint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Seld\\JsonLint\\": "src/Seld/JsonLint/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "JSON Linter",
+            "keywords": [
+                "json",
+                "linter",
+                "parser",
+                "validator"
+            ],
+            "time": "2016-11-14 17:59:58"
+        },
+        {
+            "name": "seld/phar-utils",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/phar-utils.git",
+                "reference": "7009b5139491975ef6486545a39f3e6dad5ac30a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/7009b5139491975ef6486545a39f3e6dad5ac30a",
+                "reference": "7009b5139491975ef6486545a39f3e6dad5ac30a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Seld\\PharUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "PHAR file format utilities, for when PHP phars you up",
+            "keywords": [
+                "phra"
+            ],
+            "time": "2015-10-13 18:44:15"
+        },
         {
             "name": "squizlabs/php_codesniffer",
             "version": "2.7.0",
@@ -419,11 +2773,938 @@
                 "standards"
             ],
             "time": "2016-09-01 23:53:02"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.8.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "a871ba00e0f604dceac64c56c27f99fbeaf4854e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/a871ba00e0f604dceac64c56c27f99fbeaf4854e",
+                "reference": "a871ba00e0f604dceac64c56c27f99fbeaf4854e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "symfony/debug": "~2.7,>=2.7.2|~3.0.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1|~3.0.0",
+                "symfony/process": "~2.1|~3.0.0"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-11-15 23:02:12"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "v3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/697c527acd9ea1b2d3efac34d9806bf255278b0a",
+                "reference": "697c527acd9ea1b2d3efac34d9806bf255278b0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "conflict": {
+                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+            },
+            "require-dev": {
+                "symfony/class-loader": "~2.8|~3.0",
+                "symfony/http-kernel": "~2.8|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Debug\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Debug Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-07-30 07:22:48"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v3.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "0565b61bf098cb4dc09f4f103f033138ae4f42c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/0565b61bf098cb4dc09f4f103f033138ae4f42c6",
+                "reference": "0565b61bf098cb4dc09f4f103f033138ae4f42c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-10-18 04:30:12"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v3.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "9925935bf7144f9e4d2b976905881b4face036fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/9925935bf7144f9e4d2b976905881b4face036fb",
+                "reference": "9925935bf7144f9e4d2b976905881b4face036fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-11-03 08:04:31"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2016-11-14 01:06:16"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v3.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "66de154ae86b1a07001da9fbffd620206e4faf94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/66de154ae86b1a07001da9fbffd620206e4faf94",
+                "reference": "66de154ae86b1a07001da9fbffd620206e4faf94",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-09-29 14:13:09"
+        },
+        {
+            "name": "szepeviktor/auto-login",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/szepeviktor/auto-login.git",
+                "reference": "046d1e383652893d65cdc607b2d075f65de5d0ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/szepeviktor/auto-login/zipball/046d1e383652893d65cdc607b2d075f65de5d0ab",
+                "reference": "046d1e383652893d65cdc607b2d075f65de5d0ab",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Viktor Szépe"
+                }
+            ],
+            "description": "Automatically log in to WordPress",
+            "homepage": "https://github.com/szepeviktor/auto-login",
+            "support": {
+                "source": "https://github.com/szepeviktor/auto-login/tree/master",
+                "issues": "https://github.com/szepeviktor/auto-login/issues"
+            },
+            "time": "2016-05-24 15:26:40"
+        },
+        {
+            "name": "tomjn/composerpress",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kilbourne/composerpress.git",
+                "reference": "e7b11c081b02dbc2cc78128db600ec0e99f6c7ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kilbourne/composerpress/zipball/e7b11c081b02dbc2cc78128db600ec0e99f6c7ef",
+                "reference": "e7b11c081b02dbc2cc78128db600ec0e99f6c7ef",
+                "shasum": ""
+            },
+            "require": {
+                "composer/composer": "^1.2.2",
+                "composer/installers": "~1.0",
+                "ext-pdo": "*",
+                "gitonomy/gitlib": "dev-master",
+                "php": ">=5.3",
+                "symfony/console": "^2.5"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "php/"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Tom J Nowell",
+                    "email": "contact@tomjn.com"
+                }
+            ],
+            "description": "Takes stock of a local install and generates a composer.json",
+            "support": {
+                "source": "https://github.com/Kilbourne/composerpress/tree/master"
+            },
+            "time": "2016-11-18 22:42:08"
+        },
+        {
+            "name": "wpackagist-plugin/bulk-delete",
+            "version": "5.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bulk-delete/",
+                "reference": "tags/5.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bulk-delete.5.5.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bulk-delete/"
+        },
+        {
+            "name": "wpackagist-plugin/bulk-page-creator",
+            "version": "1.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bulk-page-creator/",
+                "reference": "tags/1.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bulk-page-creator.1.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bulk-page-creator/"
+        },
+        {
+            "name": "wpackagist-plugin/custom-post-type-ui",
+            "version": "1.4.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
+                "reference": "tags/1.4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.4.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar",
+            "version": "0.8.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar/",
+                "reference": "tags/0.8.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.0.8.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar-extender",
+            "version": "0.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar-extender/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar-extender.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar-extender/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-bar-slow-actions",
+            "version": "0.8.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-bar-slow-actions/",
+                "reference": "tags/0.8.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar-slow-actions.0.8.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-bar-slow-actions/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-objects",
+            "version": "2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-objects/",
+                "reference": "tags/2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-objects.2.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-objects/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-this",
+            "version": "0.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-this/",
+                "reference": "tags/0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-this.0.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-this/"
+        },
+        {
+            "name": "wpackagist-plugin/fakerpress",
+            "version": "0.4.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/fakerpress/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/fakerpress.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/fakerpress/"
+        },
+        {
+            "name": "wpackagist-plugin/google-pagespeed-insights",
+            "version": "1.0.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-pagespeed-insights/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-pagespeed-insights.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-pagespeed-insights/"
+        },
+        {
+            "name": "wpackagist-plugin/kint-debugger",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/kint-debugger/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/kint-debugger.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/kint-debugger/"
+        },
+        {
+            "name": "wpackagist-plugin/log-deprecated-notices",
+            "version": "0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/log-deprecated-notices/",
+                "reference": "tags/0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/log-deprecated-notices.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/log-deprecated-notices/"
+        },
+        {
+            "name": "wpackagist-plugin/options-inspector",
+            "version": "2.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/options-inspector/",
+                "reference": "tags/2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/options-inspector.2.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/options-inspector/"
+        },
+        {
+            "name": "wpackagist-plugin/p3-profiler",
+            "version": "1.5.3.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/p3-profiler/",
+                "reference": "tags/1.5.3.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/p3-profiler.1.5.3.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/p3-profiler/"
+        },
+        {
+            "name": "wpackagist-plugin/piglatin",
+            "version": "0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/piglatin/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/piglatin.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/piglatin/"
+        },
+        {
+            "name": "wpackagist-plugin/plugins-garbage-collector",
+            "version": "0.10.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/plugins-garbage-collector/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/plugins-garbage-collector.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/plugins-garbage-collector/"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "2.13.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/2.13.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.13.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "2.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/2.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/rewrite-rules-inspector",
+            "version": "1.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/rewrite-rules-inspector/",
+                "reference": "tags/1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/rewrite-rules-inspector.1.2.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/rewrite-rules-inspector/"
+        },
+        {
+            "name": "wpackagist-plugin/seo-automatic-wp-core-tweaks",
+            "version": "3.9.2.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/seo-automatic-wp-core-tweaks/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/seo-automatic-wp-core-tweaks.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/seo-automatic-wp-core-tweaks/"
+        },
+        {
+            "name": "wpackagist-plugin/theme-check",
+            "version": "20160523.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/theme-check/",
+                "reference": "tags/20160523.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/theme-check.20160523.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/theme-check/"
+        },
+        {
+            "name": "wpackagist-plugin/user-role-editor",
+            "version": "4.29",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-role-editor/",
+                "reference": "tags/4.29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.29.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-role-editor/"
+        },
+        {
+            "name": "wpackagist-plugin/user-switching",
+            "version": "1.0.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-switching/",
+                "reference": "tags/1.0.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-switching.1.0.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-switching/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-crontrol",
+            "version": "1.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-crontrol/",
+                "reference": "tags/1.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-crontrol/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-inject",
+            "version": "1.15",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-inject/",
+                "reference": "tags/1.15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-inject.1.15.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-inject/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-lorem-ipsum-generator",
+            "version": "0.21",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-lorem-ipsum-generator/",
+                "reference": "tags/0.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-lorem-ipsum-generator.0.21.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-lorem-ipsum-generator/"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "composerpress/gravityform-entries-for-ultimate-member": 20,
+        "composerpress/ultimate-member-mailchimp": 20,
+        "composerpress/gravity-forms": 20,
+        "composerpress/producer-orders-admin-table": 20,
+        "pressjitsu/wp-transients-cleaner": 20,
+        "tomjn/composerpress": 20,
+        "gitonomy/gitlib": 20,
+        "szepeviktor/auto-login": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

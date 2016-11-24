@@ -1,84 +1,288 @@
 {
-  "name": "roots/bedrock",
-  "type": "project",
-  "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
-  "authors": [
-    {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
+    "name": "roots/bedrock",
+    "type": "project",
+    "license": "MIT",
+    "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+    "homepage": "https://roots.io/bedrock/",
+    "authors": [{
+        "name": "Scott Walkinshaw",
+        "email": "scott.walkinshaw@gmail.com",
+        "homepage": "https://github.com/swalkinshaw"
+    }, {
+        "name": "Ben Word",
+        "email": "ben@benword.com",
+        "homepage": "https://github.com/retlehs"
+    }],
+    "keywords": [
+        "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    ],
+    "support": {
+        "issues": "https://github.com/roots/bedrock/issues",
+        "forum": "https://discourse.roots.io/category/bedrock"
     },
-    {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
-    }
-  ],
-  "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
-  ],
-  "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
-  },
-  "config": {
-    "preferred-install": "dist"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
-  "require": {
-    "php": ">=5.6",
-    "composer/installers": "~1.0.12",
-    "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.6.1",
-    "oscarotero/env": "^1.0",
-    "roots/wp-password-bcrypt": "1.0.0",
-    "roots/soil": "3.7.1",
-    "wpackagist-plugin/transients-manager": "1.7.2",
-    "wpackagist-plugin/favicon-by-realfavicongenerator": "1.3.8",
-    "wpackagist-plugin/svg-support": "2.2.3.2",
-    "wpackagist-plugin/wp-sweep": "1.0.8",
-    "wpackagist-plugin/enable-media-replace": "3.0.4",
-    "wpackagist-plugin/imsanity": "2.3.6",
-    "wpackagist-plugin/error-log-monitor": "1.5",
-    "wpackagist-plugin/woocommerce": "2.6.4",
-    "wpackagist-plugin/disable-comments": "1.5.2",
-    "wpackagist-plugin/duplicate-post": "2.6",
-    "wpackagist-plugin/post-types-order": "1.8.9.2",
-        "wpackagist-plugin/taxonomy-terms-order": "1.4.8",
-    "wpackagist-plugin/global-meta-box-order": "1.0.3",
-    "wpackagist-plugin/term-management-tools": "1.1.4",
-    "wpackagist-plugin/parent-category-toggler": "1.3.3",
-    "wpackagist-plugin/xslt": "1.0.9",
-    "wpackagist-plugin/wp-retina-2x": "4.5.5",
-    "wpackagist-plugin/asset-queue-manager": "1.0.3",
-    "wpackagist-plugin/wp-admin-ui-customize": "1.5.10"
+    "config": {
+        "preferred-install": "dist",
+        "secure-http": false
+    },
+    "repositories": [{
+        "type": "composer",
+        "url": "https://wpackagist.org"
+    }, {
+        "type": "composer",
+        "url": "http://192.168.1.18/wordtest/satispress/"
+    }, {
+        "type": "package",
+        "package": {
+            "name": "khromov/wp-performance-profiler",
+            "version": "0.3",
+            "type": "wordpress-muplugin",
+            "dist": {
+                "url": "https://github.com/khromov/wp-performance-profiler/archive/0.3.zip",
+                "type": "zip"
+            },
+            "source": {
+                "url": "https://github.com/khromov/wp-performance-profiler.git",
+                "type": "git",
+                "reference": "dev-master"
+            },
+            "require": {
+                "composer/installers": "~1.0.12"
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "khromov/wp-request-buster",
+            "version": "1.0",
+            "type": "wordpress-plugin",
+            "dist": {
+                "url": "https://github.com/khromov/wp-request-buster/archive/1.0.zip",
+                "type": "zip"
+            },
+            "source": {
+                "url": "https://github.com/khromov/wp-request-buster.git",
+                "type": "git",
+                "reference": "dev-master"
+            },
+            "require": {
+                "composer/installers": "~1.0.12"
+            }
+        }
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/pressjitsu/wp-transients-cleaner"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/kilbourne/composerpress"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/szepeviktor/auto-login"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/poststatus/wptest"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/bueltge/wordpress-admin-style"
+    }, {
+        "type": "package",
+        "package": {
+            "name": "composerpress/gravityform-entries-for-ultimate-member",
+            "version": "dev-master",
+            "type": "wordpress-plugin",
+            "source": {
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-um-gf-entries.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "composerpress/gravity-forms",
+            "version": "dev-master",
+            "type": "wordpress-plugin",
+            "source": {
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-gravityforms.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "composerpress/producer-orders-admin-table",
+            "version": "dev-master",
+            "type": "wordpress-plugin",
+            "source": {
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-producers-orders-admin-table.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "composerpress/ultimate-member-mailchimp",
+            "version": "dev-master",
+            "type": "wordpress-plugin",
+            "source": {
+                "url": "https://vidigal@bitbucket.org/vidigal/pregit-um-mailchimp.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }],
+    "require": {
+        "php": ">=5.6",
+        "composer/installers": "~1.0.12",
+        "vlucas/phpdotenv": "^2.0.1",
+        "johnpbloch/wordpress": "4.6.1",
+        "oscarotero/env": "^1.0",
+        "roots/wp-password-bcrypt": "1.0.0",
 
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^2.5.1",
-    "wpackagist-plugin/php-compatibility-checker": "1.2.1",
-    "wpackagist-plugin/kint-debugger": "1.0.0",
-    "wpackagist-plugin/piglatin": "0.2",
-    "szepeviktor/auto-login":"dev-master"
-  },
-  "extra": {
-    "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+        "satispress/divi-builder": "*",
+        "wpackagist-plugin/ultimate-member": "*",
+        "wpackagist-plugin/woocommerce-ajax-add-to-cart-for-variable-products": "1.2.9",
+        "satispress/yith-woocommerce-catalog-mode-premium": "*",
+
+        "composerpress/gravityform-entries-for-ultimate-member": "dev-master",
+        "composerpress/ultimate-member-mailchimp": "dev-master",
+        "composerpress/gravity-forms": "dev-master",
+        "composerpress/producer-orders-admin-table": "dev-master",
+
+        "satispress/advanced-custom-fields-pro": "*",
+        "wpackagist-plugin/wp-spamshield": "*",
+        "satispress/searchwp": "*",
+        "wpackagist-plugin/woocommerce": "*",
+        "satispress/sitepress-multilingual-cms": "3.5.3.1",
+        "wpackagist-plugin/wp-email-template": "*",
+        "wpackagist-plugin/disable-comments": "*",
+        "wpackagist-plugin/advanced-excerpt": "*",
+        "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
+        "wpackagist-plugin/duplicate-post": "*",
+        "wpackagist-plugin/post-types-order": "*",
+        "satispress/enhanced-media-library-pro": "*",
+        "wpackagist-plugin/admin-post-navigation": "*",
+        "wpackagist-plugin/term-management-tools": "*",
+        "satispress/admin-columns-pro": "*",
+        "satispress/cac-addon-acf": "*",
+        "wpackagist-plugin/safe-redirect-manager": "*",
+        "satispress/responsive-menu-pro": "1.0.9",
+        "wpackagist-plugin/category-posts-in-custom-menu": "*",
+        "wpackagist-plugin/menu-social-icons": "*",
+
+        "satispress/updraftplus": "*",
+        "satispress/wp-migrate-db-pro": "*",
+        "satispress/wp-migrate-db-pro-media-files": "*",
+        "roots/soil": "*",
+        "wpackagist-plugin/transients-manager": "*",
+        "wpackagist-plugin/safe-svg": "1.3.0",
+        "wpackagist-plugin/above-the-fold-optimization": "*",
+        "wpackagist-plugin/wp-performance-pack": "*",
+        "pressjitsu/wp-transients-cleaner": "dev-master",
+        "wpackagist-plugin/remove-orphan-shortcodes": "*",
+        "wpackagist-plugin/wp-widget-disable": "*",
+        "wpackagist-plugin/wp-sweep": "*",
+        "wpackagist-plugin/error-log-monitor": "*",
+        "wpackagist-plugin/wp-retina-2x": "*",
+        "wpackagist-plugin/imsanity": "*",
+        "wpackagist-plugin/stops-core-theme-and-plugin-updates": "*",
+
+        "wpackagist-plugin/amp": "*",
+        "wpackagist-plugin/autodescription": "*",
+        "wpackagist-plugin/dom-seo-image": "*",
+        "wpackagist-plugin/facebook-open-graph-update": "*",
+        "wpackagist-plugin/fb-instant-articles": "*",
+        "wpackagist-plugin/google-sitemap-generator": "*",
+        "satispress/wordpress-seo-premium": "*",
+        "wpackagist-plugin/xslt": "*",
+        "wpackagist-plugin/pc-robotstxt": "*",
+
+        "wpackagist-plugin/global-meta-box-order": "*",
+        "wpackagist-plugin/wp-edit": "*",
+        "satispress/admin-menu-editor-pro": "*",
+        "wpackagist-plugin/admin-color-schemer": "*",
+        "satispress/wp-toolbar-editor": "*",
+        "wpackagist-plugin/shortcode-ui": "*",
+
+
+        "satispress/searchwp-exclude-ui-master": "*",
+        "satispress/searchwp-live-ajax-search": "*",
+        "satispress/searchwp-term-priority-master": "*",
+        "satispress/wpml-media": "*",
+        "satispress/wpml-string-translation": "*",
+        "satispress/wpml-translation-management": "*",
+        "satispress/gravityformsmailchimp": "*",
+        "satispress/gravityforms-multilingual": "*",
+        "satispress/searchwp-wpml-master": "*",
+        "satispress/woocommerce-multilingual": "*",
+        "satispress/cac-addon-woocommerce": "*",
+        "satispress/searchwp-woocommerce-master": "*",
+        "satispress/woocommerce-google-analytics-pro": "*",
+        "satispress/woocommerce-product-csv-import-suite": "*",
+        "satispress/wpseo-woocommerce": "*",
+        "satispress/um-woocommerce": "*"
+
+
     },
-    "wordpress-install-dir": "web/wp"
-  },
-  "scripts": {
-    "test": [
-      "vendor/bin/phpcs --ignore=web/wp/,vendor/ -n -s ."
-    ]
-  }
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.5.1",
+
+        "wpackagist-plugin/seo-automatic-wp-core-tweaks": "*",
+        "wpackagist-plugin/bulk-page-creator": "*",
+        "tomjn/composerpress": "dev-master",
+        "gitonomy/gitlib": "dev-master",
+        "wpackagist-plugin/custom-post-type-ui": "*",
+        "wpackagist-plugin/user-role-editor": "*",
+        "wpackagist-plugin/regenerate-thumbnails": "*",
+        "satispress/wp-all-import-pro": "*",
+        "satispress/wpai-woocommerce-add-on": "*",
+        "satispress/wpai-user-add-on": "*",
+        "satispress/wpai-acf-add-on": "*",
+        "satispress/wp-all-export-pro": "*",
+
+        "szepeviktor/auto-login": "dev-master",
+        "wpackagist-plugin/user-switching": "*",
+
+        "satispress/wp-migrate-db-pro-cli": "*",
+        "wpackagist-plugin/kint-debugger": "*",
+        "wpackagist-plugin/log-deprecated-notices": "*",
+        "wpackagist-plugin/piglatin": "*",
+
+        "wpackagist-plugin/google-pagespeed-insights": "*",
+        "wpackagist-plugin/wp-crontrol": "*",
+        "wpackagist-plugin/bulk-delete": "*",
+        "wpackagist-plugin/plugins-garbage-collector": "*",
+        "wpackagist-plugin/options-inspector": "*",
+        "wpackagist-plugin/rewrite-rules-inspector": "*",
+        "wpackagist-plugin/debug-objects": "*",
+        "wpackagist-plugin/debug-this": "*",
+        "wpackagist-plugin/debug-bar": "*",
+        "wpackagist-plugin/query-monitor": "*",
+
+        "wpackagist-plugin/p3-profiler": "*",
+        "khromov/wp-performance-profiler": "*",
+        "wpackagist-plugin/debug-bar-extender": "*",
+        "wpackagist-plugin/debug-bar-slow-actions": "*",
+
+        "manovotny/wptest": "*",
+        "bueltge/wordPress-admin-style": "*",
+        "wpackagist-plugin/theme-check": "*",
+        "wpackagist-plugin/fakerpress": "*",
+        "wpackagist-plugin/wp-inject": "*",
+        "wpackagist-plugin/wp-lorem-ipsum-generator": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+            "web/app/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "web/wp"
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpcs --ignore=web/wp/,vendor/ -n -s ."
+        ]
+    }
 }
