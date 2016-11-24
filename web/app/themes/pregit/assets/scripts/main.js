@@ -18,7 +18,11 @@
         // All pages
         'common': {
             init: function() {
-                // JavaScript to be fired on all pages
+                $(' .page-title.inverted').flowtype({
+                    maximum: 800,
+                    minFont: 27,
+                    fontRatio: 7
+                });
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -43,7 +47,7 @@
                         var adjusted = false;
                         if ($(window).width() >= 800) {
                             $('.temperatura .attributo-espanso-content').height(function() {
-                                $(this).height(0);
+                                $(this).height('auto');
                                 return $(this).parent().height() - $('.temperatura .attributo-espanso-title').height();
                             });
                             adjusted = false;
