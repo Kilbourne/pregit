@@ -34,7 +34,7 @@ function excerpt_more()
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
+//add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
 function conditional_mobile_menu($items, $args)
 {
     $items .= account_link_menu_item();
@@ -44,9 +44,9 @@ function account_link_menu_item()
 {
     $UM_plinks = (new \UM_Permalinks)->core;
     if (is_user_logged_in()) {
-        return '<li class="menu-item menu-account" ><a href="' . get_permalink($UM_plinks['account']) . '">' . __('Profilo', 'sage') . ' </a></li><li class="menu-item menu-logout" > <a href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Scollegati', 'sage') . '</a></li>';
+        return '<li class="responsive-menu-pro-item menu-item menu-account" ><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['account']) . '">' . __('Profilo', 'sage') . ' </a></li><li class="responsive-menu-pro-item menu-item menu-logout" > <a class="responsive-menu-pro-item-link" href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Scollegati', 'sage') . '</a></li>';
     } elseif (!is_user_logged_in()) {
-        return '<li class="menu-item menu-login" ><a href="' . get_permalink($UM_plinks['login']) . '">' . __('Area Riservata', 'sage') . ' </a></li>';
+        return '<li class="responsive-menu-pro-item menu-item menu-login" ><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['login']) . '">' . __('Area Riservata', 'sage') . ' </a></li>';
     }
 }
 add_filter('single_product_large_thumbnail_size', __NAMESPACE__ . '\\pregit_single_product_thumb_size');
@@ -260,7 +260,13 @@ function form_tab($tabs)
             'custom' => true,
         ];
     }
-
+    if ($ultimatemember->user->get_role() === 'distributore') {
+        $tabs[235]['docs'] = [
+            'icon'   => 'um-faicon-file-text-o',
+            'title'  => 'Documenti Distributore',
+            'custom' => true,
+        ];
+    }
     return $tabs;
 
 }
@@ -270,8 +276,10 @@ function form_tab($tabs)
 add_filter('um_account_content_hook_orders', __NAMESPACE__ . '\\um_account_content_hook_orders_tab');
 function um_account_content_hook_orders_tab($output)
 {
-    global $ultimatemember;
-    if ($ultimatemember->user->get_role() === 'produttore') {
+
+    $current_user = wp_get_current_user();
+
+    if (is_array($current_user->roles) && !in_array('customer', $current_user->roles)) {
         return $output;
     }
     $customer_orders = get_posts(apply_filters('woocommerce_my_account_my_orders_query', array(
@@ -306,7 +314,27 @@ function um_account_tab__mytab($info)
     echo do_shortcode('[gravityform id="6" ajax="true"]');
 
 }
+add_action('um_account_tab__docs', __NAMESPACE__ . '\\um_account_tab__docs');
+function um_account_tab__docs($info)
+{
+    $query = new \WP_Query(array(
+        'numberposts' => -1,
+        'post_type'   => 'attachment',
+        'post_status' => 'inherit',
+        'meta_key'    => 'documento_distributore',
+        'meta_value'  => true,
+    ));
 
+    if ($query->posts) {
+        ?>
+        <div class="documento-distributore-wrapper">
+        <ul class="documento-distributore-list">
+        <?php foreach ($query->posts as $key => $post) {
+            echo '<li class="documento-distributore"><span class="documento-distributore-date" >' . get_the_date('j F y', $post->ID) . '</span><a href="' . wp_get_attachment_url($post->ID) . '" class="documento-distributore-link">' . get_the_title($post->ID) . '</a></li> ';
+        }
+        ?></ul></div>   <?php
+}
+}
 add_action('um_after_account_page_load', __NAMESPACE__ . '\\insert_producer_gf');
 function insert_producer_gf()
 {
@@ -314,14 +342,14 @@ function insert_producer_gf()
 }
 
 // Register Custom Post Type
-function init_producer_orders_ct()
+function init_distributor_docs_ct()
 {
 
     $labels = array(
-        'name'                  => _x('Producer Orders', 'Post Type General Name', 'sage'),
-        'singular_name'         => _x('Producer Order', 'Post Type Singular Name', 'sage'),
-        'menu_name'             => __('Producer Orders', 'sage'),
-        'name_admin_bar'        => __('Producer Order', 'sage'),
+        'name'                  => _x('Distributor docs', 'Post Type General Name', 'sage'),
+        'singular_name'         => _x('Distributor doc', 'Post Type Singular Name', 'sage'),
+        'menu_name'             => __('Distributor docs', 'sage'),
+        'name_admin_bar'        => __('Distributor doc', 'sage'),
         'archives'              => __('Item Archives', 'sage'),
         'parent_item_colon'     => __('Parent Item:', 'sage'),
         'all_items'             => __('All Items', 'sage'),
@@ -345,10 +373,10 @@ function init_producer_orders_ct()
         'filter_items_list'     => __('Filter items list', 'sage'),
     );
     $args = array(
-        'label'               => __('Producer Order', 'sage'),
-        'description'         => __('Producer Order', 'sage'),
+        'label'               => __('Distributor doc', 'sage'),
+        'description'         => __('Distributor doc', 'sage'),
         'labels'              => $labels,
-        'supports'            => array('title', 'author', 'revisions', 'custom-fields'),
+        'supports'            => array('title', 'author', 'revisions', 'custom-fields', 'thumbnail'),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -365,7 +393,7 @@ function init_producer_orders_ct()
     register_post_type('producer_orders', $args);
 
 }
-//add_action( 'init', __NAMESPACE__ . '\\init_producer_orders_ct', 0 );
+//add_action('init', __NAMESPACE__ . '\\init_distributor_docs_ct', 0);
 
 /** Step 2 (from text above). */
 add_action('admin_menu', __NAMESPACE__ . '\\my_plugin_menu');
@@ -392,3 +420,35 @@ function producer_orders_screen_callback()
     echo '</div>';
 }
 add_filter('woocommerce_subcategory_count_html', function () {return '';});
+
+add_filter('woocommerce_product_is_on_sale', function () {
+    global $product;
+    if ($product->get_sale_price() === '') {
+        return false;
+    }
+
+});
+
+add_filter('um_account_secure_fields', function ($fields, $id) {
+    if ($id === 'general') {
+        global $ultimatemember;
+        $form = $ultimatemember->user->get_role() === 'produttore' ? 'duplicato-di-default-registration' : 'default-registration';
+        $aaa  = new \WP_Query(array(
+            'post_type'     => 'um_form',
+
+            "post_name__in" => [$form],
+            'post_status'   => array('publish'),
+        ));
+        return get_post_meta($aaa->posts[0]->ID, '_um_custom_fields')[0];
+    }
+    return $fields;
+}, 10, 2);
+
+add_filter('wp_nav_menu_menu_items', function ($items, $args) {
+
+    $items = explode("</li>", $items);
+    array_pop($items);
+    array_splice($items, 2, 0, '<li class="logo"><a href="' . get_home_url() . '"><img src="' . get_stylesheet_directory_uri() . '/dist/images/pregit_logo.svg" alt="" class="logo-img"></a>');
+    $items = implode("</li>", $items);
+    return $items;
+}, 10, 2);
