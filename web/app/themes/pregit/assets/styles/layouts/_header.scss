@@ -69,16 +69,18 @@
 .nav-primary {
     .nav {
         margin: 0;
-        margin-left: 1rem;
         text-transform: uppercase;
         padding: 0;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        padding: 0 5%;
+        padding: 0 3%;
     }
     .menu-item {
         display: inline-block;
+        flex-basis: 20%;
+        text-align: center;
+        white-space: nowrap;
     }
 }
 
@@ -86,6 +88,7 @@
     .banner {
         .container {
             margin: 14px 2% 0;
+            text-align: center;
         }
         .nav-container {
             margin-top: 0;
