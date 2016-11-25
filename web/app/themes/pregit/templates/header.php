@@ -39,7 +39,7 @@ function sk_wcmenucart()
 if (is_user_logged_in()) {
     echo '<div class="account-link"><div><a href="' . get_permalink($UM_plinks['account']) . '">' . __('Profilo', 'sage') . ' </a> | <a href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Scollegati', 'sage') . '</a></div></div>';
 } elseif (!is_user_logged_in()) {
-    echo '<div class="account-link"><div><a href="' . get_permalink($UM_plinks['login']) . '">' . __('Accedi', 'sage') . ' </a> | <a href="' . get_permalink($UM_plinks['register']) . '?action=register">' . __('Registrati', 'sage') . ' </a></div></div>';
+    echo '<div class="account-link"><div><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['login']) . '">' . __('Area Riservata', 'sage') . ' </a></div></div>';
 }
 $query = isset($_GET['searchwpquery']) ? sanitize_text_field($_GET['searchwpquery']) : '';
 ?>

@@ -38,7 +38,7 @@ $p_cat = get_field('tipo');
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID();?>" <?php post_class($p_cat);?>>
-<?php wc_get_template('single-product/title.php');?>
+
 <div class="first-col">
   <?php
 /**
@@ -71,6 +71,7 @@ if (get_field('scheda_prodotto', get_the_id())) {
   <?php }?>
 </div>
  <div class="second-col">
+    <?php wc_get_template('single-product/title.php');?>
    <div class="first-row-container" style="<?php if ($p_cat !== 'bevanda' && get_field('note')) {?> flex-wrap: wrap; <?php }?>">
     <div class="tabella-attributi">
       <?php
