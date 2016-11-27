@@ -4,7 +4,7 @@
 $root_dir = dirname(__DIR__);
 
 /** @var string Document Root */
-$webroot_dir = $root_dir . '/web';
+$webroot_dir = $root_dir . '/public_html';
 
 /**
  * Expose global env() function from oscarotero/env
@@ -76,7 +76,7 @@ ini_set('error_log', env('ERROR_PATH'));
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 define('DISALLOW_FILE_EDIT', true);
- define( 'WPMDB_LICENCE', env('WPMDB_LICENCE') );
+define('WPMDB_LICENCE', env('WPMDB_LICENCE'));
 /**
  * Bootstrap WordPress
  */
