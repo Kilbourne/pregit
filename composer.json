@@ -29,7 +29,7 @@
         "url": "https://wpackagist.org"
     }, {
         "type": "composer",
-        "url": "http://192.168.1.18/wordtest/satispress/"
+        "url": "http://www.menthalia.com/premiumpress/satispress/packages.json"
     }, {
         "type": "package",
         "package": {
@@ -215,6 +215,7 @@
         "wpackagist-plugin/global-meta-box-order": "*",
         "wpackagist-plugin/wp-edit": "*",
         "satispress/admin-menu-editor-pro": "*",
+
         "wpackagist-plugin/admin-color-schemer": "*",
         "satispress/wp-toolbar-editor": "*",
         "wpackagist-plugin/shortcode-ui": "*",

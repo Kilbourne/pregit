@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0eb0b6f91d3a52288b3a2cc243bee2b",
-    "content-hash": "c7916eab3b6028cf5851bc234fffad52",
+    "hash": "afc7d824c8986845f66c1b72bef6395b",
+    "content-hash": "1d566cf23d7224c6b24525d054483c7d",
     "packages": [
         {
             "name": "composer/installers",
@@ -152,6 +152,17 @@
             "time": "2016-11-21 16:56:47"
         },
         {
+            "name": "composerpress/wp-performance-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://vidigal@bitbucket.org/vidigal/wp-performance-pack.git",
+                "reference": "master"
+            },
+            "type": "wordpress-plugin",
+            "time": "2016-11-25 08:21:53"
+        },
+        {
             "name": "johnpbloch/wordpress",
             "version": "4.6.1",
             "source": {
@@ -235,6 +246,32 @@
                 "wordpress"
             ],
             "time": "2015-06-11 15:15:30"
+        },
+        {
+            "name": "kbjr/Git.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kbjr/Git.php.git",
+                "reference": "0d1a99625d45bccda222389bbe6135482b407782"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kbjr/Git.php/zipball/0d1a99625d45bccda222389bbe6135482b407782",
+                "reference": "0d1a99625d45bccda222389bbe6135482b407782",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Git.php"
+                ]
+            },
+            "support": {
+                "source": "https://github.com/kbjr/Git.php/tree/master",
+                "issues": "https://github.com/kbjr/Git.php/issues"
+            },
+            "time": "2015-03-31 14:10:29"
         },
         {
             "name": "oscarotero/env",
@@ -431,7 +468,7 @@
             "version": "2.4.2",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/admin-menu-editor-pro/2.4.2",
+                "url": "http://127.0.0.1/premiumpress/satispress/admin-menu-editor-pro/2.4.2",
                 "reference": null,
                 "shasum": "16aa765201da6997519d9e1c129b0dd53f46b593"
             },
@@ -453,7 +490,7 @@
             "version": "5.4.8",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/advanced-custom-fields-pro/5.4.8",
+                "url": "http://127.0.0.1/premiumpress/satispress/advanced-custom-fields-pro/5.4.8",
                 "reference": null,
                 "shasum": "556ebc84d82de78c1d36a94d563ee25c770fd8c6"
             },
@@ -475,7 +512,7 @@
             "version": "1.3.5.2",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/cac-addon-acf/1.3.5.2",
+                "url": "http://127.0.0.1/premiumpress/satispress/cac-addon-acf/1.3.5.2",
                 "reference": null,
                 "shasum": "d3c41ab60227798a5df3ae3574c2c01d66187c80"
             },
@@ -496,7 +533,7 @@
             "version": "1.4",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/cac-addon-woocommerce/1.4",
+                "url": "http://127.0.0.1/premiumpress/satispress/cac-addon-woocommerce/1.4",
                 "reference": null,
                 "shasum": "77607f89bec8ae6ba00a69800b07c2a0cc302db1"
             },
@@ -517,7 +554,7 @@
             "version": "1.3.10",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/divi-builder/1.3.10",
+                "url": "http://127.0.0.1/premiumpress/satispress/divi-builder/1.3.10",
                 "reference": null,
                 "shasum": "5904d7f6e2f53b2f1ddcf999c54fc4144a46e893"
             },
@@ -539,7 +576,7 @@
             "version": "2.3",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/enhanced-media-library-pro/2.3",
+                "url": "http://127.0.0.1/premiumpress/satispress/enhanced-media-library-pro/2.3",
                 "reference": null,
                 "shasum": "369a777d334ff67b1bfc4b8d26fe6a3bdfffae34"
             },
@@ -561,7 +598,7 @@
             "version": "1.3.12",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/gravityforms-multilingual/1.3.12",
+                "url": "http://127.0.0.1/premiumpress/satispress/gravityforms-multilingual/1.3.12",
                 "reference": null,
                 "shasum": "d4c431739584d8a1e9479712010691acffeb026a"
             },
@@ -583,7 +620,7 @@
             "version": "3.7.3",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/gravityformsmailchimp/3.7.3",
+                "url": "http://127.0.0.1/premiumpress/satispress/gravityformsmailchimp/3.7.3",
                 "reference": null,
                 "shasum": "22eddd9093bf0611239bd688e97dbee98ced14b4"
             },
@@ -605,9 +642,9 @@
             "version": "1.0.9",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/responsive-menu-pro/1.0.9",
+                "url": "http://127.0.0.1/premiumpress/satispress/responsive-menu-pro/1.0.9",
                 "reference": null,
-                "shasum": "ba2ac87cb3e4caaacc7d8fa6e6b2eea69e16ea7e"
+                "shasum": "8348416085af10deb3d96016af630e4c0d21e917"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -627,7 +664,7 @@
             "version": "2.8.4",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/searchwp/2.8.4",
+                "url": "http://127.0.0.1/premiumpress/satispress/searchwp/2.8.4",
                 "reference": null,
                 "shasum": "25cbe238d99b31c798fbba33da0b5e374450290d"
             },
@@ -649,7 +686,7 @@
             "version": "1.0.1",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/searchwp-exclude-ui-master/1.0.1",
+                "url": "http://127.0.0.1/premiumpress/satispress/searchwp-exclude-ui-master/1.0.1",
                 "reference": null,
                 "shasum": "cf454c529ccd2aa837f1964d96e8980b497e546f"
             },
@@ -671,7 +708,7 @@
             "version": "1.1.8",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/searchwp-live-ajax-search/1.1.8",
+                "url": "http://127.0.0.1/premiumpress/satispress/searchwp-live-ajax-search/1.1.8",
                 "reference": null,
                 "shasum": "1d3690fb1b6d4c336bf9344184c0711cebffab2f"
             },
@@ -693,7 +730,7 @@
             "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/searchwp-term-priority-master/1.1.2",
+                "url": "http://127.0.0.1/premiumpress/satispress/searchwp-term-priority-master/1.1.2",
                 "reference": null,
                 "shasum": "2880396f251d9ef9f923c65e8f9d4c827ad7de99"
             },
@@ -715,7 +752,7 @@
             "version": "1.1.10",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/searchwp-woocommerce-master/1.1.10",
+                "url": "http://127.0.0.1/premiumpress/satispress/searchwp-woocommerce-master/1.1.10",
                 "reference": null,
                 "shasum": "5779d357f41bd0b65b1e83ba412ad2a834748721"
             },
@@ -737,7 +774,7 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/searchwp-wpml-master/1.2.1",
+                "url": "http://127.0.0.1/premiumpress/satispress/searchwp-wpml-master/1.2.1",
                 "reference": null,
                 "shasum": "ff707fded544d862833b8599763ac0c2aa8a7379"
             },
@@ -759,7 +796,7 @@
             "version": "3.5.3.1",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/sitepress-multilingual-cms/3.5.3.1",
+                "url": "http://127.0.0.1/premiumpress/satispress/sitepress-multilingual-cms/3.5.3.1",
                 "reference": null,
                 "shasum": "b62424a8944f0b636e8eb3ec781d8b7416c814df"
             },
@@ -781,9 +818,9 @@
             "version": "1.0.9",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/um-woocommerce/1.0.9",
+                "url": "http://127.0.0.1/premiumpress/satispress/um-woocommerce/1.0.9",
                 "reference": null,
-                "shasum": "9d35fa514d88ccd722df7ec08c978d7bf6e61d1a"
+                "shasum": "d5cc149ada3d4a0140ea9cd9e69142906bf9bd9f"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -803,7 +840,7 @@
             "version": "2.12.6.22",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/updraftplus/2.12.6.22",
+                "url": "http://127.0.0.1/premiumpress/satispress/updraftplus/2.12.6.22",
                 "reference": null,
                 "shasum": "f9edf20e2208d21fbe39ed256a200e11abc9528d"
             },
@@ -825,7 +862,7 @@
             "version": "1.1.5",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/woocommerce-google-analytics-pro/1.1.5",
+                "url": "http://127.0.0.1/premiumpress/satispress/woocommerce-google-analytics-pro/1.1.5",
                 "reference": null,
                 "shasum": "c2397bade84fd87ca8523b8062034c0d62846075"
             },
@@ -847,7 +884,7 @@
             "version": "3.8",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/woocommerce-multilingual/3.8",
+                "url": "http://127.0.0.1/premiumpress/satispress/woocommerce-multilingual/3.8",
                 "reference": null,
                 "shasum": "200634a215bb73b38196b3c76f872c04de67987a"
             },
@@ -869,7 +906,7 @@
             "version": "1.10.12",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/woocommerce-product-csv-import-suite/1.10.12",
+                "url": "http://127.0.0.1/premiumpress/satispress/woocommerce-product-csv-import-suite/1.10.12",
                 "reference": null,
                 "shasum": "a169648638d731ebc0cf0cb4c0d933c17e9d181b"
             },
@@ -891,7 +928,7 @@
             "version": "3.7.1",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wordpress-seo-premium/3.7.1",
+                "url": "http://127.0.0.1/premiumpress/satispress/wordpress-seo-premium/3.7.1",
                 "reference": null,
                 "shasum": "235b3d197128505d4e9889299273b677209138c4"
             },
@@ -913,7 +950,7 @@
             "version": "1.7",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wp-migrate-db-pro/1.7",
+                "url": "http://127.0.0.1/premiumpress/satispress/wp-migrate-db-pro/1.7",
                 "reference": null,
                 "shasum": "7459b472ca6deb68bcd6f5d7f50333d68d2b53ad"
             },
@@ -935,7 +972,7 @@
             "version": "1.4.6",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wp-migrate-db-pro-media-files/1.4.6",
+                "url": "http://127.0.0.1/premiumpress/satispress/wp-migrate-db-pro-media-files/1.4.6",
                 "reference": null,
                 "shasum": "437bd5049abf6955fc43fe111cb95fe79219c06a"
             },
@@ -957,7 +994,7 @@
             "version": "1.2",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wp-toolbar-editor/1.2",
+                "url": "http://127.0.0.1/premiumpress/satispress/wp-toolbar-editor/1.2",
                 "reference": null,
                 "shasum": "0930ced065e2da8584b316d5ee03c38a6a641fe1"
             },
@@ -979,7 +1016,7 @@
             "version": "2.1.23",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpml-media/2.1.23",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpml-media/2.1.23",
                 "reference": null,
                 "shasum": "3c29b9422265a84ce8a1e8ce15a30f8735e9ba66"
             },
@@ -1001,7 +1038,7 @@
             "version": "2.4.2",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpml-string-translation/2.4.2",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpml-string-translation/2.4.2",
                 "reference": null,
                 "shasum": "be8c07e0f1dbb1bbc5ff53efceab91d45259586b"
             },
@@ -1023,7 +1060,7 @@
             "version": "2.2.4",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpml-translation-management/2.2.4",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpml-translation-management/2.2.4",
                 "reference": null,
                 "shasum": "e66f4898ff4ea88109033e2ce1e0919b36bef761"
             },
@@ -1045,7 +1082,7 @@
             "version": "3.7.0",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpseo-woocommerce/3.7.0",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpseo-woocommerce/3.7.0",
                 "reference": null,
                 "shasum": "cff4399706cfacc39a5a95872c8825b6eb2cd66a"
             },
@@ -1067,9 +1104,9 @@
             "version": "1.4.6",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/yith-woocommerce-catalog-mode-premium/1.4.6",
+                "url": "http://127.0.0.1/premiumpress/satispress/yith-woocommerce-catalog-mode-premium/1.4.6",
                 "reference": null,
-                "shasum": "f49101afe0f22dc5454a6e4befe932a589209fa9"
+                "shasum": "5806fc8171abdb7c3e3206893cc3d8fca12fdf7e"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1355,6 +1392,26 @@
             "homepage": "https://wordpress.org/plugins/error-log-monitor/"
         },
         {
+            "name": "wpackagist-plugin/ewww-image-optimizer",
+            "version": "3.1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ewww-image-optimizer/",
+                "reference": "tags/3.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.3.1.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ewww-image-optimizer/"
+        },
+        {
             "name": "wpackagist-plugin/facebook-open-graph-update",
             "version": "1.6.0",
             "source": {
@@ -1396,15 +1453,15 @@
         },
         {
             "name": "wpackagist-plugin/fb-instant-articles",
-            "version": "3.2",
+            "version": "3.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/fb-instant-articles/",
-                "reference": "tags/3.2"
+                "reference": "tags/3.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/fb-instant-articles.3.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/fb-instant-articles.3.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1493,6 +1550,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/menu-social-icons/"
+        },
+        {
+            "name": "wpackagist-plugin/password-protected",
+            "version": "2.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/password-protected/",
+                "reference": "tags/2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/password-protected.2.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/password-protected/"
         },
         {
             "name": "wpackagist-plugin/pc-robotstxt",
@@ -1775,26 +1852,6 @@
             "homepage": "https://wordpress.org/plugins/wp-email-template/"
         },
         {
-            "name": "wpackagist-plugin/wp-performance-pack",
-            "version": "1.10.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-performance-pack/",
-                "reference": "tags/1.10.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-performance-pack.1.10.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-performance-pack/"
-        },
-        {
             "name": "wpackagist-plugin/wp-retina-2x",
             "version": "4.6.0",
             "source": {
@@ -1816,15 +1873,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-spamshield",
-            "version": "1.9.9.6",
+            "version": "1.9.9.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-spamshield/",
-                "reference": "tags/1.9.9.6"
+                "reference": "tags/1.9.9.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-spamshield.1.9.9.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-spamshield.1.9.9.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -2232,7 +2289,11 @@
                     "Gitonomy\\Git\\": "src/Gitonomy/Git/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Gitonomy\\Git\\Tests\\": "tests/Gitonomy/Git/Tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -2250,6 +2311,10 @@
             ],
             "description": "Library for accessing git",
             "homepage": "http://gitonomy.com",
+            "support": {
+                "source": "https://github.com/gitonomy/gitlib/tree/master",
+                "issues": "https://github.com/gitonomy/gitlib/issues"
+            },
             "time": "2016-07-30 16:15:30"
         },
         {
@@ -2431,7 +2496,7 @@
             "version": "1.4.1",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wp-all-export-pro/1.4.1",
+                "url": "http://127.0.0.1/premiumpress/satispress/wp-all-export-pro/1.4.1",
                 "reference": null,
                 "shasum": "2a2c56eed1a33c5cee09d65eb6abff49075bda6d"
             },
@@ -2453,7 +2518,7 @@
             "version": "4.3.1",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wp-all-import-pro/4.3.1",
+                "url": "http://127.0.0.1/premiumpress/satispress/wp-all-import-pro/4.3.1",
                 "reference": null,
                 "shasum": "191f0d69d3e30e38846e5e84fd68eb1271ab3241"
             },
@@ -2475,7 +2540,7 @@
             "version": "1.3",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wp-migrate-db-pro-cli/1.3",
+                "url": "http://127.0.0.1/premiumpress/satispress/wp-migrate-db-pro-cli/1.3",
                 "reference": null,
                 "shasum": "ce4d96d9efa8eb742d9fdbfdda0ae2b650d3c87d"
             },
@@ -2497,7 +2562,7 @@
             "version": "3.1.0",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpai-acf-add-on/3.1.0",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpai-acf-add-on/3.1.0",
                 "reference": null,
                 "shasum": "7b0feea003c154f7226e129195f9a62a46426fd6"
             },
@@ -2519,7 +2584,7 @@
             "version": "1.0.7",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpai-user-add-on/1.0.7",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpai-user-add-on/1.0.7",
                 "reference": null,
                 "shasum": "845649ce37343ee9cdda52fff287762ffc8e1cd8"
             },
@@ -2541,7 +2606,7 @@
             "version": "2.3.0",
             "dist": {
                 "type": "zip",
-                "url": "http://192.168.1.18/wordtest/satispress/wpai-woocommerce-add-on/2.3.0",
+                "url": "http://127.0.0.1/premiumpress/satispress/wpai-woocommerce-add-on/2.3.0",
                 "reference": null,
                 "shasum": "2a596eabc5915b26520c4780c38232a010cb30f1"
             },
@@ -3696,10 +3761,12 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "kbjr/git.php": 20,
         "composerpress/gravityform-entries-for-ultimate-member": 20,
         "composerpress/ultimate-member-mailchimp": 20,
         "composerpress/gravity-forms": 20,
         "composerpress/producer-orders-admin-table": 20,
+        "composerpress/wp-performance-pack": 20,
         "pressjitsu/wp-transients-cleaner": 20,
         "tomjn/composerpress": 20,
         "gitonomy/gitlib": 20,
