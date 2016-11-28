@@ -215,7 +215,7 @@
     .colonna-right {
         flex-basis: 50%;
         @include media-query(palm) {
-            width: 100%;
+            flex-basis: 100%;
             >div {
                 margin-bottom: 1.5rem;
             }
