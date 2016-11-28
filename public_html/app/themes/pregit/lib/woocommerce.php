@@ -58,3 +58,17 @@ add_filter('woocommerce_product_is_on_sale', function () {
     }
 
 });
+add_filter('woocommerce_breadcrumb_home_url', function () {
+    $shop_page_id = wc_get_page_id('shop');
+    $shop_page    = get_post($shop_page_id);
+    return get_permalink($shop_page);});
+
+add_filter('woocommerce_breadcrumb_defaults', function ($args) {
+    if (!is_shop()) {
+        $shop_page_id = wc_get_page_id('shop');
+        $shop_page    = get_post($shop_page_id);
+        $args['home'] = get_the_title($shop_page);
+    } else {
+        unset($args['home']);
+    }
+    return $args;});
