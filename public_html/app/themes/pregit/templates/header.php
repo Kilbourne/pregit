@@ -62,6 +62,6 @@ endif;
 ?>
     </nav>
     </div>
-    <?php echo do_shortcode(' [responsive_menu_pro ]'); ?>
+    <?php echo do_shortcode(' [responsive_menu_pro title_link="' . get_home_url() . '" ]'); ?>
     </div>
 </header>

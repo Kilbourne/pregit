@@ -34,7 +34,14 @@ function excerpt_more()
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 add_filter('searchwp_tax_term_or_logic', '__return_true');
+add_filter('nav_menu_item_title', function ($title, $item, $args) {
+    if ($args->theme_location === 'footer_navigation' && in_array('social', $item->classes)) {
+        $title = '<img src="' . get_stylesheet_directory_uri() . '/dist/images/' . $item->post_name . '-logo.svg" alt="' . $item->post_name . ' logo">';
 
+    }
+
+    return $title;
+}, 10, 3);
 add_filter('wp_nav_menu_menu_items', function ($items, $args) {
 
     $items = explode("</li>", $items);
@@ -52,7 +59,7 @@ function conditional_mobile_menu($items, $args)
     $items .= account_link_menu_item();
     return $items;
 }
-//add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
+add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
 
 /**
  *  Account link funtion

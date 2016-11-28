@@ -102,8 +102,14 @@
 }
 
 #responsive_menu_pro[style] {
-    z-index: 9999;
+    z-index: 10000;
     padding: 0;
+    &.responsive_menu_pro_admin_bar_showing {
+        margin-top: 32px;
+        @media(max-width: 782px) {
+            margin-top: 46px;
+        }
+    }
     .responsive_menu_pro_append_link {
         border-left: none;
     }
