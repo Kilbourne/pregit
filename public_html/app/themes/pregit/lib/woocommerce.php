@@ -71,4 +71,13 @@ add_filter('woocommerce_breadcrumb_defaults', function ($args) {
     } else {
         unset($args['home']);
     }
+    /*
+    if (isset($_SERVER['HTTP_REFERER']) && $referer = $_SERVER['HTTP_REFERER']) {
+    $myDomain = $_SERVER['WP_HOME'];
+    if (parse_url($myDomain, PHP_URL_HOST) === parse_url($referer, PHP_URL_HOST)) {
+    $url                 = htmlspecialchars($referer);
+    $args['wrap_before'] = '<nav class="woocommerce-breadcrumb"><a href="' . $url . '" >' . __('Torna Indietro', 'sage') . '</a>';
+    }
+    }
+     */
     return $args;});

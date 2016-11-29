@@ -58,7 +58,9 @@ do_action('woocommerce_shop_loop_item_title');
  */
 echo '<div class="cat_item_mask">';
 do_action('woocommerce_before_shop_loop_item');
+echo '<p>';
 _e('Scopri');
+echo '</p>';
 //do_action( 'woocommerce_after_shop_loop_item_title' );
 do_action('woocommerce_after_shop_loop_item');
 echo '</div>';

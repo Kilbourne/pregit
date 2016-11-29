@@ -48,8 +48,9 @@ do_action('woocommerce_shop_loop_subcategory_title', $category);
  */
 do_action('woocommerce_after_subcategory_title', $category);
 echo '<div class="cat_item_mask">';
-echo '<a class="woocommerce-LoopCat-link" href="' . get_term_link($category, 'product_cat') . '">';
+echo '<a class="woocommerce-LoopCat-link" href="' . get_term_link($category, 'product_cat') . '"><p>';
 _e('Scopri');
+echo '</p>';
 //do_action( 'woocommerce_after_shop_loop_item_title' );
 do_action('woocommerce_after_subcategory', $category);
 echo '</div>';

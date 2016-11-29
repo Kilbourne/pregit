@@ -484,6 +484,7 @@ body.tax-producer {
                 width: 100%;
                 height: 100%;
                 top: 0;
+                left: 0;
                 @include media-query(lap-and-up) {
                     display: none;
                     background: rgba(0, 0, 0, 0.25);
@@ -491,22 +492,24 @@ body.tax-producer {
             }
             .woocommerce-LoopProduct-link,
             .woocommerce-LoopCat-link {
-                position: absolute;
-                color: #fff;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
                 text-decoration: none;
-                text-transform: uppercase;
-                padding: 4px 8px;
-                border: 1px solid;
-                @include media-query(lap-and-up) {
-                    top: 50%;
-                    left: 50%;
-                    background: #86754d;
-                    transform: translate(-50%, -50%);
-                }
-                @include media-query(palm) {
-                    width: 100%;
-                    height: 100%;
-                    font-size: 0;
+                >p {
+                    display: none;
+                    @include media-query(lap-and-up) {
+                        display: inline-block;
+                        position: absolute;
+                        color: #fff;
+                        text-transform: uppercase;
+                        padding: 4px 8px;
+                        border: 1px solid;
+                        top: 50%;
+                        left: 50%;
+                        background: #86754d;
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
             &:hover {
@@ -542,8 +545,8 @@ body.tax-producer {
 
 .woocommerce .woocommerce-breadcrumb {
     text-align: right;
-    padding: .5rem 1% 0 0;
-    font-size: 0.75rem;
+    padding: .5rem 4% 0 0;
+    font-size: 0.87rem;
     font-weight: 700;
     a {
         text-decoration: none;
@@ -794,4 +797,63 @@ body.page_title {
 .proponi-intro-wrapper {
     margin: 4.5rem auto 1.5rem;
     padding: 0 3%;
+}
+
+img.gform_ajax_spinner {
+    max-width: 19px !important;
+    vertical-align: bottom !important;
+    margin: 0 6px !important;
+}
+
+div.gform_confirmation_message {
+    text-align: center !important;
+    margin: 1rem 0 !important;
+    font-weight: 500 !important;
+    font-size: 1.2rem !important;
+}
+
+.gform_body {
+    background: transparent !important;
+    li.gfield {
+        width: 100% !important;
+        display: inline !important;
+    }
+    .ginput_container {
+        background-color: #fff !important;
+    }
+    .gfield_description.validation_message {
+        padding: 0 2.5% !important;
+        margin: 1rem 0 !important;
+    }
+}
+
+div.validation_error {
+    margin: 1rem 0 !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container {
+    margin-top: 8px;
+}
+
+.page-header h1 {
+    text-align: center;
+    background-color: #e6e6e6;
+    color: #86754D;
+    padding: 1rem 25%;
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    border: 1px solid #86754D;
+}
+
+.pregit-contatti {
+    text-align: center;
+    p {
+        &:first-child {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    a {
+        color: #262323;
+    }
 }
