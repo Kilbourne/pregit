@@ -50,6 +50,12 @@ add_filter('wp_nav_menu_menu_items', function ($items, $args) {
     $items = implode("</li>", $items);
     return $items;
 }, 10, 2);
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
+    if ($args->theme_location === 'footer_navigation' && in_array('nolink', $item->classes)) {
+        unset($atts['href']);
+    }
+    return $atts;
+}, 10, 3);
 
 /**
  *  Account link for Mobile menu
