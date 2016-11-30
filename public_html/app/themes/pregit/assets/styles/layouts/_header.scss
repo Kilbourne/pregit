@@ -104,8 +104,12 @@
     }
 }
 
+#responsive_menu_pro_button #responsive_menu_x {
+    font-size: 40px;
+}
+
 #responsive_menu_pro[style] {
-    z-index: 10000;
+    z-index: 9999;
     padding: 0;
     &.responsive_menu_pro_admin_bar_showing {
         margin-top: 32px;
@@ -125,6 +129,15 @@
             background: #d3d3d3;
             color: #86754d;
         }
+    }
+    #responsive_menu_pro_title {
+        padding: 25px 0px 8px 5%;
+    }
+    >a:first-child {
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
     }
 }
 

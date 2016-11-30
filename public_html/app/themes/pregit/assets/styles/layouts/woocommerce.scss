@@ -1,6 +1,6 @@
 .woocommerce div.product.cibo {
     .temperatura {
-        height: 100%;
+        flex-grow: 1;
         .attributo-espanso-content {
             //height: 100%;
         }
@@ -120,6 +120,7 @@
     }
     .buy-container {
         text-align: right;
+        display: none;
         @include media-query(palm) {
             text-align: center;
             margin: 0 auto 1rem;
@@ -214,6 +215,7 @@
     .colonna-left,
     .colonna-right {
         flex-basis: 50%;
+        flex-grow: 1;
         @include media-query(palm) {
             flex-basis: 100%;
             >div {
@@ -269,7 +271,7 @@
     }
     .product-form {
         clear: both;
-        padding: 1.5rem 0;
+        padding: 1.5rem 5%;
         background-color: #e3e0dd;
         .caption {
             text-align: center;

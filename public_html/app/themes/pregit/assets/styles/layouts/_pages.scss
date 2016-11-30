@@ -90,6 +90,23 @@
                 position: static;
             }
         }
+        &.golink {
+            @media(max-width: 500px) {
+                background-color: transparent;
+                padding: 0 !important;
+                width: 100%;
+                top: 0 !important;
+                bottom: 0;
+                left: 0 !important;
+                font-size: 0;
+                >a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: top;
+                }
+            }
+        }
     }
     #gform_wrapper_3,
     .brand-form-text {
@@ -787,11 +804,6 @@ body.page_title {
     h2.gsection_title {
         font-weight: 500;
     }
-    .gfield:nth-last-of-type(-n+5) {
-        .gfield_label {
-            display: none;
-        }
-    }
 }
 
 .proponi-intro-wrapper {
@@ -814,16 +826,21 @@ div.gform_confirmation_message {
 
 .gform_body {
     background: transparent !important;
-    li.gfield {
-        width: 100% !important;
-        display: inline !important;
-    }
-    .ginput_container {
-        background-color: #fff !important;
-    }
     .gfield_description.validation_message {
         padding: 0 2.5% !important;
         margin: 1rem 0 !important;
+    }
+}
+
+#gform_4 {
+    .gform_body {
+        li.gfield {
+            width: 100% !important;
+            display: inline !important;
+        }
+        .ginput_container {
+            background-color: #fff !important;
+        }
     }
 }
 
