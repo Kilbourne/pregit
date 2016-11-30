@@ -80,7 +80,10 @@ $c_att   = ['provenienza'];
 $arr_att = $p_cat === 'bevanda' ? $b_att : $c_att;
 foreach ($arr_att as $key => $value) {
     $field = get_field_object($value);
-    echo '<p class="riga-attributo"><span class="titolo">' . __($field['label'], 'sage') . '</span><span class="attributo">' . $field['value'] . '</span></p>';
+    if ($field['value'] !== '') {
+        echo '<p class="riga-attributo"><span class="titolo">' . __($field['label'], 'sage') . '</span><span class="attributo">' . $field['value'] . '</span></p>';
+    }
+
 }
 if ($producer_terms) {
     ?>
@@ -138,7 +141,7 @@ $obj_arr = array_map(function ($el) {
       <?php if ($obj_arr[0]['value'] && $obj_arr[0]['value'] !== '') {?>
       <div class="colonna-left">
 
-        <div class="organolettiche"><h4 class="attributo-espanso-title"><?php _e($obj_arr[0]['label'], 'sage');?> </h4>
+        <div class="organolettiche"><h4 class="attributo-espanso-title"><?php echo $obj_arr[0]['label']; ?> </h4>
         <div class="attributo-espanso-content"><?php echo $obj_arr[0]['value']; ?></div> </div>
 
       </div>
@@ -146,11 +149,11 @@ $obj_arr = array_map(function ($el) {
       <?php if (($obj_arr[1]['value'] && $obj_arr[1]['value'] !== '') || ($obj_arr[2]['value'] && $obj_arr[2]['value'] !== '')) {?>
       <div class="colonna-right">
         <?php if ($obj_arr[1]['value'] && $obj_arr[1]['value'] !== '') {?>
-        <div class="abbinamenti"><h4 class="attributo-espanso-title"><?php _e($obj_arr[1]['label'], 'sage');?> </h4>
+        <div class="abbinamenti"><h4 class="attributo-espanso-title"><?php echo $obj_arr[1]['label']; ?> </h4>
         <div class="attributo-espanso-content"><?php echo $obj_arr[1]['value']; ?></div> </div>
 <?php }?>
 <?php if ($obj_arr[2]['value'] && $obj_arr[2]['value'] !== '') {?>
-        <div class="temperatura"><h4 class="attributo-espanso-title"><?php _e($obj_arr[2]['label'], 'sage');?> </h4>
+        <div class="temperatura"><h4 class="attributo-espanso-title"><?php echo $obj_arr[2]['label']; ?> </h4>
         <div class="attributo-espanso-content"><?php echo $obj_arr[2]['value']; ?></div> </div>
 <?php }?>
       </div>
@@ -159,7 +162,7 @@ $obj_arr = array_map(function ($el) {
     <?php if ($obj_arr[3]['value'] && $obj_arr[3]['value'] !== '') {?>
     <div class="secondariga">
 
-      <div class="vinificazione"><h4 class="attributo-espanso-title"><?php _e($obj_arr[3]['label'], 'sage');?> </h4>
+      <div class="vinificazione"><h4 class="attributo-espanso-title"><?php echo $obj_arr[3]['label']; ?> </h4>
       <div class="attributo-espanso-content"><?php echo $obj_arr[3]['value']; ?></div> </div>
 
     </div>
@@ -168,7 +171,7 @@ $obj_arr = array_map(function ($el) {
  </div>
  <section class="product-form">
 <div class="product-form-wrapper">
-<div class="caption"><h3 class="product-form-title"><?php _e('RICHIEDI INFORMAZIONI SUL PRODOTTO', 'sage');?> </h3><p class="product-form-subtitle"><?php _e('Sarai ricontattato da un nostro consulente nel più breve tempo possibile.', 'sage');?> </p></div>
+<div class="caption"><h3 class="product-form-title"><?php _e('RICHIEDI INFORMAZIONI SUL PRODOTTO', 'sage');?> </h3><p class="product-form-subtitle"><?php _e('Sarai ricontattato da un nostro consulente nel pi&ugrave; breve tempo possibile.', 'sage');?> </p></div>
   <?php echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]'); ?> </div>
   </section>
 
