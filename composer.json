@@ -90,7 +90,6 @@
         "wpackagist-plugin/password-protected": "*",
 
         "wpackagist-plugin/redis-cache": "*",
-        "wpackagist-plugin/opcache": "*",
         "wpackagist-plugin/plugin-organizer": "*",
 
         "satispress/gravityform-entries-for-ultimate-member": "*",
@@ -98,6 +97,9 @@
         "satispress/gravityforms": "*",
         "satispress/producer-orders-admin-table": "*",
         "satispress/wp-performance-pack": "*",
+        "satispress/opcache": "*",
+        "satispress/xslt": "*",
+        "satispress/global-meta-box-order": "*",
 
         "satispress/advanced-custom-fields-pro": "*",
         "wpackagist-plugin/wp-spamshield": "*",
@@ -140,10 +142,8 @@
         "wpackagist-plugin/fb-instant-articles": "*",
         "wpackagist-plugin/google-sitemap-generator": "*",
         "satispress/wordpress-seo-premium": "*",
-        "wpackagist-plugin/xslt": "*",
         "wpackagist-plugin/pc-robotstxt": "*",
 
-        "wpackagist-plugin/global-meta-box-order": "*",
         "wpackagist-plugin/wp-edit": "*",
         "satispress/admin-menu-editor-pro": "*",
 
@@ -154,16 +154,16 @@
 
         "satispress/searchwp-exclude-ui-master": "*",
         "satispress/searchwp-live-ajax-search": "*",
-        "satispress/searchwp-term-priority-master": "*",
+        "satispress/searchwp-term-priority": "*",
         "satispress/wpml-media": "*",
         "satispress/wpml-string-translation": "*",
         "satispress/wpml-translation-management": "*",
         "satispress/gravityformsmailchimp": "*",
         "satispress/gravityforms-multilingual": "*",
-        "satispress/searchwp-wpml-master": "*",
+        "satispress/searchwp-wpml": "*",
         "satispress/woocommerce-multilingual": "*",
         "satispress/cac-addon-woocommerce": "*",
-        "satispress/searchwp-woocommerce-master": "*",
+        "satispress/searchwp-woocommerce": "*",
         "satispress/woocommerce-google-analytics-pro": "*",
         "satispress/woocommerce-product-csv-import-suite": "*",
         "satispress/wpseo-woocommerce": "*",
@@ -179,7 +179,7 @@
         "tomjn/composerpress": "dev-master",
         "gitonomy/gitlib": "dev-master",
         "wpackagist-plugin/custom-post-type-ui": "*",
-        "wpackagist-plugin/user-role-editor": "*",
+        "wpackagist-plugin/members": "*",
         "wpackagist-plugin/regenerate-thumbnails": "*",
         "satispress/wp-all-import-pro": "*",
         "satispress/wpai-woocommerce-add-on": "*",
