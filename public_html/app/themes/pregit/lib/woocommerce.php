@@ -47,6 +47,9 @@ function wc_product_columns_frontend()
     return $columns;
 
 }
+add_filter('woocommerce_single_product_image_html', function ($html) {
+    return strip_tags($html, '<img>');
+});
 add_filter('loop_shop_columns', __NAMESPACE__ . '\\wc_product_columns_frontend');
 
 add_filter('woocommerce_subcategory_count_html', function () {return '';});
