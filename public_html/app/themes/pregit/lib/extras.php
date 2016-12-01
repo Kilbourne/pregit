@@ -23,7 +23,53 @@ function body_class($classes)
     return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
+add_filter('editable_roles', function ($all_roles) {
 
+    if (in_array('shop_manager', wp_get_current_user()->roles)) {
+        $white_roles = ['producer', 'distributor', 'customer'];
+        foreach ($all_roles as $key => $role) {
+            if (!in_array($key, $white_roles)) {
+                unset($all_roles[$key]);
+            }
+
+        }
+
+    }
+
+    return $all_roles;
+});
+add_filter('users_list_table_query_args', function ($args) {
+    if (in_array('shop_manager', wp_get_current_user()->roles)) {
+
+        $args['role__in'] = ['producer', 'distributor', 'customer'];
+    }
+    return $args;
+});
+
+//hook into the administrative header output
+add_action('admin_head', function () {
+    echo '
+<style type="text/css">
+#wpadminbar > #wp-toolbar > #wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon {
+    background-image: url(http://www.ipregiditalia.it/app/themes/pregit/dist/images/pregit_logo.svg) !important;
+    background-position: center center;
+    width: 29px;
+    height: 29px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#wpadminbar > #wp-toolbar > #wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon::before{
+  content:"";
+}
+
+ </style>
+';
+}
+);
+if (!in_array('administrator', wp_get_current_user()->roles)) {
+
+    add_filter('screen_options_show_screen', '__return_false');
+}
 /**
  * Clean up the_excerpt()
  */
@@ -158,17 +204,19 @@ function save_producer_tax_terms($post_id)
     }
 
     $taxonomy          = 'producer';
-    $product_producers = get_post_meta($post_id, 'produttore')[0];
+    $product_producers = get_post_meta($post_id, 'produttore');
     $terms             = array();
-    foreach ($product_producers as $key => $user_id) {
-        $user = get_userdata($user_id);
-        $term = $user->user_login;
+    if ($product_producers) {
+        foreach ($product_producers[0] as $key => $user_id) {
+            $user = get_userdata($user_id);
+            $term = $user->user_login;
 
-        if (!term_exists($term, $taxonomy)) {
-            wp_insert_term($term, $taxonomy, array('slug' => 'produttore_' . $user_id));
+            if (!term_exists($term, $taxonomy)) {
+                wp_insert_term($term, $taxonomy, array('slug' => 'produttore_' . $user_id));
+            }
+
+            $terms[] = 'produttore_' . $user_id;
         }
-
-        $terms[] = 'produttore_' . $user_id;
     }
     if ($terms) {
         wp_set_object_terms($post_id, $terms, $taxonomy);
