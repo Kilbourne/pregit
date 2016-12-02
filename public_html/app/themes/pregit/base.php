@@ -19,6 +19,8 @@ $title = get_field('show_title', get_the_id()) ? 'page_title' : '';
     <?php
 do_action('get_header');
 get_template_part('templates/header');
+do_action('body_open');
+
 ?>
 
       <div class="content row">
@@ -43,10 +45,14 @@ echo do_shortcode(get_page_by_title('Header Slider')->post_content);
       </div><!-- /.content -->
 
     <?php
-do_action('get_footer');
 get_template_part('templates/footer');
+do_action('get_footer');
+do_action('body_close');
+?>
+</div><!-- /.wrap -->
+<?php
 wp_footer();
 ?>
-    </div><!-- /.wrap -->
+
   </body>
 </html>
