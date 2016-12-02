@@ -1,32 +1,148 @@
 {
-  "dependencies": {
-    "main.js": {
-      "files": [
-        "scripts/main.js"
-      ],
-      "main": true
+    "dependencies": {
+        "main.js": {
+            "vendor": [
+
+                "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
+                "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
+
+
+                "../../plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+                "../../plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../plugins/gravityforms/js/jquery.json.js",
+
+                "../../plugins/gravityforms/js/jquery.maskedinput.min.js",
+                "../../plugins/gravityforms/js/placeholders.jquery.min.js",
+                "../../app/plugins/wp-spamshield/js/jscripts-ftr2-min.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+                "../../app/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/woocommerce.js",
+                "../../app/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/cart-fragments.js",
+                "../../app/plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/single-product.js"
+            ],
+            "files": [
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main-home.js": {
+            "vendor": [
+
+                "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
+                "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
+
+
+                "../../plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+                "../../plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../plugins/gravityforms/js/jquery.json.js",
+
+                "../../plugins/gravityforms/js/jquery.maskedinput.min.js",
+                "../../plugins/gravityforms/js/placeholders.jquery.min.js",
+                "../../app/plugins/wp-spamshield/js/jscripts-ftr2-min.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+                "../../app/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/woocommerce.js",
+                "../../app/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/cart-fragments.js",
+                "../../app/plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/single-product.js",
+                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.fitvids.js",
+                "../../plugins/divi-builder/includes/builder/scripts/waypoints.min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.magnific-popup.js",
+                "../../plugins/divi-builder/includes/builder/scripts/jquery.mobile.custom.min.js",
+                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-scripts.js"
+
+            ],
+            "files": [
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main-um.js": {
+            "vendor": [
+
+                "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
+                "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
+
+
+                "../../plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+                "../../plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../app/plugins/wp-spamshield/js/jscripts-ftr2-min.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+                "../../app/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/woocommerce.js",
+                "../../app/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/cart-fragments.js",
+                "../../app/plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../app/plugins/woocommerce/assets/js/frontend/single-product.js",
+                "../../../wp/wp-includes/js/imagesloaded.min.js",
+                "../../../wp/wp-includes/js/masonry.min.js",
+                "../../../wp/wp-includes/js/jquery/jquery.masonry.min.js",
+                "../../plugins/ultimate-member/assets/js/um.min.js",
+                "../../plugins/ultimate-member/assets/js/pickadate/translations/it_IT.js"
+            ],
+            "files": [
+                "scripts/main.js"
+            ],
+            "main": true
+        },
+        "main.css": {
+            "vendor": [
+                "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
+                "../../plugins/gravityforms/css/browsers.css",
+                "../../plugins/gravityforms/css/formsmain.css",
+                "../../plugins/gravityforms/css/formreset.css",
+                "../../plugins/gravityforms/css/readyclass.css"
+            ],
+            "files": [
+                "styles/woocommerce.scss",
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "main-home.css": {
+            "vendor": [
+                "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
+                "../../plugins/divi-builder/includes/builder/styles/frontend-builder-plugin-style.css",
+                "../../plugins/gravityforms/css/browsers.css",
+                "../../plugins/gravityforms/css/formsmain.css",
+                "../../plugins/gravityforms/css/formreset.css",
+                "../../plugins/gravityforms/css/readyclass.css"
+            ],
+            "files": [
+                "styles/woocommerce.scss",
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "main-um.css": {
+            "vendor": [
+                "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
+                "../../plugins/ultimate-member/assets/css/um.min.css"
+            ],
+            "files": [
+                "styles/woocommerce.scss",
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "customizer.js": {
+            "files": [
+                "scripts/customizer.js"
+            ]
+        },
+        "jquery.js": {
+            "vendor": [
+                "../../plugins/gravityforms/js/gravityforms.js"
+            ],
+
+            "bower": ["jquery"]
+        }
     },
-    "main.css": {
-      "files": [
-        "styles/main.scss"
-      ],
-      "main": true
-    },
-    "woocommerce.css":{
-      "files":[
-        "styles/woocommerce.scss"
-      ]
-    },
-    "customizer.js": {
-      "files": [
-        "scripts/customizer.js"
-      ]
-    },
-    "jquery.js": {
-      "bower": ["jquery"]
+    "config": {
+        "devUrl": "http://example.dev"
     }
-  },
-  "config": {
-    "devUrl": "http://example.dev"
-  }
 }

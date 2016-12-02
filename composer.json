@@ -73,6 +73,9 @@
         "url": "https://github.com/pressjitsu/wp-transients-cleaner"
     }, {
         "type": "vcs",
+        "url": "https://github.com/inpsyde/translation-cache"
+    }, {
+        "type": "vcs",
         "url": "https://github.com/kilbourne/composerpress"
     }],
     "require": {
@@ -91,12 +94,13 @@
 
         "wpackagist-plugin/redis-cache": "*",
         "wpackagist-plugin/plugin-organizer": "*",
+        "inpsyde/translation-cache": "1.0.1",
 
         "satispress/gravityform-entries-for-ultimate-member": "*",
         "satispress/ultimate-member-mailchimp": "*",
         "satispress/gravityforms": "*",
         "satispress/producer-orders-admin-table": "*",
-        "satispress/wp-performance-pack": "*",
+
         "satispress/opcache": "*",
         "satispress/xslt": "*",
         "satispress/global-meta-box-order": "*",
@@ -112,6 +116,7 @@
         "wpackagist-plugin/duplicate-post": "*",
         "wpackagist-plugin/post-types-order": "*",
         "satispress/enhanced-media-library-pro": "*",
+        "wpackagist-plugin/enable-media-replace": "*",
         "wpackagist-plugin/term-management-tools": "*",
         "satispress/admin-columns-pro": "*",
         "satispress/cac-addon-acf": "*",
@@ -141,7 +146,6 @@
         "wpackagist-plugin/facebook-open-graph-update": "*",
         "wpackagist-plugin/fb-instant-articles": "*",
         "wpackagist-plugin/google-sitemap-generator": "*",
-        "satispress/wordpress-seo-premium": "*",
         "wpackagist-plugin/pc-robotstxt": "*",
 
         "wpackagist-plugin/wp-edit": "*",
@@ -166,7 +170,6 @@
         "satispress/searchwp-woocommerce": "*",
         "satispress/woocommerce-google-analytics-pro": "*",
         "satispress/woocommerce-product-csv-import-suite": "*",
-        "satispress/wpseo-woocommerce": "*",
         "satispress/um-woocommerce": "*"
 
 

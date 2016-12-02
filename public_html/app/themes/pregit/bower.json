@@ -1,29 +1,29 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
-  "authors": [
-    "Ben Word <ben@benword.com>"
-  ],
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "inuit-defaults": "latest",
-    "inuit-responsive-settings": "latest",
-    "inuit-functions": "latest",
-    "inuit-mixins": "latest",
-    "inuit-responsive-tools": "latest",
-    "inuit-normalize.css": "latest",
-    "inuit-box-sizing": "latest",
-    "inuit-shared": "latest",
-    "inuit-print": "latest",
-    "jquery": "~1.11.3",
-    "font-awesome": "~4.5.0",
-    "fastclick": "~1.0.6",
-    "imagesloaded": "~4.1.0",
-    "picturefill": "latest",
-    "skrollr": "~0.6.30",
-    "Flowtype.js": "~1.1.0",
-    "magnific-popup": "~1.1.0",
-    "mobile-detect": "~1.3.2"
-  }
+    "name": "sage",
+    "homepage": "https://roots.io/sage/",
+    "authors": [
+        "Ben Word <ben@benword.com>"
+    ],
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "inuit-defaults": "latest",
+        "inuit-responsive-settings": "latest",
+        "inuit-functions": "latest",
+        "inuit-mixins": "latest",
+        "inuit-responsive-tools": "latest",
+        "inuit-normalize.css": "latest",
+        "inuit-box-sizing": "latest",
+        "inuit-shared": "latest",
+        "inuit-print": "latest",
+        "jquery": "~1.11.3",
+        "font-awesome": "~4.5.0",
+        "fastclick": "~1.0.6",
+
+        "picturefill": "latest",
+
+        "Flowtype.js": "~1.1.0"
+
+
+    }
 }
