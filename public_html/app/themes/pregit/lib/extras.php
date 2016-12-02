@@ -45,7 +45,8 @@ add_filter('users_list_table_query_args', function ($args) {
     }
     return $args;
 });
-
+add_filter('searchwp_missing_integration_notices', '__return_false');
+remove_action('admin_notices', 'woothemes_updater_notice');
 //hook into the administrative header output
 add_action('admin_head', function () {
     echo '
