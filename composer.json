@@ -141,7 +141,6 @@
         "wpackagist-plugin/facebook-open-graph-update": "*",
         "wpackagist-plugin/fb-instant-articles": "*",
         "wpackagist-plugin/google-sitemap-generator": "*",
-        "satispress/wordpress-seo-premium": "*",
         "wpackagist-plugin/pc-robotstxt": "*",
 
         "wpackagist-plugin/wp-edit": "*",
@@ -166,7 +165,6 @@
         "satispress/searchwp-woocommerce": "*",
         "satispress/woocommerce-google-analytics-pro": "*",
         "satispress/woocommerce-product-csv-import-suite": "*",
-        "satispress/wpseo-woocommerce": "*",
         "satispress/um-woocommerce": "*"
 
 
