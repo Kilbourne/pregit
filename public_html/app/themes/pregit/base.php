@@ -15,11 +15,11 @@ $title = get_field('show_title', get_the_id()) ? 'page_title' : '';
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage');?>
       </div>
     <![endif]-->
+    <?php do_action('body_open');?>
     <div class="page-wrapper" role="document">
     <?php
 do_action('get_header');
 get_template_part('templates/header');
-do_action('body_open');
 
 ?>
 
@@ -47,9 +47,12 @@ echo do_shortcode(get_page_by_title('Header Slider')->post_content);
     <?php
 get_template_part('templates/footer');
 do_action('get_footer');
-do_action('body_close');
 ?>
 </div><!-- /.wrap -->
+<?php
+do_action('body_close');
+?>
+
 <?php
 wp_footer();
 ?>

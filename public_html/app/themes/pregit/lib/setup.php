@@ -106,7 +106,7 @@ function display_sidebar()
 function assets()
 {
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), [], null, true);
+    wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), [], null);
 
     if (is_front_page()) {
         wp_enqueue_style('sage/css', Assets\asset_path('styles/main-home.css'), false, null);
@@ -127,10 +127,10 @@ function assets()
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 $opts = [
-    "bundle" => ["cart-widget", "et-builder-modules-global-functions-script", "touch", "responsive-menu-pro", "wc-add-to-cart", "woocommerce", "wc-cart-fragments", "gform_gravityforms", "gform_placeholder", "divi-fitvids", "waypoints", "magnific-popup", "et-jquery-touch-mobile", "et-builder-modules-script", "add-to-cart-variation_ajax", "wpss-jscripts-ftr", 'jquery-cookie', 'jquery-blockui', 'add-to-cart-variation_ajax', 'sitepress', "gform_json", "um_minified", "jquery-masonry", "masonry", "imagesloaded", "um_datetime_locale", "gform_masked_input", "wc-single-product"], "not_async" => [
+    "bundle" => ["cart-widget", "et-builder-modules-global-functions-script", "touch", "responsive-menu-pro", "wc-add-to-cart", "woocommerce", "wc-cart-fragments", "gform_gravityforms", "gform_placeholder", "divi-fitvids", "waypoints", "magnific-popup", "et-jquery-touch-mobile", "et-builder-modules-script", "add-to-cart-variation_ajax", "wpss-jscripts-ftr", 'jquery-cookie', 'jquery-blockui', 'add-to-cart-variation_ajax', 'sitepress', "gform_json", "um_minified", "jquery-masonry", "masonry", "imagesloaded", "um_datetime_locale", "gform_masked_input", "wc-single-product", "um_woocommerce", "select2"], "not_async" => [
         'jquery',
     ],
-    "css"    => ["responsive-menu-pro", "woocommerce-layout", "woocommerce-smallscreen", "woocommerce-general", "yit-icon-retinaicon-font", "font-awesome", "ywctm-premium-style", "et-builder-modules-style", "magnific-popup", "woocommerce", "um_minified", "gforms_reset_css", "gforms_formsmain_css", "gforms_ready_class_css", "gforms_browsers_css", 'language-selector'],
+    "css"    => ["responsive-menu-pro", "woocommerce-layout", "woocommerce-smallscreen", "woocommerce-general", "yit-icon-retinaicon-font", "font-awesome", "ywctm-premium-style", "et-builder-modules-style", "magnific-popup", "woocommerce", "um_minified", "gforms_reset_css", "gforms_formsmain_css", "gforms_ready_class_css", "gforms_browsers_css", 'language-selector', 'um_raty'],
 ];
 new AssetBuilder($opts);
 
@@ -147,7 +147,7 @@ class AssetBuilder
     public $not_async    = [];
     public $head_scripts = [];
     public $with_version = [];
-    public $head_to_do   = [];
+    public $head_to_do   = ['jquery'];
     public $css          = [];
 
     public function __construct($opts)
@@ -231,7 +231,7 @@ class AssetBuilder
         if (did_action('body_open') === 0) {
             if ($wp_scripts->to_do) {
                 $this->head_to_do = array_unique(array_merge($this->head_to_do, $wp_scripts->to_do));
-                $to_do            = [];
+                $to_do            = $this->head_scripts ? $this->head_scripts : [];
             }
         }
         return $to_do;
@@ -244,33 +244,33 @@ class AssetBuilder
 
     public function close_body_ob()
     {
+
         $ob = ob_get_clean();
         global $wp_scripts;
+
+        $aaa = 0;
+
         $pos = strpos($ob, '<script');
         if ($pos !== false) {
             $matches = [];
-            $aaa     = true;
             $aaa     = preg_match_all("/<script(.|\n)*?\/script>/", $ob, $matches);
             if (isset($matches[0]) && is_array($matches[0])) {
                 foreach ($matches[0] as $key => $match) {
                     $ob = str_replace($match, "", $ob);
                 }
             }
-            if ($aaa !== false) {
-                echo $ob;
-            }
-
-            $wp_scripts->do_items($this->head_to_do);
-            if ($aaa === true) {
-                echo $ob;
-            }
-
-            if (isset($matches[0]) && is_array($matches[0])) {
-                echo implode("", $matches[0]);
-            }
-
-        } else {
+        }
+        if ($aaa !== false) {
             echo $ob;
+        }
+
+        $wp_scripts->do_items($this->head_to_do);
+        if ($aaa === false) {
+            echo $ob;
+        }
+
+        if (isset($matches[0]) && is_array($matches[0])) {
+            echo implode("", $matches[0]);
         }
 
     }
