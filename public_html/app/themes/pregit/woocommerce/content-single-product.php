@@ -169,11 +169,7 @@ $obj_arr = array_map(function ($el) {
     <?php }?>
    </div>
  </div>
- <section class="product-form">
-<div class="product-form-wrapper">
-<div class="caption"><h3 class="product-form-title"><?php _e('RICHIEDI INFORMAZIONI SUL PRODOTTO', 'sage');?> </h3><p class="product-form-subtitle"><?php _e('Sarai ricontattato da un nostro consulente nel pi&ugrave; breve tempo possibile.', 'sage');?> </p></div>
-  <?php echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]'); ?> </div>
-  </section>
+
 
 
 
