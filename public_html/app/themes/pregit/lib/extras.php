@@ -23,6 +23,17 @@ function body_class($classes)
     return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
+
+/**
+ * Enables the HTTP Strict Transport Security (HSTS) header.
+ *
+ * @since 1.0.0
+ */
+add_action('send_headers', function () {
+
+    header('Strict-Transport-Security: max-age=10886400; includeSubDomains; preload');
+
+});
 add_filter('editable_roles', function ($all_roles) {
 
     if (in_array('shop_manager', wp_get_current_user()->roles)) {
@@ -52,7 +63,7 @@ add_action('admin_head', function () {
     echo '
 <style type="text/css">
 #wpadminbar > #wp-toolbar > #wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon {
-    background-image: url(http://www.ipregiditalia.it/app/themes/pregit/dist/images/pregit_logo.svg) !important;
+    background-image: url(https://www.ipregiditalia.it/app/themes/pregit/dist/images/pregit_logo.svg) !important;
     background-position: center center;
     width: 29px;
     height: 29px;
