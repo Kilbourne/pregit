@@ -139,6 +139,7 @@
         "wpackagist-plugin/wp-retina-2x": "*",
         "wpackagist-plugin/imsanity": "*",
         "wpackagist-plugin/stops-core-theme-and-plugin-updates": "*",
+        "wpackagist-plugin/lazy-load": "*",
 
         "wpackagist-plugin/amp": "*",
         "wpackagist-plugin/autodescription": "*",
