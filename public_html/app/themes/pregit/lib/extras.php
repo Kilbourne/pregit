@@ -123,7 +123,7 @@ function conditional_mobile_menu($items, $args)
     $items .= account_link_menu_item();
     return $items;
 }
-add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
+//add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
 
 /**
  *  Account link funtion
