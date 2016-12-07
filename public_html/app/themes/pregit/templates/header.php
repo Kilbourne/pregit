@@ -56,7 +56,8 @@ $query = isset($_GET['searchwpquery']) ? sanitize_text_field($_GET['searchwpquer
 
     </span></div>
     <div class="container">
-      <div class="logo"><a href="<?php echo get_home_url(); ?> "><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/pregit_logo.svg" alt="" class="logo-img"></a></div>
+      <div class="logo"><a href="<?php echo get_home_url(); ?> "><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/pregit_logo.svg" alt="I predi d\'Italia logo"
+ width="60" height="60" class="logo-img"></a></div>
       <div class="nav-container">
       <nav class="nav-primary">
       <?php

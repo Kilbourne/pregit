@@ -3,6 +3,7 @@
 namespace Roots\Sage\Extras;
 
 use Roots\Sage\Setup;
+
 /**
  * Add <body> classes
  */
@@ -104,7 +105,7 @@ add_filter('wp_nav_menu_menu_items', function ($items, $args) {
 
     $items = explode("</li>", $items);
     array_pop($items);
-    array_splice($items, 2, 0, '<li class="logo"><a href="' . get_home_url() . '"><img src="' . get_stylesheet_directory_uri() . '/dist/images/pregit_logo.svg" alt="" class="logo-img"></a>');
+    array_splice($items, 2, 0, '<li class="logo"><a href="' . get_home_url() . '"><img src="' . get_stylesheet_directory_uri() . '/dist/images/pregit_logo.svg" alt="I predi d\'Italia logo" class="logo-img" width="174" height="174"></a>');
     $items = implode("</li>", $items);
     return $items;
 }, 10, 2);
@@ -352,3 +353,18 @@ function init_distributor_docs_ct()
 
 }
 //add_action('init', __NAMESPACE__ . '\\init_distributor_docs_ct', 0);
+
+if (!empty($GLOBALS['sitepress'])) {
+    add_action('wp_head', function () {
+        remove_action(
+            current_filter(),
+            array($GLOBALS['sitepress'], 'meta_generator_tag')
+        );
+    },
+        0
+    );
+}
+
+add_action('init', function () {
+ remove_action('wp_head', 'Roots\\Soil\\CleanUp\\rel_canonical');
+}, 15);
