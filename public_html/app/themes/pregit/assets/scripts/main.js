@@ -24,9 +24,12 @@
                     minFont: 27,
                     fontRatio: 7
                 });
-                $('img[data-lazy-src]').each(function(i, img) {
-                    lazy_load_image(img);
+                $(window).load(function() {
+                    $('img[data-lazy-src]').each(function(i, img) {
+                        lazy_load_image(img);
+                    });
                 });
+
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired

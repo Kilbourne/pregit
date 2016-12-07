@@ -48,7 +48,7 @@ function wc_product_columns_frontend()
 
 }
 add_filter('woocommerce_single_product_image_html', function ($html) {
-    return strip_tags($html, '<img>');
+    return strip_tags($html, '<img><noscript>');
 });
 add_filter('loop_shop_columns', __NAMESPACE__ . '\\wc_product_columns_frontend');
 
