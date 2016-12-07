@@ -112,9 +112,6 @@ function assets()
         wp_enqueue_style('sage/css', Assets\asset_path('styles/main-home.css'), false, null);
 
         wp_enqueue_script('sage/js', Assets\asset_path('scripts/main-home.js'), ['jquery'], null, true);
-    } elseif (is_ultimatemember()) {
-        wp_enqueue_style('sage/css', Assets\asset_path('styles/main-um.css'), false, null);
-        wp_enqueue_script('sage/js', Assets\asset_path('scripts/main-um.js'), ['jquery'], null, true);
     } else {
         wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
         wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
@@ -127,13 +124,20 @@ function assets()
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 $opts = [
-    "bundle" => ["cart-widget", "et-builder-modules-global-functions-script", "touch", "responsive-menu-pro", "wc-add-to-cart", "woocommerce", "wc-cart-fragments", "gform_gravityforms", "gform_placeholder", "divi-fitvids", "waypoints", "magnific-popup", "et-jquery-touch-mobile", "et-builder-modules-script", "add-to-cart-variation_ajax", "wpss-jscripts-ftr", 'jquery-cookie', 'jquery-blockui', 'add-to-cart-variation_ajax', 'sitepress', "gform_json", "um_minified", "jquery-masonry", "masonry", "imagesloaded", "um_datetime_locale", "gform_masked_input", "wc-single-product", "um_woocommerce", "select2", 'gform_masked_input', 'wpcom-lazy-load-images'
-        , 'jquery-sonar'], "not_async" => [
+    "bundle" => ["cart-widget", "et-builder-modules-global-functions-script", "touch", "responsive-menu-pro", "wc-add-to-cart", "woocommerce", "wc-cart-fragments", "gform_gravityforms", "gform_placeholder", "divi-fitvids", "waypoints", "magnific-popup", "et-jquery-touch-mobile", "et-builder-modules-script", "add-to-cart-variation_ajax", "wpss-jscripts-ftr", 'jquery-cookie', 'jquery-blockui', 'add-to-cart-variation_ajax', 'sitepress', "gform_json", "um_minified", "jquery-masonry", "masonry", "imagesloaded", "um_datetime_locale", "gform_masked_input", "wc-single-product", "um_woocommerce", "select2"], "not_async" => [
         'jquery',
     ],
-    "css"    => ["responsive-menu-pro", "woocommerce-layout", "woocommerce-smallscreen", "woocommerce-general", "yit-icon-retinaicon-font", "font-awesome", "ywctm-premium-style", "et-builder-modules-style", "magnific-popup", "woocommerce", "um_minified", "gforms_reset_css", "gforms_formsmain_css", "gforms_ready_class_css", "gforms_browsers_css", 'language-selector', 'um_raty'],
+    "css"    => ["responsive-menu-pro", "woocommerce-layout", "woocommerce-smallscreen", "woocommerce-general", "yit-icon-retinaicon-font", "font-awesome", "ywctm-premium-style", "et-builder-modules-style", "magnific-popup", "woocommerce", "um_minified", "gforms_reset_css", "gforms_formsmain_css", "gforms_ready_class_css", "gforms_browsers_css", 'language-selector', 'um_   raty'],
 ];
 new AssetBuilder($opts);
+
+function aaa()
+{
+    global $wp_styles;
+    $aaa = new AssetBuilder();
+    $bbb = $aaa->recursive_deps(array_merge($wp_styles->queue, $wp_styles->to_do));
+    var_dump(json_encode(array_keys($bbb)));
+}
 class AssetBuilder
 {
     public $bundle       = [];

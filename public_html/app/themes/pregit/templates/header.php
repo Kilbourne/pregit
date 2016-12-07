@@ -35,12 +35,16 @@ function sk_wcmenucart()
     <div class="first-line"><span class="left"> IT | EN </span>
     <span class="right">
 
-         <?php $UM_plinks = (new UM_Permalinks)->core;
+         <?php
+/*
+$UM_plinks = (new UM_Permalinks)->core;
 if (is_user_logged_in()) {
-    echo '<div class="account-link"><div><a href="' . get_permalink($UM_plinks['account']) . '">' . __('Profilo', 'sage') . ' </a> | <a href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Scollegati', 'sage') . '</a></div></div>';
+echo '<div class="account-link"><div><a href="' . get_permalink($UM_plinks['account']) . '">' . __('Profilo', 'sage') . ' </a> | <a href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Scollegati', 'sage') . '</a></div></div>';
 } elseif (!is_user_logged_in()) {
-    echo '<div class="account-link"><div><a class="responsive-menu-pro-item-link" href="' . get_permalink(get_page_by_title(__('Contatti', 'sage'))->ID) . '">' . __('Contattaci', 'sage') . ' </a></div></div>';
+
 }
+ */
+echo '<div class="account-link"><div><a class="responsive-menu-pro-item-link" href="' . get_permalink(get_page_by_title(__('Contatti', 'sage'))->ID) . '">' . __('Contattaci', 'sage') . ' </a></div></div>';
 $query = isset($_GET['searchwpquery']) ? sanitize_text_field($_GET['searchwpquery']) : '';
 ?>
     <div class="cart-icon-container"> <?php echo sk_wcmenucart(); ?></div>

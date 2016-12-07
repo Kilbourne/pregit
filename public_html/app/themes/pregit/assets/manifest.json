@@ -5,8 +5,7 @@
 
                 "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
                 "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
-                "../../plugins/ultimate-member/assets/js/select2/select2.full.min.js",
-                "../../plugins/um-woocommerce/assets/js/um-woocommerce.js",
+
 
                 "../../plugins/woocommerce/assets/js/frontend/add-to-cart.js",
                 "../../plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
@@ -33,8 +32,7 @@
 
                 "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
                 "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
-                "../../plugins/ultimate-member/assets/js/select2/select2.full.min.js",
-                "../../plugins/um-woocommerce/assets/js/um-woocommerce.js",
+
 
                 "../../plugins/woocommerce/assets/js/frontend/add-to-cart.js",
                 "../../plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
@@ -141,10 +139,9 @@
         "jquery.js": {
             "vendor": [
                 "../../plugins/lazy-load/js/jquery.sonar.min.js",
-                "assets/scripts//lazy-load.js",
+                "assets/scripts/lazy-load.js",
                 "../../plugins/gravityforms/js/gravityforms.js",
-                "../../plugins/gravityforms/js/jquery.maskedinput.min.js",
-                "../../plugins/ultimate-member/assets/js/um-raty.js"
+                "../../plugins/gravityforms/js/jquery.maskedinput.min.js"
 
             ],
 

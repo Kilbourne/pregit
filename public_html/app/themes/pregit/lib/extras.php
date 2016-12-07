@@ -161,7 +161,7 @@ add_action("template_redirect", __NAMESPACE__ . '\\um_custom_page_restriction');
 function um_custom_page_restriction()
 {
 
-    if (!is_user_logged_in()) {
+    if (!is_user_logged_in() || !function_exists('um_is_core_page')) {
         return;
     }
 
