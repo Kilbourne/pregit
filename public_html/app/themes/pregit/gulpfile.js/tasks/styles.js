@@ -21,7 +21,7 @@ var gulp              = require('gulp')
   , browserSync       = require("browser-sync").get('My server')
   , wiredep           = require('wiredep').stream
 ;
-
+var uncss = require('gulp-uncss');
 
 var cssTasks = function(filename) {
   return lazypipe()
@@ -75,4 +75,11 @@ gulp.task('bowerCss', function() {
 
 gulp.task('watch-styles', function() {
   gulp.watch([config.src + '/**/*'], ['styles']);
+});
+gulp.task('uncss', function() {
+return gulp.src('dist/styles/mainhome.css')
+        .pipe(uncss({
+            html: ['http://127.0.0.1/pregit/','http://127.0.0.1/pregit/contatti/','http://127.0.0.1/pregit/proponi']
+        }))
+        .pipe(gulp.dest('./out'));
 });
