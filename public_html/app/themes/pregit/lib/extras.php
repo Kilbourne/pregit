@@ -368,3 +368,14 @@ if (!empty($GLOBALS['sitepress'])) {
 add_action('init', function () {
  remove_action('wp_head', 'Roots\\Soil\\CleanUp\\rel_canonical');
 }, 15);
+
+add_filter( 'searchwp_background_deltas', '__return_false' );
+ if (! wp_next_scheduled ( 'update_searchwp_delta' )) {
+  wp_schedule_event(time(), 'hourly', 'update_searchwp_delta');
+    }
+    add_action('update_searchwp_delta', function() {
+ if( function_exists( 'SWP' ) ) {
+    SWP()->process_updates();
+}
+});
+remove_action( 'wp_loaded', array( 'YITH_WC_Catalog_Mode_Premium', 'register_plugin_for_activation' ), 99 );
