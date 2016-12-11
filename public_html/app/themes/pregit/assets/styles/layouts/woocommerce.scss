@@ -9,6 +9,9 @@
 
 .woocommerce div.product {
     overflow: hidden;
+    @include media-query(palm){
+      margin-bottom:2.4rem
+    }
     .product_title {
         color: #86754D;
         text-transform: uppercase;
