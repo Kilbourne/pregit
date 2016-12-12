@@ -215,11 +215,21 @@
             }
             .et_pb_column_3 {
                 background: #000;
+                position: relative;
             }
             .et_pb_column_3 > .et_pb_text > p {
                 position: relative;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+            .et_pb_column_3 {
+                > .et_pb_video + .et_pb_text {
+                    position: absolute;
+                    z-index: 99;
+                    left: 0;
+                    width: 100%;
+                    top: 50%;
+                }
             }
         }
     }
@@ -471,10 +481,10 @@ body.tax-producer {
         width: calc(100% - 179px);
         display: inline-block;
         vertical-align: top;
-        display:flex;
-        flex-wrap:wrap;
+        display: flex;
+        flex-wrap: wrap;
         li.product {
-            display:flex;
+            display: flex;
             flex-direction: column;
             width: 30.8%;
             border: 1px solid;
@@ -541,16 +551,15 @@ body.tax-producer {
                     display: block;
                 }
                 @include media-query(lap-and-up) {
-                  >h3 {
-                      background: transparent;
-                      color: transparent;
-                  }
+                    >h3 {
+                        background: transparent;
+                        color: transparent;
+                    }
                 }
             }
         }
     }
     .woocommerce-pagination {
-
         a {
             color: #575756;
         }
@@ -579,9 +588,11 @@ body.tax-producer {
         font-weight: 300;
     }
 }
-body.post-type-archive-product  .woocommerce-breadcrumb{
-  display:none;
+
+body.post-type-archive-product .woocommerce-breadcrumb {
+    display: none;
 }
+
 body.error404,
 body.search,
 body.page-template-custom-search {
@@ -861,8 +872,13 @@ div.gform_confirmation_message {
             label>a {
                 text-decoration: underline !important;
             }
-            .gfield_checkbox{ margin-bottom:1rem;}
-            input,label{ vertical-align:middle;}
+            .gfield_checkbox {
+                margin-bottom: 1rem;
+            }
+            input,
+            label {
+                vertical-align: middle;
+            }
         }
     }
 }
