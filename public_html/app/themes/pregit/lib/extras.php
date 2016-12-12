@@ -225,10 +225,10 @@ function save_producer_tax_terms($post_id)
             $term = $user->user_login;
 
             if (!term_exists($term, $taxonomy)) {
-                wp_insert_term($term, $taxonomy, array('slug' => 'produttore_' . $user_id));
+                wp_insert_term($term, $taxonomy, array('slug' => $term));
             }
 
-            $terms[] = 'produttore_' . $user_id;
+            $terms[] = $term;
         }
     }
     if ($terms) {
@@ -243,7 +243,7 @@ function on_producer_register_add_to_tax($user_id)
 {
     $user = get_userdata($user_id);
     if (in_array('producer', (array) $user->roles) && !term_exists($user->user_login, 'producer')) {
-        wp_insert_term($user->user_login, 'producer', array('slug' => 'produttore_' . $user_id));
+        wp_insert_term($user->user_login, 'producer', array('slug' => $user->user_login));
     }
 
 }
@@ -366,16 +366,16 @@ if (!empty($GLOBALS['sitepress'])) {
 }
 
 add_action('init', function () {
- remove_action('wp_head', 'Roots\\Soil\\CleanUp\\rel_canonical');
+    remove_action('wp_head', 'Roots\\Soil\\CleanUp\\rel_canonical');
 }, 15);
 
-add_filter( 'searchwp_background_deltas', '__return_false' );
- if (! wp_next_scheduled ( 'update_searchwp_delta' )) {
-  wp_schedule_event(time(), 'hourly', 'update_searchwp_delta');
-    }
-    add_action('update_searchwp_delta', function() {
- if( function_exists( 'SWP' ) ) {
-    SWP()->process_updates();
+add_filter('searchwp_background_deltas', '__return_false');
+if (!wp_next_scheduled('update_searchwp_delta')) {
+    wp_schedule_event(time(), 'hourly', 'update_searchwp_delta');
 }
+add_action('update_searchwp_delta', function () {
+    if (function_exists('SWP')) {
+        SWP()->process_updates();
+    }
 });
-remove_action( 'wp_loaded', array( 'YITH_WC_Catalog_Mode_Premium', 'register_plugin_for_activation' ), 99 );
+remove_action('wp_loaded', array('YITH_WC_Catalog_Mode_Premium', 'register_plugin_for_activation'), 99);

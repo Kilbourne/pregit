@@ -31,13 +31,14 @@ function set_column($input_info, $field, $column, $value, $form_id)
 add_filter('gform_column_input_6_5_1', __NAMESPACE__ . '\\set_column2', 10, 5);
 function set_column2($input_info, $field, $column, $value, $form_id)
 {
+    $user = wp_get_current_user();
     return array('type' => 'post-select', 'args' => array(
         'post_type' => 'product',
         'tax_query' => array(
             array(
                 'taxonomy' => 'producer',
                 'field'    => 'slug',
-                'terms'    => 'produttore_' . get_current_user_id(),
+                'terms'    => $user->user_login,
             ),
         ),
     ), 'value' => 'ID', "text" => 'post_title');
@@ -102,3 +103,19 @@ function um_account_tab__docs($info)
         ?></ul></div>   <?php
 }
 }
+/*
+add_action('um_after_new_user_register', function ($user_id) {
+global $um_mailchimp;
+$um_mailchimp->api->user_id = $user_id;
+$lists                      = $um_mailchimp->api->has_lists();
+delete_option("um_cache_userdata_{$user_id}");
+
+foreach ($lists as $post_id) {
+$list = $um_mailchimp->api->fetch_list($post_id);
+if (!$um_mailchimp->api->is_subscribed($list['id'])) {
+$um_mailchimp->api->subscribe($list['id'], $list['merge_vars']);
+}
+
+}
+}, 10);
+ */
