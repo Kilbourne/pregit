@@ -6,7 +6,9 @@
     }
     border-bottom: 8px solid #86754d;
     position:relative;
-    margin-bottom: 3.25rem;
+    @include media-query(lap-and-up) {
+        margin-bottom: 3.25rem;
+    }
     .first-line {
         font-size: .8rem;
         margin: 0 1rem 0;
