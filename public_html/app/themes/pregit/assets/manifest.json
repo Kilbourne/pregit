@@ -49,12 +49,12 @@
                 "../../app/plugins/woocommerce/assets/js/frontend/cart-fragments.js",
                 "../../app/plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
                 "../../app/plugins/woocommerce/assets/js/frontend/single-product.js",
-                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-global-functions.js",
-                "../../plugins/divi-builder/includes/builder/scripts/jquery.fitvids.js",
-                "../../plugins/divi-builder/includes/builder/scripts/waypoints.min.js",
-                "../../plugins/divi-builder/includes/builder/scripts/jquery.magnific-popup.js",
-                "../../plugins/divi-builder/includes/builder/scripts/jquery.mobile.custom.min.js",
-                "../../plugins/divi-builder/includes/builder/scripts/frontend-builder-scripts.js"
+                "../../plugins/divi-builder-resp/includes/builder/scripts/frontend-builder-global-functions.js",
+                "../../plugins/divi-builder-resp/includes/builder/scripts/jquery.fitvids.js",
+                "../../plugins/divi-builder-resp/includes/builder/scripts/waypoints.min.js",
+                "../../plugins/divi-builder-resp/includes/builder/scripts/jquery.magnific-popup.js",
+                "../../plugins/divi-builder-resp/includes/builder/scripts/jquery.mobile.custom.min.js",
+                "../../plugins/divi-builder-resp/includes/builder/scripts/frontend-builder-scripts.js"
 
             ],
             "files": [
@@ -98,6 +98,18 @@
                 "../../plugins/gravityforms/css/formsmain.css",
                 "../../plugins/gravityforms/css/formreset.css",
                 "../../plugins/gravityforms/css/readyclass.css"
+            ],
+            "files": [
+                "styles/woocommerce.scss",
+                "styles/main.scss"
+            ],
+            "main": true
+        },
+        "main-home1.css": {
+            "vendor": [
+                "../../plugins/responsive-menu-pro-data/css/responsive-menu-pro-1.css",
+                "out/gravity.css",
+                "out/mainhome.css"
             ],
             "files": [
                 "styles/woocommerce.scss",

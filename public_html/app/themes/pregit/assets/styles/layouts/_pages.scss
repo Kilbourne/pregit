@@ -291,7 +291,7 @@
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
     margin-top: 1rem;
-    @media(min-width: 220px) {
+    @include media-query(lap-and-up) {
         margin-top: 5rem;
     }
     .azienda-box {
@@ -304,6 +304,9 @@
             float: left;
             margin: 0 1% 2rem;
             width: 23%;
+            @include media-query(palm) {
+                margin-bottom: 1rem;
+            }
         }
         .text-content {
             width: 43%;
@@ -448,7 +451,7 @@ body.post-type-archive-product,
 body.tax-product_cat,
 body.tax-producer {
     .category-products-container {
-        margin: 0 5rem 3rem;
+        margin: 0 6% 3rem;
         overflow: hidden;
         position: relative;
         @include media-query(lap-and-up) {
@@ -470,7 +473,7 @@ body.tax-producer {
         transform: rotate(-180deg);
         writing-mode: vertical-lr;
         vertical-align: top;
-        padding-bottom: 2rem;
+        //padding-bottom: 2rem;
         @include media-query(lap-and-up) {
             font-size: 6rem !important;
             align-self: flex-start;
@@ -494,6 +497,12 @@ body.tax-producer {
                 margin: 0 0 1.5rem;
                 float: left;
                 clear: both;
+
+            }
+            @media(min-width:450.1px) and (max-width:799.999px) {
+            &:nth-child(odd){
+                    margin-right:2%;
+            }
             }
             @media(max-width:450px) {
                 width: 100%;
@@ -577,7 +586,9 @@ body.tax-producer {
         }
     }
 }
-
+body.post-type-archive-product .category-products-container {
+    padding-top:3rem;
+}
 .woocommerce .woocommerce-breadcrumb {
     text-align: right;
     padding: .5rem 4% 0 0;
@@ -666,13 +677,10 @@ body.woocommerce-checkout {
 body.blog,
 body.single-post {
     main {
-        padding: 4rem 4.5% 4.5rem;
-        @media(min-width: 650px) {
-            padding: 6rem 4.5% 4.5rem;
-        }
+        padding: 1.5rem 4.5% 4.5rem;
     }
 }
-
+body.single-post main {padding-bottom:2.5rem}
 body.single-post article {
     h1,
     h2,
@@ -755,7 +763,7 @@ body.blog {
 }
 
 .producers-wrapper {
-    padding: 3.5rem 2.5%;
+    padding: 1rem 2.5% 2.5rem;
     .producers-list {
         list-style: none;
         padding: 0;
