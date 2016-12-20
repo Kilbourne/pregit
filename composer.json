@@ -106,7 +106,7 @@
         "satispress/global-meta-box-order": "*",
 
         "satispress/advanced-custom-fields-pro": "*",
-        "wpackagist-plugin/wp-spamshield": "*",
+        "satispress/wp-spamshield": "*",
         "satispress/searchwp": "*",
         "wpackagist-plugin/woocommerce": "*",
         "satispress/sitepress-multilingual-cms": "*",

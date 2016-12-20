@@ -20,7 +20,8 @@
                 "../../app/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
                 "../../app/plugins/woocommerce/assets/js/frontend/cart-fragments.js",
                 "../../app/plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
-                "../../app/plugins/woocommerce/assets/js/frontend/single-product.js"
+                "../../app/plugins/woocommerce/assets/js/frontend/single-product.js",
+                "../../app/plugins/woocommerce-multilingual/res/js/front-scripts.js"
             ],
             "files": [
                 "scripts/main.js"
@@ -48,6 +49,7 @@
                 "../../app/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js",
                 "../../app/plugins/woocommerce/assets/js/frontend/cart-fragments.js",
                 "../../app/plugins/woocommerce-ajax-add-to-cart-for-variable-products/js/add-to-cart-variation.js",
+                "../../app/plugins/woocommerce-multilingual/res/js/front-scripts.js",
                 "../../app/plugins/woocommerce/assets/js/frontend/single-product.js",
                 "../../plugins/divi-builder-resp/includes/builder/scripts/frontend-builder-global-functions.js",
                 "../../plugins/divi-builder-resp/includes/builder/scripts/jquery.fitvids.js",

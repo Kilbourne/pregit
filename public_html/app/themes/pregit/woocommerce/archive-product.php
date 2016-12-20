@@ -12,7 +12,7 @@
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     WooCommerce/Templates
- * @version     1.6.4
+ * @version     2.0.0
  */
 
 if (!defined('ABSPATH')) {
@@ -70,9 +70,9 @@ do_action('woocommerce_archive_description');
 
         <?php while (have_posts()): the_post();?>
 
-                <?php wc_get_template_part('content', 'product');?>
+                  <?php wc_get_template_part('content', 'product');?>
 
-              <?php endwhile; // end of the loop. ?>
+                <?php endwhile; // end of the loop. ?>
 
       <?php woocommerce_product_loop_end();?>
 

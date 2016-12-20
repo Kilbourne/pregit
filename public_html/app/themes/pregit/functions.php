@@ -12,6 +12,7 @@
 $sage_includes = [
     'lib/assets.php', // Scripts and stylesheets
     'lib/extras.php', // Custom functions
+    'lib/acf.php',
     'lib/woocommerce.php',
     'lib/members.php',
     'lib/setup.php', // Theme setup
