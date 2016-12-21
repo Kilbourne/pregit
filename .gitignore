@@ -31,3 +31,15 @@ bin
 .vagrant
 .htaccess
 public_html/app/themes/pregit/assets/styles/components/_fonts.scss
+
+./*
+!.git
+!.github
+!config
+!vendor
+!.editorconfig
+!.gitattributes
+!.gitignore
+!composer.json
+!public_html
+!wp-cli.yml

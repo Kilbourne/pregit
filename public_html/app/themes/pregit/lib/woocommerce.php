@@ -22,8 +22,8 @@ function woocommerce_header_add_to_cart_fragment($fragments)
 {
     ob_start();
     ?>
-  <a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php __('Carrello', 'sage');?>"><i class="fa fa-shopping-cart"></i><span class="wcmenucart-text">(<span class="cart-length">
-  <?php echo WC()->cart->get_cart_contents_count(); ?> </span>) <?php _e('Carrello', 'sage')?></span></a>
+  <a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php __('Cart', 'sage');?>"><i class="fa fa-shopping-cart"></i><span class="wcmenucart-text">(<span class="cart-length">
+  <?php echo WC()->cart->get_cart_contents_count(); ?> </span>) <?php _e('Cart', 'sage')?></span></a>
 
   <?php
 

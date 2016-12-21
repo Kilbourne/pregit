@@ -57,7 +57,7 @@ if ($producer_terms) {
     ?>
   <div class="produttore-link">
     <a href="<?php echo esc_url(get_term_link($term_id)); ?>">
-      <p><?php _e('Guarda tutti i prodotti', 'sage')?></p>
+      <p><?php _e('Discover all products', 'sage')?></p>
       <?php echo wp_get_attachment_image(get_field('logo', 'producer_' . $term_id), 'full') ? wp_get_attachment_image(get_field('logo', 'producer_' . $term_id), 'full') : ''; ?>
     </a>
   </div>
@@ -66,7 +66,7 @@ if (get_field('scheda_prodotto', get_the_id())) {
 
     ?>
   <div class="product-scheda">
-    <a href="<?php echo wp_get_attachment_url(get_field('scheda_prodotto', get_the_id())); ?>" ><?php _e('Scarica la scheda', 'sage')?> </a>
+    <a href="<?php echo wp_get_attachment_url(get_field('scheda_prodotto', get_the_id())); ?>" ><?php _e('Download Product Details', 'sage')?> </a>
   </div>
   <?php }?>
 </div>
@@ -87,7 +87,7 @@ foreach ($arr_att as $key => $value) {
 }
 if ($producer_terms) {
     ?>
-     <p class="riga-attributo"><span class="titolo"><?php _e('Produttore', 'sage')?>  </span><span class="attributo"><?php echo get_term($term_id, 'producer')->name ?></span></p>
+     <p class="riga-attributo"><span class="titolo"><?php _e('Producer', 'sage')?>  </span><span class="attributo"><?php echo get_term($term_id, 'producer')->name ?></span></p>
 <?php
 }
 global $product;

@@ -133,9 +133,9 @@ function account_link_menu_item()
 {
     $UM_plinks = (new \UM_Permalinks)->core;
     if (is_user_logged_in()) {
-        return '<li class="responsive-menu-pro-item menu-item menu-account" ><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['account']) . '">' . __('Profilo', 'sage') . ' </a></li><li class="responsive-menu-pro-item menu-item menu-logout" > <a class="responsive-menu-pro-item-link" href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Scollegati', 'sage') . '</a></li>';
+        return '<li class="responsive-menu-pro-item menu-item menu-account" ><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['account']) . '">' . __('Profile', 'sage') . ' </a></li><li class="responsive-menu-pro-item menu-item menu-logout" > <a class="responsive-menu-pro-item-link" href="' . esc_url(get_permalink($UM_plinks['logout'])) . '">' . __('Logout', 'sage') . '</a></li>';
     } elseif (!is_user_logged_in()) {
-        return '<li class="responsive-menu-pro-item menu-item menu-login" ><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['login']) . '">' . __('Area Riservata', 'sage') . ' </a></li>';
+        return '<li class="responsive-menu-pro-item menu-item menu-login" ><a class="responsive-menu-pro-item-link" href="' . get_permalink($UM_plinks['login']) . '">' . __('Reserved Area', 'sage') . ' </a></li>';
     }
 }
 
@@ -185,12 +185,12 @@ add_action('init', __NAMESPACE__ . '\\cptui_register_my_taxes_producer');
 function cptui_register_my_taxes_producer()
 {
     $labels = array(
-        "name"          => __('Produttori', 'sage'),
-        "singular_name" => __('Produttore', 'sage'),
+        "name"          => __('Producers', 'sage'),
+        "singular_name" => __('Producer', 'sage'),
     );
 
     $args = array(
-        "label"              => __('Produttori', 'sage'),
+        "label"              => __('Producers', 'sage'),
         "labels"             => $labels,
         "public"             => true,
         "hierarchical"       => false,

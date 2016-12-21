@@ -9,7 +9,7 @@ function sk_wcmenucart()
 
     ob_start();
     global $woocommerce;
-    $viewing_cart        = __('Carrello', 'sage');
+    $viewing_cart        = __('Cart', 'sage');
     $cart_url            = $woocommerce->cart->get_cart_url();
     $cart_contents_count = $woocommerce->cart->cart_contents_count;
     $cart_contents       = sprintf(_n('%d  item', '%d items', $cart_contents_count, 'sage'), $cart_contents_count);
@@ -44,7 +44,7 @@ echo '<div class="account-link"><div><a href="' . get_permalink($UM_plinks['acco
 
 }
  */
-echo '<div class="account-link"><div><a class="responsive-menu-pro-item-link" href="' . get_permalink(get_page_by_title(__('Contatti', 'sage'))->ID) . '">' . __('Contattaci', 'sage') . ' </a></div></div>';
+echo '<div class="account-link"><div><a class="responsive-menu-pro-item-link" href="' . get_permalink(get_page_by_title(__('Contacts', 'sage'))->ID) . '">' . __('Contact us', 'sage') . ' </a></div></div>';
 $query = isset($_GET['searchwpquery']) ? sanitize_text_field($_GET['searchwpquery']) : '';
 ?>
     <div class="cart-icon-container"> <?php echo sk_wcmenucart(); ?></div>
