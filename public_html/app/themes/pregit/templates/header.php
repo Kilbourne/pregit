@@ -50,7 +50,7 @@ $query = isset($_GET['searchwpquery']) ? sanitize_text_field($_GET['searchwpquer
     <div class="cart-icon-container"> <?php echo sk_wcmenucart(); ?></div>
     <form action="<?php echo get_permalink(922); ?>" id="responsive_menu_pro_search" method="get" role="search">
      <i class="fa fa-search"></i>
-            <input type="search" name="searchwpquery" value="<?php echo esc_attr($query); ?>" placeholder="<?php _e('Cerca', 'responsive-menu-pro');?>" id="responsive_menu_pro_search_input">
+            <input type="search" name="searchwpquery" value="<?php echo esc_attr($query); ?>" placeholder="<?php _e('Search', 'sage');?>" id="responsive_menu_pro_search_input">
         </form>
 
 

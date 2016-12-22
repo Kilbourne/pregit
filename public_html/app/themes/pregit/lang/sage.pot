@@ -64,6 +64,10 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
+#: templates/header.php:53
+msgid "Search"
+msgstr ""
+
 #: lib/acf.php:15
 msgid "Document Distributor"
 msgstr ""
