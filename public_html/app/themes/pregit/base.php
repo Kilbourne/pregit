@@ -30,7 +30,7 @@ get_template_part('templates/header');
               <div class="et_builder_outer_content" id="et_builder_outer_content">
         <div class="et_builder_inner_content et_pb_gutters3">
         <?php
-echo do_shortcode(get_page_by_title('Header Slider')->post_content);
+echo do_shortcode(get_page_by_title('Header Slider en')->post_content);
 
     ?>
         </div></div></div><?php }?>
