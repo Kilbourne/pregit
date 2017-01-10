@@ -102,8 +102,8 @@ msgid "Classification"
 msgstr "Classificazione"
 
 #: lib/acf.php:283
-msgid "Alcol Vol. %"
-msgstr "Alcohol Cont. %"
+msgid "Alcohol Cont. %"
+msgstr "Alcol Vol. %"
 
 #: lib/acf.php:302
 msgid "Year"

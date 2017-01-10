@@ -280,7 +280,7 @@ if (function_exists('acf_add_local_field_group')):
                 'prepend'           => '',
                 'append'            => '',
                 'key'               => 'field_57eb952634b42',
-                'label'             => __('Alcol Vol. %', 'sage'),
+                'label'             => __('Alcohol Cont. %', 'sage'),
                 'name'              => 'alcol',
                 'type'              => 'text',
                 'instructions'      => '',

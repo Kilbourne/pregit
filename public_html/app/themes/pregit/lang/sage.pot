@@ -109,7 +109,7 @@ msgid "Classification"
 msgstr ""
 
 #: lib/acf.php:283
-msgid "Alcol Vol. %"
+msgid "Alcohol Cont. %"
 msgstr ""
 
 #: lib/acf.php:302

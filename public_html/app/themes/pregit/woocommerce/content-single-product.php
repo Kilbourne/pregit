@@ -141,7 +141,7 @@ $obj_arr = array_map(function ($el) {
       <?php if ($obj_arr[0]['value'] && $obj_arr[0]['value'] !== '') {?>
       <div class="colonna-left">
 
-        <div class="organolettiche"><h4 class="attributo-espanso-title"><?php echo $obj_arr[0]['label']; ?> </h4>
+        <div class="organolettiche"><h4 class="attributo-espanso-title"><?php echo __($obj_arr[0]['label'], 'sage'); ?> </h4>
         <div class="attributo-espanso-content"><?php echo $obj_arr[0]['value']; ?></div> </div>
 
       </div>
@@ -149,11 +149,11 @@ $obj_arr = array_map(function ($el) {
       <?php if (($obj_arr[1]['value'] && $obj_arr[1]['value'] !== '') || ($obj_arr[2]['value'] && $obj_arr[2]['value'] !== '')) {?>
       <div class="colonna-right">
         <?php if ($obj_arr[1]['value'] && $obj_arr[1]['value'] !== '') {?>
-        <div class="abbinamenti"><h4 class="attributo-espanso-title"><?php echo $obj_arr[1]['label']; ?> </h4>
+        <div class="abbinamenti"><h4 class="attributo-espanso-title"><?php echo __($obj_arr[1]['label'], 'sage'); ?> </h4>
         <div class="attributo-espanso-content"><?php echo $obj_arr[1]['value']; ?></div> </div>
 <?php }?>
 <?php if ($obj_arr[2]['value'] && $obj_arr[2]['value'] !== '') {?>
-        <div class="temperatura"><h4 class="attributo-espanso-title"><?php echo $obj_arr[2]['label']; ?> </h4>
+        <div class="temperatura"><h4 class="attributo-espanso-title"><?php echo __($obj_arr[2]['label'], 'sage'); ?> </h4>
         <div class="attributo-espanso-content"><?php echo $obj_arr[2]['value']; ?></div> </div>
 <?php }?>
       </div>
@@ -162,7 +162,7 @@ $obj_arr = array_map(function ($el) {
     <?php if ($obj_arr[3]['value'] && $obj_arr[3]['value'] !== '') {?>
     <div class="secondariga">
 
-      <div class="vinificazione"><h4 class="attributo-espanso-title"><?php echo $obj_arr[3]['label']; ?> </h4>
+      <div class="vinificazione"><h4 class="attributo-espanso-title"><?php echo __($obj_arr[3]['label'], 'sage'); ?> </h4>
       <div class="attributo-espanso-content"><?php echo $obj_arr[3]['value']; ?></div> </div>
 
     </div>
