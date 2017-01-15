@@ -1,7 +1,6 @@
 @import "common/variables";
 //@import "common/mixins";
 //@import "common/utility";
-
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/inuit-defaults/_settings.defaults.scss";
@@ -15,7 +14,6 @@
 @import "../../bower_components/inuit-print/_trumps.print.scss";
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
-
 @import "common/global";
 @import "components/buttons";
 //@import "components/comments";
@@ -23,7 +21,6 @@
 @import "components/fonts";
 @import "components/grid";
 @import "components/wp-classes";
-
 @import "layouts/header";
 //@import "components/menu";
 @import "layouts/sidebar";
@@ -33,3 +30,4 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 @import "layouts/account";
+@import "layouts/divi-home";

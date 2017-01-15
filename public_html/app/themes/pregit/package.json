@@ -52,7 +52,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
-    "gulp-wp-pot": "^2.0.1",
+    "gulp-wp-pot": "^2.0.3",
     "imagemin-pngcrush": "^5.0.0",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.0.1",

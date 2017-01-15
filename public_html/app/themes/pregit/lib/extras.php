@@ -142,6 +142,10 @@ function account_link_menu_item()
     }
 }
 
+
+remove_action( 'wp_footer', 'et_pb_maybe_add_advanced_styles' );
+
+
 /**
  *  This will hide the Divi "Project" post type.
  *  Thanks to georgiee (https://gist.github.com/EngageWP/062edef103469b1177bc#gistcomment-1801080) for his improved solution.
