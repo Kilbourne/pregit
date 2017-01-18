@@ -142,6 +142,13 @@ function account_link_menu_item()
     }
 }
 
+
+add_action('wp_footer',function(){
+  remove_action( 'wp_footer', 'et_pb_maybe_add_advanced_styles' );
+},9);
+
+
+
 /**
  *  This will hide the Divi "Project" post type.
  *  Thanks to georgiee (https://gist.github.com/EngageWP/062edef103469b1177bc#gistcomment-1801080) for his improved solution.
@@ -382,3 +389,49 @@ add_action('update_searchwp_delta', function () {
     }
 });
 remove_action('wp_loaded', array('YITH_WC_Catalog_Mode_Premium', 'register_plugin_for_activation'), 99);
+
+
+
+//add_filter('wc_google_analytics_pro_tracking_function_name', function ($tracker) {return 'ga';});
+function ga_tracking_code($class)
+{
+
+    // bail if tracking is disabled
+
+    // no indentation on purpose
+    ?>
+<!-- Start WooCommerce Google Analytics Pro -->
+  <?php do_action('wc_google_analytics_pro_before_tracking_code');?>
+<script>
+
+  <?php echo $class->ga_function_name; ?>( 'create', '<?php echo esc_js($class->get_tracking_id()); ?>', 'auto' );
+  <?php echo $class->ga_function_name; ?>( 'set', 'forceSSL', true );
+<?php if ('yes' === $class->settings['track_user_id'] && is_user_logged_in()): ?>
+  <?php echo $class->ga_function_name; ?>( 'set', 'userId', '<?php echo esc_js(get_current_user_id()) ?>' );
+<?php endif;?>
+<?php if ('yes' === $class->settings['anonymize_ip']): ?>
+  <?php echo $class->ga_function_name; ?>( 'set', 'anonymizeIp', true );
+<?php endif;?>
+<?php if ('yes' === $class->settings['enable_displayfeatures']): ?>
+  <?php echo $class->ga_function_name; ?>( 'require', 'displayfeatures' );
+<?php endif;?>
+  <?php echo $class->ga_function_name; ?>( 'require', 'ec' );
+</script>
+  <?php do_action('wc_google_analytics_pro_after_tracking_code');?>
+<!-- end WooCommerce Google Analytics Pro -->
+    <?php
+}
+
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
+remove_action('template_redirect', 'rest_output_link_header', 11, 0);
+if (!empty($GLOBALS['sitepress'])) {
+    add_action('wp_head', function () {
+        remove_action(
+            current_filter(),
+            array($GLOBALS['sitepress'], 'meta_generator_tag')
+        );
+    },
+        0
+    );
+}
