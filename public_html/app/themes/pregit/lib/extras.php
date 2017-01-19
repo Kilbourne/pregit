@@ -391,8 +391,8 @@ add_action('update_searchwp_delta', function () {
 remove_action('wp_loaded', array('YITH_WC_Catalog_Mode_Premium', 'register_plugin_for_activation'), 99);
 
 
-
-//add_filter('wc_google_analytics_pro_tracking_function_name', function ($tracker) {return 'ga';});
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+add_filter('wc_google_analytics_pro_tracking_function_name', function ($tracker) {return 'ga';});
 function ga_tracking_code($class)
 {
 

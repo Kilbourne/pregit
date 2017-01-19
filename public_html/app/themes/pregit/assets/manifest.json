@@ -2,7 +2,7 @@
     "dependencies": {
         "main.js": {
             "vendor": [
-
+                "assets/scripts/analytics.js",
                 "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
                 "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
 
@@ -30,7 +30,7 @@
         },
         "main-home.js": {
             "vendor": [
-
+                "assets/scripts/analytics.js",
                 "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
                 "../../plugins/responsive-menu-pro-data/js/responsive-menu-pro-1.js",
 
@@ -66,7 +66,7 @@
         },
         "main-um.js": {
             "vendor": [
-
+                "assets/scripts/analytics.js",
                 "../../plugins/responsive-menu-pro-bacon/public/js/touch.js",
 
                 "../../plugins/ultimate-member/assets/js/select2/select2.full.min.js",
