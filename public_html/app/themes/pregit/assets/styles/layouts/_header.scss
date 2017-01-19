@@ -203,5 +203,8 @@
         display: inline-block;
         margin: 0 .25rem;
         text-transform: uppercase;
+        &.active {
+            font-weight: 700;
+        }
     }
 }

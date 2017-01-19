@@ -32,7 +32,7 @@ function sk_wcmenucart()
 }
 function language_selector()
 {
-    $languages = icl_get_languages('skip_missing=0');
+    $languages = icl_get_languages('skip_missing=0&orderby=custom');
     if (!empty($languages)) {
         echo '<ul id="lansel">';
         $length=count($languages);
