@@ -90,9 +90,28 @@
             top: 50%;
             width: 100%;
             transform: translateY(-50%);
+            overflow: hidden;
+            max-height: 100%;
             @media(max-width: 400px) {
                 transform: none;
                 position: static;
+                display: none;
+            }
+            @media(max-width: 409px) {
+                >h3 {
+                    font-size: 1.35rem;
+                }
+                >p:first-of-type {
+                    display: none;
+                }
+                i {
+                    width: 40px;
+                    height: 40px;
+                    &:before {
+                        font-size: 1.8rem;
+                        padding-left: 5.5px;
+                    }
+                }
             }
         }
         &.golink {
@@ -226,24 +245,6 @@
                 background: #000;
                 position: relative;
             }
-            .et_pb_column_3 > .et_pb_text {
-                display: flex;
-                align-items: center;
-                > p {
-                    // position: absolute;
-                    // top: 50%;
-                    // transform: translateY(-50%);
-                }
-            }
-            .et_pb_column_3 {
-                > .et_pb_video + .et_pb_text {
-                    position: absolute;
-                    z-index: 99;
-                    left: 0;
-                    width: 100%;
-                    top: 50%;
-                }
-            }
         }
     }
     .home-news-content p:last-of-type {
@@ -254,6 +255,28 @@
             display: flex;
             > .et_pb_text {
                 height: auto;
+            }
+        }
+    }
+    .et_pb_column_3 {
+        display: inline-block;
+        position: relative;
+        > .et_pb_video,
+        >.et_pb_text,
+        .et_pb_video_box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        > .et_pb_video + .et_pb_text {
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            @media(max-width: 400px) {
+                display: none;
             }
         }
     }
@@ -965,4 +988,16 @@ div.validation_error {
     max-width: 850px;
     margin: 0 auto;
     padding: 0 3%;
+}
+
+#field_8_8 {
+    display: flex;
+    >label {
+        order: 2;
+    }
+    .ginput_container {
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 1rem;
+    }
 }

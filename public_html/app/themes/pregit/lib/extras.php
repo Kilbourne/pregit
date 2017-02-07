@@ -38,7 +38,9 @@ add_action('send_headers', function () {
 add_filter('editable_roles', function ($all_roles) {
 
     if (in_array('shop_manager', wp_get_current_user()->roles)) {
-        $white_roles = ['producer', 'distributor', 'customer'];
+        $white_roles = ['producer'
+        //, 'distributor', 'customer'
+        ];
         foreach ($all_roles as $key => $role) {
             if (!in_array($key, $white_roles)) {
                 unset($all_roles[$key]);
@@ -53,7 +55,9 @@ add_filter('editable_roles', function ($all_roles) {
 add_filter('users_list_table_query_args', function ($args) {
     if (in_array('shop_manager', wp_get_current_user()->roles)) {
 
-        $args['role__in'] = ['producer', 'distributor', 'customer'];
+        $args['role__in'] = ['producer'
+        //, 'distributor', 'customer'
+        ];
     }
     return $args;
 });

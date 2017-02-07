@@ -41,7 +41,57 @@
                 $('.brand-form-submit').click(function(event) {
                     $('#gform_submit_button_3').click();
                 });
+                video = $('.et_pb_column_3 video');
 
+                function toggleVideo(isPaused) {
+                    if (isPaused) {
+                        video.get(0).play();
+                        video.attr('controls', '');
+                        $('.et_pb_text_3').hide();
+                    } else {
+                        video.get(0).pause();
+                        video.removeAttr('controls');
+                        $('.et_pb_text_3').show();
+                    }
+                }
+                $('.et_pb_text_3 .fa-play').click(
+                    videoCallback
+
+                );
+                $('video').click(
+                    videoCallback
+
+                );
+                videoState();
+                $(window).resize(videoState);
+
+                function videoCallback(e) {
+                    if (document.documentElement.clientWidth > 400) toggleVideo(video.get(0).paused)
+
+                }
+                var mobile;
+
+                function videoState() {
+                    var mobile1 = document.documentElement.clientWidth < 400
+                    if (mobile1 === mobile) {
+                        return;
+                    } else { mobile = mobile1; }
+                    if (mobile) {
+                        video.attr('controls', '');
+                        $('.et_pb_text_3').hide();
+                    } else {
+
+                        video.removeAttr('controls');
+                        if (!video.get(0).paused) {
+                            $('.et_pb_text_3').hide();
+                            video.attr('controls', '');
+                        } else {
+                            video.removeAttr('controls');
+                            $('.et_pb_text_3').show();
+                        }
+
+                    }
+                }
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS
