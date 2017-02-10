@@ -1,4 +1,6 @@
 <?php
+use Roots\Sage\Extras;
+
 function sk_wcmenucart()
 {
 
@@ -30,35 +32,10 @@ function sk_wcmenucart()
     return $social;
 
 }
-function language_selector()
-{
-    $languages = icl_get_languages('skip_missing=0&orderby=custom');
-    if (!empty($languages)) {
-        echo '<ul id="lansel">';
-        $length=count($languages);
-        $x=0;
-        foreach ($languages as $l) {
-            $x++;
-            echo '<li ' . ($l['active'] ? 'class="active"' : '') . ' data-lang="' . $l['language_code'] . '" >';
-            if (!$l['active']) {
-                echo '<a href="' . $l['url'] . '">';
-            }
 
-            echo '' . $l['language_code'] . '';
-            if (!$l['active']) {
-                echo '</a>';
-            }
-
-            echo '</li>';
-
-            if($x !== $length  ) echo ' | ';
-        }
-    }
-    echo '</ul>';
-}
 ?>
 <header class="banner">
-    <div class="first-line"><span class="left"> <?php  language_selector()  ?></span>
+    <div class="first-line"><span class="left"> <?php  Extras\language_selector()  ?></span>
     <span class="right">
 
          <?php

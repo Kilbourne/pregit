@@ -348,6 +348,9 @@ msgstr "Spiacente, la ricerca non ha prodotto nessun risultato."
 msgid "Error locating %s for inclusion"
 msgstr "Errore nell'inclusione di %s"
 
+msgid "News Archive"
+msgstr "Archivio News"
+
 #~ msgid "One Response to &ldquo;%2$s&rdquo;"
 #~ msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
 #~ msgstr[0] "Una risposta a &ldquo;%2$s&rdquo;"

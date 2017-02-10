@@ -280,9 +280,57 @@
             }
         }
     }
+    .et_pb_column_1_2 {
+        background-color: #B71622;
+    }
+    .et_pb_posts {
+        color: #fff;
+        padding-right: 1rem;
+        position: relative;
+        article {
+            display: flex;
+            margin-bottom: 0 !important;
+            height: 100%;
+            h1 {
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+            >.entry-content {
+                overflow: hidden;
+                padding-bottom: 2rem;
+                >a {
+                    float: right;
+                    margin-top: 1rem;
+                }
+            }
+            >a {
+                text-align: left;
+                margin: 0 5%;
+                background-color: #df332a;
+                position: relative;
+                width: auto;
+                outline: 1px dotted red !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                >img {
+                    border-radius: 50%;
+                    border: 3px solid #fff;
+                }
+            }
+        }
+    }
+    .pagination {
+        display: none;
+    }
+    .et_pb_text_3 {
+        display: block !important;
+    }
 }
 
-.et_pb_module #gform_wrapper_4 {
+.et_pb_module #gform_wrapper_4,
+.et_pb_module #gform_wrapper_9 {
     margin: 1.25rem 0;
     padding: 0 5%;
     overflow: hidden;
@@ -315,7 +363,8 @@
     }
 }
 
-.gform_wrapper form .gform_body #gform_fields_4 {
+.gform_wrapper form .gform_body #gform_fields_4,
+.gform_wrapper form .gform_body #gform_fields_9 {
     padding: 0;
     .gfield_label {
         display: none;
@@ -326,7 +375,8 @@
     }
 }
 
-#gform_submit_button_4 {
+#gform_submit_button_4,
+#gform_submit_button_9 {
     text-transform: uppercase;
 }
 
@@ -767,6 +817,9 @@ body.single-post article {
     .entry-content {
         padding: 1.5rem 0;
     }
+    br {
+        margin-bottom: 1rem;
+    }
 }
 
 body.blog {
@@ -924,7 +977,8 @@ div.gform_confirmation_message {
     }
 }
 
-#gform_4 {
+#gform_4,
+#gform_9 {
     .gform_body {
         li.gfield {
             width: 100% !important;
@@ -933,7 +987,8 @@ div.gform_confirmation_message {
         .ginput_container {
             background-color: #fff !important;
         }
-        #field_4_2>.ginput_container {
+        #field_4_2>.ginput_container,
+        #field_9_2>.ginput_container {
             background: transparent !important;
             margin: 1rem 0 0;
             >.gfield_checkbox {
@@ -944,6 +999,7 @@ div.gform_confirmation_message {
             }
             .gfield_checkbox {
                 margin-bottom: 1rem;
+                min-width: 13px;
             }
             input,
             label {

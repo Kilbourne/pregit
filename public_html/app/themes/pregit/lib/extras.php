@@ -131,6 +131,32 @@ function conditional_mobile_menu($items, $args)
     $items .= account_link_menu_item();
     return $items;
 }
+function language_selector()
+{
+    $languages = icl_get_languages('skip_missing=0&orderby=custom');
+    if (!empty($languages)) {
+        echo '<ul id="lang_sel">';
+        $length=count($languages);
+        $x=0;
+        foreach ($languages as $l) {
+            $x++;
+            echo '<li ' . ($l['active'] ? 'class="active"' : '') . ' data-lang="' . $l['language_code'] . '" >';
+            if (!$l['active']) {
+                echo '<a href="' . $l['url'] . '">';
+            }
+
+            echo '' . $l['language_code'] . '';
+            if (!$l['active']) {
+                echo '</a>';
+            }
+
+            echo '</li>';
+
+            if($x !== $length  ) echo ' | ';
+        }
+    }
+    echo '</ul>';
+}
 //add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
 
 /**
