@@ -349,3 +349,6 @@ msgstr ""
 #: functions.php:26
 msgid "Error locating %s for inclusion"
 msgstr ""
+
+msgid "News Archive"
+msgstr ""

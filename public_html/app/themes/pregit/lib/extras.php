@@ -38,7 +38,9 @@ add_action('send_headers', function () {
 add_filter('editable_roles', function ($all_roles) {
 
     if (in_array('shop_manager', wp_get_current_user()->roles)) {
-        $white_roles = ['producer', 'distributor', 'customer'];
+        $white_roles = ['producer'
+        //, 'distributor', 'customer'
+        ];
         foreach ($all_roles as $key => $role) {
             if (!in_array($key, $white_roles)) {
                 unset($all_roles[$key]);
@@ -53,7 +55,9 @@ add_filter('editable_roles', function ($all_roles) {
 add_filter('users_list_table_query_args', function ($args) {
     if (in_array('shop_manager', wp_get_current_user()->roles)) {
 
-        $args['role__in'] = ['producer', 'distributor', 'customer'];
+        $args['role__in'] = ['producer'
+        //, 'distributor', 'customer'
+        ];
     }
     return $args;
 });
@@ -127,6 +131,32 @@ function conditional_mobile_menu($items, $args)
     $items .= account_link_menu_item();
     return $items;
 }
+function language_selector()
+{
+    $languages = icl_get_languages('skip_missing=0&orderby=custom');
+    if (!empty($languages)) {
+        echo '<ul id="lang_sel">';
+        $length=count($languages);
+        $x=0;
+        foreach ($languages as $l) {
+            $x++;
+            echo '<li ' . ($l['active'] ? 'class="active"' : '') . ' data-lang="' . $l['language_code'] . '" >';
+            if (!$l['active']) {
+                echo '<a href="' . $l['url'] . '">';
+            }
+
+            echo '' . $l['language_code'] . '';
+            if (!$l['active']) {
+                echo '</a>';
+            }
+
+            echo '</li>';
+
+            if($x !== $length  ) echo ' | ';
+        }
+    }
+    echo '</ul>';
+}
 //add_filter('wp_nav_menu_menu-mobile_items', __NAMESPACE__ . '\\conditional_mobile_menu', 199, 2);
 
 /**
@@ -143,7 +173,12 @@ function account_link_menu_item()
 }
 
 
-remove_action( 'wp_footer', 'et_pb_maybe_add_advanced_styles' );
+
+add_action('wp_footer',function(){
+  remove_action( 'wp_footer', 'et_pb_maybe_add_advanced_styles' );
+},9);
+
+
 
 
 /**
@@ -386,3 +421,49 @@ add_action('update_searchwp_delta', function () {
     }
 });
 remove_action('wp_loaded', array('YITH_WC_Catalog_Mode_Premium', 'register_plugin_for_activation'), 99);
+
+
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+add_filter('wc_google_analytics_pro_tracking_function_name', function ($tracker) {return 'ga';});
+function ga_tracking_code($class)
+{
+
+    // bail if tracking is disabled
+
+    // no indentation on purpose
+    ?>
+<!-- Start WooCommerce Google Analytics Pro -->
+  <?php do_action('wc_google_analytics_pro_before_tracking_code');?>
+<script>
+
+  <?php echo $class->ga_function_name; ?>( 'create', '<?php echo esc_js($class->get_tracking_id()); ?>', 'auto' );
+  <?php echo $class->ga_function_name; ?>( 'set', 'forceSSL', true );
+<?php if ('yes' === $class->settings['track_user_id'] && is_user_logged_in()): ?>
+  <?php echo $class->ga_function_name; ?>( 'set', 'userId', '<?php echo esc_js(get_current_user_id()) ?>' );
+<?php endif;?>
+<?php if ('yes' === $class->settings['anonymize_ip']): ?>
+  <?php echo $class->ga_function_name; ?>( 'set', 'anonymizeIp', true );
+<?php endif;?>
+<?php if ('yes' === $class->settings['enable_displayfeatures']): ?>
+  <?php echo $class->ga_function_name; ?>( 'require', 'displayfeatures' );
+<?php endif;?>
+  <?php echo $class->ga_function_name; ?>( 'require', 'ec' );
+</script>
+  <?php do_action('wc_google_analytics_pro_after_tracking_code');?>
+<!-- end WooCommerce Google Analytics Pro -->
+    <?php
+}
+
+remove_action('wp_head', 'rest_output_link_wp_head');
+remove_action('wp_head', 'wp_oembed_add_discovery_links');
+remove_action('template_redirect', 'rest_output_link_header', 11, 0);
+if (!empty($GLOBALS['sitepress'])) {
+    add_action('wp_head', function () {
+        remove_action(
+            current_filter(),
+            array($GLOBALS['sitepress'], 'meta_generator_tag')
+        );
+    },
+        0
+    );
+}

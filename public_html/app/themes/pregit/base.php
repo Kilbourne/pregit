@@ -15,6 +15,8 @@ $title = get_field('show_title', get_the_id()) ? 'page_title' : '';
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage');?>
       </div>
     <![endif]-->
+    <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+</script>
     <?php do_action('body_open');?>
     <div class="page-wrapper" role="document">
     <?php
@@ -30,7 +32,10 @@ get_template_part('templates/header');
               <div class="et_builder_outer_content" id="et_builder_outer_content">
         <div class="et_builder_inner_content et_pb_gutters3">
         <?php
-echo do_shortcode(get_page_by_title('Header Slider en')->post_content);
+        $default_slider_id = get_page_by_title('Header Slider')->ID;
+        $lang_slider_id = apply_filters( 'wpml_object_id', $default_slider_id, 'page' );
+
+echo do_shortcode(get_post($lang_slider_id)->post_content);
 
     ?>
         </div></div></div><?php }?>

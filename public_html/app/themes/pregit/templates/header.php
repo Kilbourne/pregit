@@ -1,4 +1,6 @@
 <?php
+use Roots\Sage\Extras;
+
 function sk_wcmenucart()
 {
 
@@ -30,9 +32,10 @@ function sk_wcmenucart()
     return $social;
 
 }
+
 ?>
 <header class="banner">
-    <div class="first-line"><span class="left"> IT | EN </span>
+    <div class="first-line"><span class="left"> <?php  Extras\language_selector()  ?></span>
     <span class="right">
 
          <?php
