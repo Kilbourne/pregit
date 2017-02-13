@@ -280,7 +280,7 @@
             }
         }
     }
-    .et_pb_column_1_2 {
+    .et_pb_column_2 {
         background-color: #B71622;
     }
     .et_pb_posts {
@@ -309,7 +309,9 @@
                 margin: 0 5%;
                 background-color: #df332a;
                 position: relative;
-                width: auto;
+                width: 110px;
+                flex-shrink: 0;
+                flex-basis: auto;
                 outline: 1px dotted red !important;
                 display: flex;
                 flex-direction: column;
