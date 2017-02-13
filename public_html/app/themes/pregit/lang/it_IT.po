@@ -12,54 +12,30 @@ msgstr ""
 "X-Generator: Poedit 1.8.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/comments.php:17
-msgctxt "comments title"
-msgid "One response to &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Spiacente, la pagina che stai cercando di visualizzare non esiste."
 
-#: templates/comments.php:37
-msgid "&larr; Older comments"
-msgstr "&larr; Commenti meno recenti"
+#: base.php:15
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+"Stai usando un browser <strong>obsoleto</strong>. Per favore <a href="
+"\"\"\"http://browsehappy.com/\">aggiorna il tuo browser</a> per migliorare "
+"la \"\"navigazione."
 
-#: templates/comments.php:43
-msgid "Newer comments &rarr;"
-msgstr "Commenti pi&ugrave recenti &rarr;"
+#: custom-search.php:27
+msgid "Search Results for"
+msgstr "Risultati di ricerca per"
 
-#: templates/comments.php:61
-msgid "Comments are closed."
-msgstr "I commenti sono chiusi."
+#: custom-search.php:32, index.php:5, search.php:5
+msgid "Sorry, no results were found."
+msgstr "Spiacente, la ricerca non ha prodotto nessun risultato."
 
-#: templates/content-page.php:3, templates/content-single.php:21
-msgid "Pages:"
-msgstr "Pagine:"
-
-#: templates/entry-meta.php:5
-msgid "By"
-msgstr "Scritto da"
-
-#: templates/header.php:12, lib/woocommerce.php:25, lib/woocommerce.php:26
-msgid "Cart"
-msgstr "Carrello"
-
-#: templates/header.php:15
-msgid "%d  item"
-msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
-
-#: templates/header.php:47
-msgid "Contacts"
-msgstr "Contatti"
-
-#: templates/header.php:47
-msgid "Contact us"
-msgstr "Contattaci"
-
-#: templates/header.php:53
-msgid "Search"
-msgstr "Cerca"
+#: functions.php:26
+msgid "Error locating %s for inclusion"
+msgstr "Errore nell'inclusione di %s"
 
 #: lib/acf.php:15
 msgid "Document Distributor"
@@ -81,7 +57,8 @@ msgstr "Logo"
 msgid "Type"
 msgstr "Tipo"
 
-#: lib/acf.php:175, lib/extras.php:189
+#: lib/acf.php:175, lib/extras.php:231,
+#: woocommerce/content-single-product.php:90
 msgid "Producer"
 msgstr "Produttore"
 
@@ -161,125 +138,125 @@ msgstr "Processo Produttivo"
 msgid "Notes"
 msgstr "Note"
 
-#: lib/extras.php:91
+#: lib/extras.php:95
 msgid "Continued"
-msgstr ""
+msgstr "Continua"
 
-#: lib/extras.php:136
+#: lib/extras.php:169
 msgid "Profile"
 msgstr "Profilo"
 
-#: lib/extras.php:136
+#: lib/extras.php:169
 msgid "Logout"
 msgstr "Scollegati"
 
-#: lib/extras.php:138
+#: lib/extras.php:171
 msgid "Reserved Area"
 msgstr "Area Riservata"
 
-#: lib/extras.php:188, lib/extras.php:193
+#: lib/extras.php:230, lib/extras.php:235
 msgid "Producers"
 msgstr "Produttori"
 
-#: lib/extras.php:308
+#: lib/extras.php:350
 msgctxt "Post Type General Name"
 msgid "Distributor docs"
 msgstr ""
 
-#: lib/extras.php:309
+#: lib/extras.php:351
 msgctxt "Post Type Singular Name"
 msgid "Distributor doc"
 msgstr ""
 
-#: lib/extras.php:310
+#: lib/extras.php:352
 msgid "Distributor docs"
 msgstr ""
 
-#: lib/extras.php:311, lib/extras.php:335, lib/extras.php:336
+#: lib/extras.php:353, lib/extras.php:377, lib/extras.php:378
 msgid "Distributor doc"
 msgstr ""
 
-#: lib/extras.php:312
+#: lib/extras.php:354
 msgid "Item Archives"
 msgstr ""
 
-#: lib/extras.php:313
+#: lib/extras.php:355
 msgid "Parent Item:"
 msgstr ""
 
-#: lib/extras.php:314
+#: lib/extras.php:356
 msgid "All Items"
 msgstr ""
 
-#: lib/extras.php:315
+#: lib/extras.php:357
 msgid "Add New Item"
 msgstr ""
 
-#: lib/extras.php:316
+#: lib/extras.php:358
 msgid "Add New"
 msgstr ""
 
-#: lib/extras.php:317
+#: lib/extras.php:359
 msgid "New Item"
 msgstr ""
 
-#: lib/extras.php:318
+#: lib/extras.php:360
 msgid "Edit Item"
 msgstr ""
 
-#: lib/extras.php:319
+#: lib/extras.php:361
 msgid "Update Item"
 msgstr ""
 
-#: lib/extras.php:320
+#: lib/extras.php:362
 msgid "View Item"
 msgstr ""
 
-#: lib/extras.php:321
+#: lib/extras.php:363
 msgid "Search Item"
 msgstr ""
 
-#: lib/extras.php:322
+#: lib/extras.php:364
 msgid "Not found"
 msgstr ""
 
-#: lib/extras.php:323
+#: lib/extras.php:365
 msgid "Not found in Trash"
 msgstr ""
 
-#: lib/extras.php:324
+#: lib/extras.php:366
 msgid "Featured Image"
 msgstr ""
 
-#: lib/extras.php:325
+#: lib/extras.php:367
 msgid "Set featured image"
 msgstr ""
 
-#: lib/extras.php:326
+#: lib/extras.php:368
 msgid "Remove featured image"
 msgstr ""
 
-#: lib/extras.php:327
+#: lib/extras.php:369
 msgid "Use as featured image"
 msgstr ""
 
-#: lib/extras.php:328
+#: lib/extras.php:370
 msgid "Insert into item"
 msgstr ""
 
-#: lib/extras.php:329
+#: lib/extras.php:371
 msgid "Uploaded to this item"
 msgstr ""
 
-#: lib/extras.php:330
+#: lib/extras.php:372
 msgid "Items list"
 msgstr ""
 
-#: lib/extras.php:331
+#: lib/extras.php:373
 msgid "Items list navigation"
 msgstr ""
 
-#: lib/extras.php:332
+#: lib/extras.php:374
 msgid "Filter items list"
 msgstr ""
 
@@ -299,17 +276,66 @@ msgstr "PrimarY"
 msgid "Footer"
 msgstr "Footer"
 
-#: lib/titles.php:25
+#: lib/titles.php:13
 msgid "Latest Posts"
 msgstr "Articoli pi&ugrave recenti"
 
-#: lib/titles.php:35
+#: lib/titles.php:18
 msgid "Search Results for %s"
 msgstr "Risultati della ricerca per %s"
 
-#: lib/titles.php:39
+#: lib/titles.php:20
 msgid "Not Found"
 msgstr "Non trovato"
+
+#: lib/woocommerce.php:25, lib/woocommerce.php:26, templates/header.php:14
+msgid "Cart"
+msgstr "Carrello"
+
+#: templates/comments.php:9
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Commenti meno recenti"
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Commenti pi&ugrave recenti &rarr;"
+
+#: templates/comments.php:31
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: templates/content-page.php:2, templates/content-single.php:11
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: templates/entry-meta.php:3
+msgid "By"
+msgstr "Scritto da"
+
+#: templates/header.php:17
+msgid "%d  item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/header.php:50
+msgid "Contacts"
+msgstr "Contatti"
+
+#: templates/header.php:50
+msgid "Contact us"
+msgstr "Contattaci"
+
+#: templates/header.php:57
+msgid "Search"
+msgstr "Cerca"
 
 #: woocommerce/content-product.php:62, woocommerce/content-product_cat.php:52
 msgid "Discover"
@@ -323,33 +349,8 @@ msgstr "Guarda tutti i prodotti"
 msgid "Download Product Details"
 msgstr "Scarica la scheda"
 
-#: woocommerce/content-single-product.php:84
-msgid "$fieldlabel"
-msgstr ""
-
-#: 404.php:7
-msgid "Sorry, but the page you were trying to view does not exist."
-msgstr "Spiacente, la pagina che stai cercando di visualizzare non esiste."
-
-#: base.php:29
-msgid ""
-"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
-"browsehappy.com/\">upgrade your browser</a> to improve your experience."
-msgstr ""
-"Stai usando un browser <strong>obsoleto</strong>. Per favore <a href="
-"\"\"\"http://browsehappy.com/\">aggiorna il tuo browser</a> per migliorare "
-"la \"\"navigazione."
-
-#: custom-search.php:20, index.php:9, search.php:9
-msgid "Sorry, no results were found."
-msgstr "Spiacente, la ricerca non ha prodotto nessun risultato."
-
-#: functions.php:26
-msgid "Error locating %s for inclusion"
-msgstr "Errore nell'inclusione di %s"
-
-msgid "News Archive"
-msgstr "Archivio News"
+#~ msgid "News Archive"
+#~ msgstr "Archivio News"
 
 #~ msgid "One Response to &ldquo;%2$s&rdquo;"
 #~ msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"

@@ -7,6 +7,6 @@ if (has_nav_menu('primary_navigation')):
 endif;
 ?>
   </div>
-  <div class="last-line"><span class="left"> &copy; 2016 I Pregi d’Italia </span><span class="right">Credits</span>
+  <div class="last-line"><span class="left"> &copy; 2016 I Pregi d’Italia </span><!--<span class="right">Credits</span>-->
    </div>
 </footer>

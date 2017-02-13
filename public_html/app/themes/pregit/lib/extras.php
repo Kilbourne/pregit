@@ -467,3 +467,13 @@ if (!empty($GLOBALS['sitepress'])) {
         0
     );
 }
+
+add_filter( 'gform_field_validation', function ( $result, $value, $form, $field ) {
+  $pattern = "/^(\+44\s?7\d{3}|\(?07\d{3}\)|\(?01\d{3}\)?)\s?\d{3}\s?\d{3}$/";
+    if ( $field->type == 'phone' && $field->phoneFormat != 'standard' && ! preg_match( $pattern, $value ) ) {
+        $result['is_valid'] = false;
+        $result['message']  = 'Please enter a valid phone number';
+    }
+
+    return $result;
+}, 10, 4 );

@@ -47,14 +47,14 @@
                     if (isPaused) {
                         video.get(0).play();
                         video.attr('controls', '');
-                        $('.et_pb_text_3').hide();
+                        $('.et_pb_text_2').hide();
                     } else {
                         video.get(0).pause();
                         video.removeAttr('controls');
-                        $('.et_pb_text_3').show();
+                        $('.et_pb_text_2').show();
                     }
                 }
-                $('.et_pb_text_3 .fa-play').click(
+                $('.et_pb_text_2 .fa-play').click(
                     videoCallback
 
                 );
@@ -78,16 +78,16 @@
                     } else { mobile = mobile1; }
                     if (mobile) {
                         video.attr('controls', '');
-                        $('.et_pb_text_3').hide();
+                        $('.et_pb_text_2').hide();
                     } else {
 
                         video.removeAttr('controls');
                         if (!video.get(0).paused) {
-                            $('.et_pb_text_3').hide();
+                            $('.et_pb_text_2').hide();
                             video.attr('controls', '');
                         } else {
                             video.removeAttr('controls');
-                            $('.et_pb_text_3').show();
+                            $('.et_pb_text_2').show();
                         }
 
                     }

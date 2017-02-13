@@ -1000,12 +1000,15 @@ div.gform_confirmation_message {
                 text-decoration: underline !important;
             }
             .gfield_checkbox {
+                input {
+                    margin-top: 4px;
+                }
                 margin-bottom: 1rem;
                 min-width: 13px;
             }
             input,
             label {
-                vertical-align: middle;
+                vertical-align: top;
             }
         }
     }

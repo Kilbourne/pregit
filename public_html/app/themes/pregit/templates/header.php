@@ -48,12 +48,13 @@ echo '<div class="account-link"><div><a href="' . get_permalink($UM_plinks['acco
 }
  */
 echo '<div class="account-link"><div><a class="responsive-menu-pro-item-link" href="' . get_permalink(get_page_by_title(__('Contacts', 'sage'))->ID) . '">' . __('Contact us', 'sage') . ' </a></div></div>';
-$query = isset($_GET['searchwpquery']) ? sanitize_text_field($_GET['searchwpquery']) : '';
+$query = isset($_GET['swpquery']) ? sanitize_text_field($_GET['swpquery']) : '';
 ?>
     <div class="cart-icon-container"> <?php echo sk_wcmenucart(); ?></div>
-    <form action="<?php echo get_permalink(922); ?>" id="responsive_menu_pro_search" method="get" role="search">
+    <?php $current_language= apply_filters( 'wpml_current_language', NULL ); ?>
+    <form action="<?php echo get_the_permalink( apply_filters( 'wpml_object_id', get_page_by_title('Search Results')->ID , 'page', FALSE, $current_language )); ?>" id="responsive_menu_pro_search" method="get" role="search">
      <i class="fa fa-search"></i>
-            <input type="search" name="searchwpquery" value="<?php echo esc_attr($query); ?>" placeholder="<?php _e('Search', 'sage');?>" id="responsive_menu_pro_search_input">
+            <input type="search" name="swpquery" value="<?php echo esc_attr($query); ?>" placeholder="<?php _e('Search', 'sage');?>" id="responsive_menu_pro_search_input">
         </form>
 
 
