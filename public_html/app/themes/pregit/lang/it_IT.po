@@ -260,6 +260,10 @@ msgstr ""
 msgid "Filter items list"
 msgstr ""
 
+#: lib/extras.php:475
+msgid "Please enter a valid phone number"
+msgstr "Si prega di inserire un numero di telefono valido"
+
 #: lib/setup.php:35
 msgid "Primary Navigation"
 msgstr "Primary Navigation"
