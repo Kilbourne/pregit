@@ -127,10 +127,10 @@ function assets()
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 $opts = [
     "bundle" => ["cart-widget", "et-builder-modules-global-functions-script", "touch", "responsive-menu-pro", "wc-add-to-cart", "woocommerce", "wc-cart-fragments", "gform_gravityforms", "gform_placeholder", "divi-fitvids", "waypoints", "magnific-popup", "et-jquery-touch-mobile", "et-builder-modules-script", "add-to-cart-variation_ajax", "wpss-jscripts-ftr", 'jquery-cookie', 'jquery-blockui', 'add-to-cart-variation_ajax', 'sitepress', "gform_json", "um_minified", "jquery-masonry", "masonry", "imagesloaded", "um_datetime_locale", "gform_masked_input", "wc-single-product", "um_woocommerce", "select2", 'gform_masked_input', 'wpcom-lazy-load-images'
-        , 'jquery-sonar', 'wcml-scripts', 'wcml-pointer', 'wcml-front-scripts', 'wp-pointer', 'jquery-ui-widget', 'jquery-ui-position', 'wpml-legacy-dropdown-0'], "not_async" => [
+        , 'jquery-sonar', 'wcml-scripts', 'wcml-pointer', 'wcml-front-scripts', 'wp-pointer', 'jquery-ui-widget', 'jquery-ui-position', 'wpml-legacy-dropdown-0','wp-mediaelement'], "not_async" => [
         'jquery',
     ],
-    "css"    => ["responsive-menu-pro", "woocommerce-layout", "woocommerce-smallscreen", "woocommerce-general", "yit-icon-retinaicon-font", "font-awesome", "ywctm-premium-style", "et-builder-modules-style", "magnific-popup", "woocommerce", "um_minified", "gforms_reset_css", "gforms_formsmain_css", "gforms_ready_class_css", "gforms_browsers_css", 'language-selector', 'um_raty', 'wcml_admin', 'wp-pointer'],
+    "css"    => ["responsive-menu-pro", "woocommerce-layout", "woocommerce-smallscreen", "woocommerce-general", "yit-icon-retinaicon-font", "font-awesome", "ywctm-premium-style", "et-builder-modules-style", "magnific-popup", "woocommerce", "um_minified", "gforms_reset_css", "gforms_formsmain_css", "gforms_ready_class_css", "gforms_browsers_css", 'language-selector', 'um_raty', 'wcml_admin', 'wp-pointer','wp-mediaelement'],
 ];
 new AssetBuilder($opts);
 class AssetBuilder
